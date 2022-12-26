@@ -12,6 +12,7 @@
         "vite": "^3.0.0"
     },
     "dependencies": {
+        "css-declaration-sorter": "^6.3.1",
         "sass": "^1.57.1",
         "scss": "^0.2.4"
     }

@@ -2,7 +2,7 @@
 
 p, h1, h2, h3, h4, h5, h6, ul, li, dl {
     max-width: 75ch;
-    margin-bottom: 1rem;
+   
 }
 p {
     @include font-serif;
@@ -14,31 +14,37 @@ p {
 h1 {
     @include text-4xl;
     @include font-serif;
-    margin-bottom: 1rem;
+    
     font-weight: var(--text-bold);
 }
 h2 {
     @include text-3xl;
     @include font-serif;
-    margin-bottom: 1rem;
+    
     font-weight: var(--text-bold);
 }
 h3 {
     @include text-2xl;
     @include font-sans;
-    margin-bottom: .75rem;
+   
     font-weight: var(--text-bold);
 }
 h4 {
     @include text-xl;
     @include font-sans;
-    margin-bottom: .75rem;
+   
     font-weight: var(--text-bold);
 }
 h5 {
     @include text-lg;
     @include font-sans;
-    margin-bottom: .75rem;
+   
+    font-weight: var(--text-bold);
+}
+h6 {
+    @include text-base;
+    @include font-sans;
+   
     font-weight: var(--text-bold);
 }
 ul, li {
