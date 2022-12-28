@@ -11,4 +11,3 @@
     <p>For Members</p>
         <a href="https://tithe.ly/give?c=247580" target="blank">Give Online</a>
     </div>
-</section>
