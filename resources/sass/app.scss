@@ -1,6 +1,6 @@
-@use "reset";
-// @use "typography";
-@use "gutenberg";
+@use "helpers/helpers";
+@use "home/home";
+@use "components/components";
 
 .container {
     max-width: 1200px;
@@ -10,99 +10,7 @@
     margin-left: auto;
     margin-right: auto;
     padding: 2rem;
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: helpers.$large) {
         padding: 0;
     }
 }  
-
-body.home {
-    background: white;
-    width: 100%;
-    header {
-        width: 100%;
-        display: block;
-        margin: 0 0;
-        max-width: 100%;
-        padding: 0;
-        section.top {
-            width: 100%;
-            max-width: 1200px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 80vh;
-            background: black;
-            padding: 0;
-            margin: 0 auto;
-            max-width: none;
-            background-size: cover;
-            background-position: top;
-            position: relative;
-
-            h1 {
-            color: white;
-            text-align: center;
-            margin: 0;
-
-            }
-        }
-    }
-    nav.main-navigation {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        padding: 2rem 1rem;
-        margin: 0 auto;
-        color: white;
-        max-width: 1200px;
-        text-align: left;
-        position: absolute; 
-        top: 0;
-        a {
-            color: white;
-            text-decoration: none;
-            text-align: left;
-        }
-        a.logo {
-            
-            text-transform: uppercase;
-            text-align: left;
-            width: inherit;
-            margin: 0;
-        }
-        button.hamburger {
-            display: block;
-            background: none;
-            border: none;
-            color: white;
-            cursor: pointer;
-            @media screen and (min-width: 1200px) {
-                display: none;
-            }
-        }
-        ul {
-            display: none;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            li {
-                margin: 0 1rem;
-            }
-        }
-        @media screen and (min-width: 1200px) {
-            ul {
-                display: flex;
-            }
-        }
-    }
-    section.actions {
-        display: grid;
-        width: 100%;
-        margin: 0 auto;
-        max-width: 1200px;
-        grid-template-columns: 33% 33% 33%;
-    }
-
-}

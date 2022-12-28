@@ -1,8 +1,7 @@
-:root {
-    --text-light: 300;
-    --text-regular: 400;
-    --text-bold: 700;
-}
+$text-light: 300;
+$text-regular: 400;
+$text-bold: 700;
+
 
 @mixin text-xs {
     font-size: 0.75rem; 
@@ -52,4 +51,32 @@
 }
 @mixin font-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+@mixin font-light {
+    font-weight: $text-light;
+}
+
+@mixin font-normal {
+    font-weight: $text-regular;
+}
+@mixin font-bold {
+    font-weight: $text-bold;
+}
+@mixin tracking-tighter {
+    letter-spacing: -0.05em;
+}
+@mixin tracking-tight {
+    letter-spacing: -0.025em;
+}
+@mixin tracking-normal {
+    letter-spacing: 0em;
+}
+@mixin tracking-wide {
+    letter-spacing: 0.025em;
+}
+@mixin tracking-wider {
+    letter-spacing: 0.05em;
+}
+@mixin tracking-widest {
+    letter-spacing: 0.1em;
 }

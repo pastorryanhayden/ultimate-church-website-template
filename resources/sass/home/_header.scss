@@ -1,0 +1,173 @@
+@use "../helpers/helpers";
+body.home {
+    background: white;
+    width: 100%;
+    header {
+        width: 100%;
+        display: block;
+        margin: 0 0;
+        max-width: 100%;
+        padding: 0;
+        section.top {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 50vh;
+            background: black;
+            padding: 0 helpers.$s6;
+            margin: 0 auto;
+            max-width: none;
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
+            position: relative;
+            @media screen and (min-width: helpers.$medium)
+            {
+                height: 80vh;
+            min-height: 80vh;
+            }
+
+            h1 {
+            color: white;
+            text-align: center;
+            margin: 0;
+            @include helpers.text-4xl;
+            max-width: 25ch;
+            line-height: 1.5;
+            @media screen and (min-width: helpers.$medium)
+            {
+                @include helpers.text-6xl;
+            }
+
+            }
+        }
+    }
+    nav.main-navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 2rem 1rem;
+        margin: 0 auto;
+        color: white;
+        max-width: 1200px;
+        text-align: left;
+        position: absolute; 
+        top: 0;
+        @media screen and (min-width: helpers.$large)
+        {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            text-align: left;
+        }
+        a.logo {
+            
+            text-transform: uppercase;
+            text-align: center;
+            width: inherit;
+            margin-bottom: helpers.$s4;
+            @include helpers.text-2xl;
+            @include helpers.tracking-wide;
+            @media screen and (min-width: helpers.$large)
+            {
+                text-align: left;
+                margin: 0;
+            }
+        }
+        button.mobile-toggle {
+            display: block;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            text-transform: uppercase;
+            @include helpers.text-xl;
+            @include helpers.tracking-wide;
+            @include helpers.font-sans;
+            @media screen and (min-width: helpers.$large) {
+                display: none;
+            }
+        }
+        ul {
+            display: none;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: inherit;
+            li {
+                margin: 0 1rem;
+                @include helpers.text-xl;
+                @include helpers.transition;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        @media screen and (min-width: helpers.$large) {
+            ul {
+                display: flex;
+                justify-content: end;
+            }
+        }
+    }
+    aside.mobile-menu {
+        height: 100vh;
+        width: 100%;
+        background: helpers.$gray-100;
+        background-color: helpers.$gray-100;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        padding: helpers.$s8;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @media screen and (min-width: helpers.$large) {
+        display: none;
+        @include helpers.transition
+        }
+        button.close {
+            color: helpers.$gray-600;
+            width: helpers.$s12;
+            height: helpers.$s12;
+            position: absolute;
+            top: helpers.$s4;
+            right: helpers.$s4;
+            cursor: pointer;
+            background-color: helpers.$gray-100;
+        }
+        ul {
+            width: 100%;
+        }
+        ul li {
+            @include helpers.text-2xl;
+            text-align: center;
+            width: 100%;
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+                color: helpers.$gray-600;
+                // margin: helpers.$s8 0;
+                display: block;
+                padding: helpers.$s4 helpers.$s4;
+                @include helpers.transition;
+            &:hover {
+                background-color: helpers.$gray-200;
+            }
+            }
+        }
+    }
+
+
+}

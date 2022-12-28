@@ -19,10 +19,23 @@ dd {
   margin: 0;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+/* Headings are unstyled */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Lists are unstyled. */
+ul,
+ol {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Set core root defaults */
@@ -42,11 +55,24 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
+/*Images (and other media elements) are display block by default */
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+}
+
 /* Make images easier to work with */
 img,
 picture {
   max-width: 100%;
-  display: block;
+  height: auto;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -57,18 +83,17 @@ select {
   font: inherit;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-   scroll-behavior: auto;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+/* Border styles turned off */
+*,
+::before,
+::after {
+  border-width: 0;
+  border-style: solid;
+  border-color: currentColor;
+}
+
+/* Buttons have an outline */
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
 }

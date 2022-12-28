@@ -1,0 +1,49 @@
+@use "../helpers/helpers";
+section.actions {
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+    
+
+    @media screen and (min-width: helpers.$medium)
+    {
+        grid-template-columns: 33% 33% 33%;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: helpers.$s6 helpers.$s6;
+        border-bottom: 1px solid helpers.$gray-200;
+        @include helpers.transition;
+        @media screen and (min-width: helpers.$medium)
+        {
+            border-bottom: none;
+            border-right: 1px solid helpers.$gray-200;
+            height: 18vh;
+        }
+        &:hover {
+            background-color: helpers.$gray-100;
+        }
+
+        &:nth-last-child(1) {
+            border-right: none;
+            border-bottom: none;
+        }
+        p {
+            @include helpers.text-lg;
+            @include helpers.font-sans;
+            color: helpers.$gray-400;
+        }
+        a {
+            text-decoration: none;
+            @include helpers.text-2xl;
+            @include helpers.tracking-wide;
+            text-transform: uppercase;
+            color: helpers.$gray-600;
+        }
+    }
+}

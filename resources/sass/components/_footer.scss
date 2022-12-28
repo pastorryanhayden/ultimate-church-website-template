@@ -1,0 +1,82 @@
+@use "../helpers/helpers";
+footer {
+    background-color: helpers.$gray-800;
+    color: helpers.$gray-100;
+    hgroup {
+        padding: helpers.$s16 helpers.$s6;
+        text-align: center;
+
+        h2 {
+            @include helpers.text-4xl;
+            margin-bottom: helpers.$s2;
+            @include helpers.font-light;
+            @include helpers.tracking-wider;
+            text-transform: uppercase;
+            color: helpers.$white;
+        }
+        h4 {
+            @include helpers.text-xl;
+            font-style: italic;
+            @include helpers.font-sans;
+        }
+    }
+    section.grid {
+        padding: 0 helpers.$s6;
+        display: grid;
+        margin: 0 auto;
+        grid-column-gap: helpers.$s8;
+        grid-template-columns: 90%;
+        justify-content: center;
+        @include helpers.font-sans;
+        @media screen and (min-width: helpers.$medium)
+        {
+            grid-template-columns: 45% 45%;
+        }
+        @media screen and (min-width: helpers.$large)
+        {
+            grid-template-columns: 25% 25% 25% 25%;
+        }
+        article {
+            margin-top: helpers.$s4;
+            @media screen and (min-width: helpers.$large)
+        {
+            margin-top: 0;
+        }
+        }
+        h3 {
+            @include helpers.font-sans;
+            @include helpers.text-2xl;
+            @include helpers.font-bold;
+            margin-bottom: helpers.$s4;
+            text-transform: uppercase;
+            color: helpers.$white;
+        }
+        p {
+            @include helpers.text-sm;
+            color: helpers.$gray-300;
+        }
+        p, h4 {
+            margin-bottom: helpers.$s2;
+        }
+        h4 {
+            @include helpers.text-lg;
+            @include helpers.font-bold;
+            @include helpers.tracking-wide;
+        }
+        p a {
+            text-decoration: none;
+            color: helpers.$gray-100;
+            &:hover {
+                color: helpers.$white;
+                text-decoration: underline;
+            }
+        }
+    }
+    svg {
+        height: helpers.$s4;
+        width: helpers.$s4;
+        color: helpers.$white;
+        display: inline-block;
+        margin-right: helpers.$s3;
+    }
+}
