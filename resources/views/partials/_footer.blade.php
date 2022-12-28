@@ -1,5 +1,7 @@
  <footer>
+ @if($show_map)
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079.6823770347582!2d-88.40071454861499!3d39.47650367938475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x887311fe472b780f%3A0x380b6224f17e358f!2sBible%20Baptist%20Church!5e0!3m2!1sen!2sus!4v1672189972888!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+@endif 
         <hgroup>
         <h2>Experience Bible Baptist</h2>
         <h4>Join us this week for church</h4>
@@ -30,8 +32,8 @@
             </article>
             <article>
             <h3>Useful Links</h3>
-             <p>@include('partials.icons.chevright') <a href="#">Give Online</a></p>
-             <p>@include('partials.icons.chevright') <a href="#">Watch Live</a></p>
+             <p>@include('partials.icons.chevright') <a href="https://tithe.ly/give?c=247580" target="blank">Give Online</a></p>
+             <p>@include('partials.icons.chevright') <a href="https://www.youtube.com/@biblebaptistchurch7203/streams" target="blank">Watch Live</a></p>
              <p>@include('partials.icons.chevright') <a href="#">Church Facebook</a></p>
              <p>@include('partials.icons.chevright') <a href="#">Church Constitution</a></p>
              <p>@include('partials.icons.chevright') <a href="#">Church Covenant</a></p>

@@ -2,6 +2,8 @@
 footer {
     background-color: helpers.$gray-800;
     color: helpers.$gray-100;
+    padding-bottom: helpers.$s12;
+    display: block;
     hgroup {
         padding: helpers.$s16 helpers.$s6;
         text-align: center;
@@ -34,7 +36,7 @@ footer {
         }
         @media screen and (min-width: helpers.$large)
         {
-            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-columns: 23% 23% 23% 23%;
         }
         article {
             margin-top: helpers.$s4;

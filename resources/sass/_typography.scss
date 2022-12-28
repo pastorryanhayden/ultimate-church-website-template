@@ -1,52 +1,66 @@
+@use "helpers/helpers";
 .prose {
+    margin: 0 auto;
+    display: block;
+    max-width: 800px;
+    padding: 0 helpers.$s6 helpers.$s12 helpers.$s6;
 p, h1, h2, h3, h4, h5, h6, ul, li, dl {
     max-width: 75ch;
+    color: helpers.$gray-800;
+    
    
 }
 p {
-    @include font-serif;
-    @include text-base;
+    @include helpers.font-serif;
+    @include helpers.text-base;
     overflow: hidden;
+    margin-top: helpers.$s4;
 
 }
 
 h1 {
-    @include text-4xl;
-    @include font-serif;
-    @include font-bold;
+    @include helpers.text-4xl;
+    @include helpers.font-serif;
+    @include helpers.font-bold;
+    margin-top: helpers.$s4;
+    color: helpers.$gray-700;
 }
 h2 {
-    @include text-3xl;
-    @include font-serif; 
-    @include font-bold;
+    @include helpers.text-3xl;
+    @include helpers.font-serif; 
+    @include helpers.font-bold;
+    margin-top: helpers.$s8;
+    color: helpers.$gray-700;
 }
 h3 {
-    @include text-2xl;
-    @include font-sans;
-   
-    @include font-bold;
+    @include helpers.text-2xl;
+    @include helpers.font-sans;
+    margin-top: helpers.$s6;
+    @include helpers.font-bold;
+    color: helpers.$gray-700;
 }
 h4 {
-    @include text-xl;
-    @include font-sans;
-   
-    @include font-bold;
+    @include helpers.text-xl;
+    @include helpers.font-sans;
+    @include helpers.font-bold;
+    margin-top: helpers.$s4;
+    color: helpers.$gray-700;
 }
 h5 {
-    @include text-lg;
-    @include font-sans;
+    @include helpers.text-lg;
+    @include helpers.font-sans;
    
-    @include font-bold;
+    @include helpers.font-bold;
 }
 h6 {
-    @include text-base;
-    @include font-sans;
+    @include helpers.text-base;
+    @include helpers.font-sans;
    
-    @include font-bold;
+    @include helpers.font-bold;
 }
 ul, li {
-    @include text-base;
-    @include font-sans
+    @include helpers.text-base;
+    @include helpers.font-sans
 }
 hgroup {
     h1:first-child, h2:first-child, h3:first-child, h4:first-child {
