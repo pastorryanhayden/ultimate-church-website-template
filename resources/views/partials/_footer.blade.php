@@ -35,8 +35,9 @@
              <p>@include('partials.icons.chevright') <a href="https://tithe.ly/give?c=247580" target="blank">Give Online</a></p>
              <p>@include('partials.icons.chevright') <a href="https://www.youtube.com/@biblebaptistchurch7203/streams" target="blank">Watch Live</a></p>
              <p>@include('partials.icons.chevright') <a href="#">Church Facebook</a></p>
-             <p>@include('partials.icons.chevright') <a href="#">Church Constitution</a></p>
-             <p>@include('partials.icons.chevright') <a href="#">Church Covenant</a></p>
+            
+             <p>@include('partials.icons.chevright') <a href="/documents/constitution.pdf" target="blank">Church Constitution</a></p>
+             <p>@include('partials.icons.chevright') <a href="/documents/ChurchCovenant.pdf" target="blank">Church Covenant</a></p>
             </article>
         </section>
         <section class="copywrite">

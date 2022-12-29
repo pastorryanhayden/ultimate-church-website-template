@@ -1,4 +1,3 @@
-@use "../helpers/helpers";
 body.home {
     background: white;
     width: 100%;
@@ -18,14 +17,14 @@ body.home {
             justify-content: center;
             height: 50vh;
             background: black;
-            padding: 0 helpers.$s6;
+            padding: 0 $s6;
             margin: 0 auto;
             max-width: none;
             background-size: cover;
             background-position: top;
             background-repeat: no-repeat;
             position: relative;
-            @media screen and (min-width: helpers.$medium)
+            @media screen and (min-width: $medium)
             {
                 height: 80vh;
             min-height: 80vh;
@@ -35,12 +34,12 @@ body.home {
             color: white;
             text-align: center;
             margin: 0;
-            @include helpers.text-4xl;
+            @include text-4xl;
             max-width: 25ch;
             line-height: 1.5;
-            @media screen and (min-width: helpers.$medium)
+            @media screen and (min-width: $medium)
             {
-                @include helpers.text-6xl;
+                @include text-6xl;
             }
 
             }
