@@ -1,0 +1,119 @@
+
+section.ministries {
+    background-color: $gray-800;
+    padding: $s16 $s8 0 $s8;
+    hgroup{
+        text-align: center;
+        margin-bottom: $s12;
+        h2 {
+            color: $gray-200;
+            @include text-3xl;
+            @include font-bold;
+            @include font-sans;
+            text-transform: uppercase;
+           
+        }
+       a {
+        @include text-2xl;
+        color: $gray-300;
+        text-decoration: none;
+        margin-top: $s2;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        svg {
+            width: $s6;
+            height: $s6;
+            margin-left: $s2;
+            margin-top: $s1;
+        }
+       }
+    }
+   
+    div.grid {
+        display: grid;
+        margin: 0 auto;
+        @media screen and (min-width: $large)
+        {
+            width: 90%;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: $s64 $s64;
+        }
+        @media screen and (min-width: $extra-large)
+        {
+            width: 60%;
+        }
+        @media screen and (min-width: $extra-extra-large)
+        {
+            width: 60%;
+        }
+    }
+    .grid article {
+        display: flex;
+        height: $s64;
+        flex-direction: row;
+    }
+    .grid article img {
+        object-fit: cover;
+        width: 50%;
+        height: $s64;
+    }
+    .grid article:nth-child(2), .grid article:nth-child(4), {
+        flex-direction: row-reverse;
+    }
+    @media screen and (min-width: $large) {
+        .grid article:nth-child(1), .grid article:nth-child(2), {
+            flex-direction: row;
+        }
+        .grid article:nth-child(3), .grid article:nth-child(4), {
+            flex-direction: row-reverse;
+        }
+    }
+    
+    .grid article div {
+        background: $white;
+        padding: $s6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        h4 {
+            text-transform: uppercase;
+            @include font-sans;
+            color: $gray-500;
+            @include tracking-wide;
+        }
+        h3 {
+            @include font-bold;
+            @include font-sans;
+            @include text-3xl;
+            margin-bottom: $s2;
+            color: $gray-800;
+        }
+        a {
+            @include font-sans;
+            text-decoration: none;
+            color: $gray-600;
+            @include text-lg;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+            text-transform: uppercase;
+
+            svg {
+                width: $s4;
+                height: $s4;
+                margin-left: $s1;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+
+}

@@ -15,6 +15,7 @@ nav.main-navigation {
         max-width: 1200px;
         text-align: left;
         position: absolute; 
+        z-index: 20;
         top: 0;
         @media screen and (min-width: $large)
         {

@@ -12,8 +12,13 @@
     </head>
     <body class="home">
     @include('partials._mobile-menu')
+    @include('partials._announcements')
         <header>
-            <section class="top" style="background-image: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0, .5)), url('/homephoto.jpg');">
+            <section class="top" style="background-image: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0, .5));">
+            <div class="overlay"></div>
+            <video  autoplay muted loop poster="/images/traditional.jpg">
+            <source src="/images/hero.mp4" type="video/mp4">
+            </video>
             @include('partials._main-nav')
             <h1>Find hope, purpose, and fellowship at BBC.</h1>
         </section>
@@ -21,7 +26,7 @@
       
       
           @include('partials._actions')
-        
+        @include('partials._ministries')  
        @include('partials._footer', ['show_map' => true])
     </body>
 </html>
