@@ -31,15 +31,15 @@ class LeaderResource extends Resource
         return $form
             ->schema([
                 TextInput::make('name'),
-                Select::make('postion')
+                Select::make('position')
                 ->options([
-                    'lead_pastor' => 'Lead Pastor',
-                    'youth_pastor' => 'Youth Pastor',
-                    'music_pastor' => 'Music Pastor',
-                    'pastoral_intern' => 'Pastoral Intern',
-                    'deacon' => 'Deacon',
-                    'ss_teacher' => 'Sunday School Teacher',
-                    'volunteer' => 'Volunteer'
+                    'Lead Pastor' => 'Lead Pastor',
+                    'Youth Pastor' => 'Youth Pastor',
+                    'Music Pastor' => 'Music Pastor',
+                    'Pastoral Intern' => 'Pastoral Intern',
+                    'Deacon' => 'Deacon',
+                    'Sunday School Teacher' => 'Sunday School Teacher',
+                    'Volunteer' => 'Volunteer'
                 ]),
                 FileUpload::make('photo')
                 ->label('Leader Image'),

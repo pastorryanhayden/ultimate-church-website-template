@@ -5,37 +5,14 @@
    
     </hgroup>
      <div class="grid">
-    <article>
-    <img src="/images/awana.webp" alt="">
+     @foreach ($ministries as $ministry)
+         <article>
+    <img src="{{ asset('storage/'. $ministry->image) }}" alt="">
     <div>
-    <h4>Kids</h4>
-    <h3>Awana</h3>
+    <h4>{{ $ministry->for }}</h4>
+    <h3>{{ $ministry->name }}</h3>
     <a href="#">Learn More @include('partials.icons.chevright')</a>
     </div>
     </article>
-    <article>
-    <img src="/images/izzy.jpg" alt="">
-    <div>
-    <h4>Teens</h4>
-    <h3>Youth Group</h3>
-    <a href="#">Learn More @include('partials.icons.chevright')</a>
-    </div>
-    </article>
-    <article>
-    <img src="/images/seniors.jpg" alt="">
-    <div>
-    <h4>Seniors</h4>
-    <h3>Classic Christians</h3>
-    <a href="#">Learn More @include('partials.icons.chevright')</a>
-    </div>
-    </article>
-    <article>
-    <img src="/images/scout.jpg" alt="">
-    <div>
-    <h4>Kids</h4>
-    <h3>Trail Life</h3>
-    <a href="#">Learn More @include('partials.icons.chevright')</a>
-    </div>
-    </article>
-    </div>
+     @endforeach
 </section>

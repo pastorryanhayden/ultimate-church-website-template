@@ -18,30 +18,27 @@
 </section>
 <section>
 <h2>Who are your pastors?</h2>
+@foreach ($leaders as $leader)
+    
+@if($leader->lead_pastor == true)
 <article>
 
-<h3>Ryan Hayden, Lead Pastor</h3>
-<img src="/images/ryan.jpg" alt="">
-<p>Ryan has served as the lead pastor at BBC since 2011. A native of New Hampshire, Ryan served at churches in New England and Tennessee before coming to Bible Baptist.</p>
-<p>Ryan is joined in ministry by his wife Amanda.  Together they have five children.</p>
-<p>Ryan prepared for the ministry studying at The Crown College of the Bible in Powell, TN and then at Pensacola Christian College (for masters classes). Before coming to Bible, he apprenticed under Dr. Jack Scallions, the long time pastor at Fairview Baptist Church in Athens, TN.  Ryan also has business experience, founding and then selling a software company.</p>
-<p>Ryan's hobbies include hiking, woodworking, developing software, and triathlons.</p>
+<h3>{{ $leader->name }}, {{ $leader->position }}</h3>
+<img src="{{ asset('storage/'. $leader->photo) }}" alt="{{ $leader->name }}">
+{!! $leader->bio !!}
 </article>
+@endif
+@if($leader->lead_pastor == false)
+
+
 <article>
 
-<h3>Adam McCaslin, Youth/Assistant Pastor</h3>
-<img src="/images/adam.jpg" alt="">
-<p>Adam has served as the youth pastor at BBC since 2014. Originally from Georgia, Adam has put down roots in the Mattoon area and oversees our youth ministry, preaches regularly in church, manages the church calendar, and helps oversee many other aspects of the ministry at BBC.</p>
-<p>Adam prepared for the ministry at The Crown College of the Bible, earning both his bachelors and masters degrees there.  In 2019, while taking a group of teenagers to church camp, Adam met his wife Genna.  They were married in 2020 and have one infant son.</p>
-<p>When not working on youth ministry, Adam enjoys cheering on sport teams like the Tenessee Volunteers and Dallas Cowboys. In addition to working at BBC, he works as a rural mail carrier.</p>
+<h3>{{ $leader->name }}, {{ $leader->position }}</h3>
+<img src="{{ asset('storage/'. $leader->photo) }}" alt="{{ $leader->name }}">
+{!! $leader->bio !!}
 </article>
-<article>
-
-<h3>Ken Hedrick, Worship Pastor</h3>
-<img src="/images/ken.jpg" alt="">
-<p>Ken has served as the worship pastor at BBC since 2021. Ken grew up in Mattoon and then after earning both a bachelor's and master's degree in music from Bob Jones University, spent many years working as a music pastor in Michigan, Georgia and Virginia before coming home to Mattoon.</p>
-<p>Ken and his wife Jodi have three children.  When not playing and directing music, Ken enjoys baking, cooking, playing golf and cheering for the Tennessee Volunteers. Ken also runs a baking and catering business.</p>
-</article>
+@endif 
+@endforeach
 </section>
 <section>
 <h2>What is your church like?</h2>

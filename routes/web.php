@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomePageController;
+use App\Http\Controllers\AboutPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,4 @@ use App\Http\Controllers\HomePageController;
 */
 
 Route::get('/', [HomePageController::class, 'show']);
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/about', [AboutPageController::class, 'show']);

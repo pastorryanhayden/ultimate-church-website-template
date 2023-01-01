@@ -4,15 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Announcement;
-use App\Models\Ministry;
+use App\Models\Leader;
 
-class HomePageController extends Controller
+class AboutPageController extends Controller
 {
     public function show()
     {
         $today = now();
-        $ministries = Ministry::where('homepage', true)->limit(4)->get();
+        $leaders = Leader::where('pastor', true)->get();
+        
         $announcement = Announcement::where('start', '<=', $today)->where('end', '>=', $today)->first();
-        return view('welcome', compact('announcement', 'ministries'));
+        return view('about', compact('announcement', 'leaders'));
     }
 }

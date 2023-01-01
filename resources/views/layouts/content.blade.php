@@ -12,6 +12,7 @@
     </head>
     <body class="page">
     @include('partials._mobile-menu')
+     @include('partials._announcements')
      <header>
         @include('partials._main-nav')
     </header>
