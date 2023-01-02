@@ -15,6 +15,9 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\Card;
+use Filament\Forms\Components\Textarea;
+
 
 class AnnouncementResource extends Resource
 {
@@ -26,9 +29,15 @@ class AnnouncementResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('announcement')->placeholder('No church Sunday'),
+                Card::make()
+                ->schema([
+                Textarea::make('announcement')->placeholder('No church Sunday')
+                ->maxLength(140)
+                ->required(),
                 DateTimePicker::make('start')->firstDayOfWeek(7)->required(),
                 DateTimePicker::make('end')->firstDayOfWeek(7)->required()
+                ])
+                
 
                 //
             ]);

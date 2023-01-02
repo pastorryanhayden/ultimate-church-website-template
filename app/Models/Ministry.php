@@ -11,6 +11,7 @@ class Ministry extends Model
 
     protected $fillable = [
         'name',
+        'slug',
         'for',
         'leader_id',
         'body',

@@ -26,6 +26,7 @@
       
       
           @include('partials._actions')
+          @include('partials._event')
         @include('partials._ministries')  
        @include('partials._footer', ['show_map' => true])
     </body>

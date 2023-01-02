@@ -19,6 +19,7 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Checkbox;
+use Filament\Forms\Components\Section;
 
 class LeaderResource extends Resource
 {
@@ -30,7 +31,12 @@ class LeaderResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name'),
+                Section::make('Main Info')
+                ->columns(2)
+                ->schema([
+                TextInput::make('name')
+                ->columnSpan(2)
+                ->required(),
                 Select::make('position')
                 ->options([
                     'Lead Pastor' => 'Lead Pastor',
@@ -40,22 +46,43 @@ class LeaderResource extends Resource
                     'Deacon' => 'Deacon',
                     'Sunday School Teacher' => 'Sunday School Teacher',
                     'Volunteer' => 'Volunteer'
-                ]),
-                FileUpload::make('photo')
-                ->label('Leader Image'),
-                TextInput::make('phone'),
-                TextInput::make('email'),
-                TextInput::make('twitter'),
-                TextInput::make('facebook'),
-                TextInput::make('instagram'),
-                RichEditor::make('bio'),
+                ])
+                ->columnSpan(2),
                 Checkbox::make('pastor')
-                ->label('On the pastoral team?'),
+                ->label('On the pastoral team?')
+                ->columnSpan(1),
                 Checkbox::make('lead_pastor')
-                ->label('Is the lead pastor?'),
+                ->label('Is the lead pastor?')
+                ->columnSpan(1),
                 Checkbox::make('deacon')
-                ->label('On the deacon board?'),
-
+                ->label('On the deacon board?')
+                ->columnSpan(1),
+            ]),
+            Section::make('Image')
+            ->schema([
+                FileUpload::make('photo')
+                ->label('Leader Image')
+                ->required(),
+            ]),
+            Section::make('Contact Info')
+            ->columns(2)
+            ->schema([
+                TextInput::make('phone')
+                    ->columnSpan(1),
+                TextInput::make('email')
+                    ->columnSpan(1),
+                TextInput::make('twitter')
+                    ->columnSpan(1),
+                TextInput::make('facebook')
+                    ->columnSpan(1),
+                TextInput::make('instagram')
+                    ->columnSpan(1),
+            ]),
+            Section::make('Content')
+            ->schema([
+                RichEditor::make('bio')
+                ->required(),
+            ])
             ]);
     }
 

@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Announcement;
 use App\Models\Ministry;
+use App\Models\Event;
 
 class HomePageController extends Controller
 {
@@ -12,7 +12,9 @@ class HomePageController extends Controller
     {
         $today = now();
         $ministries = Ministry::where('homepage', true)->limit(4)->get();
-        $announcement = Announcement::where('start', '<=', $today)->where('end', '>=', $today)->first();
-        return view('welcome', compact('announcement', 'ministries'));
+        // Get the next upcoming event that is on the homepage
+        $event = Event::where('start_date', '>=', $today)->where('on_homepage', true)->orderBy('start_date', 'asc')->first();
+     
+        return view('welcome', compact('ministries', 'event'));
     }
 }

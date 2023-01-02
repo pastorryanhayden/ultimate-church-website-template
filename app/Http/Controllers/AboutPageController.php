@@ -12,8 +12,6 @@ class AboutPageController extends Controller
     {
         $today = now();
         $leaders = Leader::where('pastor', true)->get();
-        
-        $announcement = Announcement::where('start', '<=', $today)->where('end', '>=', $today)->first();
-        return view('about', compact('announcement', 'leaders'));
+        return view('about', compact('leaders'));
     }
 }

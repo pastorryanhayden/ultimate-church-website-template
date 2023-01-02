@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('ministries', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('slug')->unique();
             $table->string('for')->default('kids');
             $table->foreignId('leader_id')->nullable();
             $table->mediumText('body')->nullable();

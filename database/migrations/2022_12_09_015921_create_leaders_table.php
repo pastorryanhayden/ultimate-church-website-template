@@ -23,6 +23,9 @@ return new class extends Migration
             $table->string('facebook')->nullable();
             $table->string('twitter')->nullable();
             $table->string('instagram')->nullable();
+            $table->boolean('pastor')->default(0);
+            $table->boolean('lead_pastor')->default(0);
+            $table->boolean('deacon')->default(0);
             $table->text('bio')->nullable();
             $table->timestamps();
         });

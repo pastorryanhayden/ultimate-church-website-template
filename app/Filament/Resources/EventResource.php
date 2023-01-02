@@ -3,6 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\EventResource\Pages;
+use Filament\Resources\Pages\CreateRecord;
 use App\Filament\Resources\EventResource\RelationManagers;
 use App\Models\Event;
 use Filament\Forms;
@@ -21,6 +22,10 @@ use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\FileUpload;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
+use Illuminate\Support\Str;
+use Filament\Forms\Components\Section;
+
+use Closure;
 
 class EventResource extends Resource
 {
@@ -28,22 +33,38 @@ class EventResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-calendar';
 
+    public ?string $title = '';
+    // public ?string $slug = '';
+
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                TextInput::make('title'),
+
+                Section::make('Details')
+                ->columns(4)
+                ->schema([
+                TextInput::make('title')
+                    ->reactive()
+                    ->required()
+                    ->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state)))
+                    ->columnSpan(2),
+                TextInput::make('slug')
+                    ->columnSpan(2),
                 DatePicker::make('start_date')
                     ->label('Date')
                     ->firstDayOfWeek(7)
-                    ->required(),
+                    ->required()
+                    ->columnSpan(2),
                 DatePicker::make('end_date')
                     ->label('End Date (if multiday)')
-                    ->firstDayOfWeek(7),
+                    ->firstDayOfWeek(7)
+                    ->columnSpan(2),
                 Textarea::make('description')
                     ->required()
                     ->minLength(10)
-                    ->maxLength(240),
+                    ->maxLength(240)
+                    ->columnSpan(4),
                 Select::make('for')
                     ->label('The ministry is for...')
                     ->default('everyone')
@@ -57,11 +78,23 @@ class EventResource extends Resource
                         'college' => 'college',
                         'boys' => 'boys',
                         'girls' => 'girls'
-                    ]),
+                    ])
+                    ->columnSpan(3),
                 Checkbox::make('on_homepage')
-                    ->label('Show on homepage?'),
-                FileUpload::make('photo'),
-                RichEditor::make('body')
+                    ->label('Show on homepage?')
+                    ->columnSpan(3),
+                ]),
+                Section::make('Photo')
+                ->schema([
+                    FileUpload::make('photo'),
+                ]),
+                Section::make('Content')
+                ->schema([
+                    RichEditor::make('body')
+                    ->required(),
+                ]),
+               
+                
             ]);
     }
 

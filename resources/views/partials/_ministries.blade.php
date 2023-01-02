@@ -1,7 +1,8 @@
+@if($ministries->count() > 1)
 <section class="ministries">
     <hgroup>
     <h2>Something for you and your family</h2>
-    <a href="#">See All Ministries @include('partials.icons.chevright')</a>
+    <a href="/ministries">See All Ministries @include('partials.icons.chevright')</a>
    
     </hgroup>
      <div class="grid">
@@ -16,3 +17,4 @@
     </article>
      @endforeach
 </section>
+@endif

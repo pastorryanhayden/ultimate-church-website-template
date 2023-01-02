@@ -15,6 +15,7 @@
      @include('partials._announcements')
      <header>
         @include('partials._main-nav')
+        @yield('header')
     </header>
     <main class="prose">
         @yield('content')
