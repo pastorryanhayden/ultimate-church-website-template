@@ -13,7 +13,7 @@
 <p>We believe that the Bible is our ultimate authority and that God has provided us with everythign we need to live sucessful Christian lives in His word.  So we make a lot of the Bible and spend most of our gathered time in Bible preaching and teaching.</p>
 <img src="/images/traditional.jpg" alt="">
 <h3>Traditional</h3>
-<p>At Bible Baptist, we honor the traditions of our past.  We sing from hymn books.  We have a choir. We sit on pews.  Many of our people still dress up in "church clothes."  While we not stuffy or legalistic about these things, we are definitely a traditional church.</p>
+<p>At Bible Baptist, we honor the traditions of our past.  We sing from hymn books.  We have a choir. We sit on pews.  Many of our people still dress up in "church clothes."  While we are not stuffy or legalistic about these things, we are definitely a traditional church.</p>
 <p>A typical service at Bible Baptist lasts around an hour.  We sing, we pray, we preach and we break for fellowship.  Everything about our services is intended to be as simple and as close to what the apostles did thousands of years ago as possible.</p>
 </section>
 <section>
