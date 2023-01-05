@@ -56,14 +56,20 @@ body.home {
             h1 {
             color: white;
             text-align: center;
-            margin: 0;
-            @include text-4xl;
+            margin: $s16 0 0 0;
+            @include text-2xl;
 
             max-width: 25ch;
             line-height: 1.5;
-            z-index: 30;
+            z-index: 10;
+            @media screen and (min-width: $extra-small)
+            {
+                margin: 0;
+                @include text-4xl;
+            }
             @media screen and (min-width: $medium)
             {
+                margin: 0;
                 @include text-6xl;
             }
 
