@@ -6,5 +6,8 @@
     @if($showEvents)
     <li><a href="/events">Calendar</a></li>
     @endif
+    @if($showDevotions)
+    <li><a href="/devotion">Devotions</a></li>
+    @endif
     {{--<li><a href="#">Sermons</a></li> --}}
 </ul>
