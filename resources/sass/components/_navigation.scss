@@ -68,7 +68,7 @@ nav.main-navigation {
         @media screen and (min-width: $large) {
             ul {
                 display: flex;
-                justify-content: end;
+                justify-content: flex-end;
             }
         }
 }

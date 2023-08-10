@@ -10,7 +10,7 @@ class EditMinistry extends EditRecord
 {
     protected static string $resource = MinistryResource::class;
 
-    protected function getActions(): array
+    protected function getHeaderActions(): array
     {
         return [
             Actions\DeleteAction::make(),

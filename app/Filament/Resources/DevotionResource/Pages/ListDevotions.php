@@ -10,7 +10,7 @@ class ListDevotions extends ListRecords
 {
     protected static string $resource = DevotionResource::class;
 
-    protected function getActions(): array
+    protected function getHeaderActions(): array
     {
         return [
             Actions\CreateAction::make(),

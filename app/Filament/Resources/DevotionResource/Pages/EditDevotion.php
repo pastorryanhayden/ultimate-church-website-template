@@ -10,7 +10,7 @@ class EditDevotion extends EditRecord
 {
     protected static string $resource = DevotionResource::class;
 
-    protected function getActions(): array
+    protected function getHeaderActions(): array
     {
         return [
             Actions\DeleteAction::make(),

@@ -7,18 +7,23 @@
 <article class="devotions-list-item">
     <div class="content">
         <div class="details">
-            <h3>{{ $devotion->title }}</h3>
+            <h3><a href="/devotion/{{ $devotion->id }}">{{ $devotion->title }}</a></h3>
             <p class="dates">{{ \Carbon\Carbon::parse($devotion->date)->format('F j, Y') }}</p>
-            <p class="description">{{ $devotion->description }}</p>
-            <a class="learn-more" href="/devotion/{{ $devotion->slug }}">Read More @include('partials.icons.chevright')</a>
+            <p class="description">{{ $devotion->text }}</p>
+            <a class="learn-more" href="/devotion/{{ $devotion->id }}">Read More @include('partials.icons.chevright')</a>
         </div>
-        @if($devotion->photo)
-        <img src="{{ asset('storage/'. $devotion->photo) }}" alt="{{ $devotion->title }}">
-        @else
-        <img src="/images/placeholder.jpg" alt="placeholder image">
+        @if($devotion->image_url)
+        <img src="{{ asset('storage/'. $devotion->image_url) }}" alt="{{ $devotion->title }}">
+        @elseif($devotion->youtube_id)
+         <img src="http://img.youtube.com/vi/{{ $devotion->youtube_id }}/maxresdefault.jpg" alt="placeholder image">
+        @else 
+        <img src="/images/devotional-placeholder.jpg" alt="placeholder image">
         @endif
     </div>
 </article>
 @endforeach
+
+
+{{ $devotions->links('partials._pagination') }}
 
 @endsection

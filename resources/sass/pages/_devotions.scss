@@ -58,6 +58,11 @@ article.devotions-list-item {
         @include text-4xl;
         color: $gray-800;
         max-width: 20ch;
+
+        & a {
+            text-decoration: none;
+            color: $gray-800;
+        }
     }
     p.dates {
         @include text-lg;
@@ -89,4 +94,74 @@ article.devotions-list-item {
         }
     }
     
+}
+
+h1.devotion-header {
+    a {
+        color: $gray-600;
+        font-weight: 500;
+        text-decoration: none;
+        border-bottom: 1px dashed $gray-600;
+    }
+}
+
+div.devotion {
+    img.header-image {
+        margin-bottom: $s6;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    h1 {
+        margin: $s6 auto;
+        text-align: center;
+    }
+    div.video-wrapper {
+        text-align: center;
+        margin-bottom: $s6;
+        
+        iframe {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    article.prose {
+        blockquote {
+            background-color: $primary-100;
+            color: $primary-900;
+            margin: $s4 $s2;
+            padding: $s2;
+            font-style: italic;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: $s6;
+            margin-top: $s2;
+            margin-bottom: $s2;
+            @include font-serif;
+
+            li {
+                @include font-serif;
+                margin-bottom: $s2;
+            }
+        }
+    }
+    hr {
+        border-bottom: 1px solid $gray-200;
+    }
+    div.details {
+        border-top: 1px solid $gray-200;
+        border-bottom: 1px solid $gray-200;
+        text-align: center;
+        padding: $s2;
+        margin-botttom: $s8;
+    }
+    figure.audio {
+        margin: $s6 auto;
+        text-align: center;
+        audio {
+            margin-top: $s2;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 }

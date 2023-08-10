@@ -6,9 +6,9 @@ use App\Filament\Resources\MinistryResource\Pages;
 use App\Filament\Resources\MinistryResource\RelationManagers;
 use App\Models\Ministry;
 use Filament\Forms;
-use Filament\Resources\Form;
+use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Resources\Table;
+use Filament\Tables\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -29,7 +29,7 @@ class MinistryResource extends Resource
 {
     protected static ?string $model = Ministry::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-view-grid';
+    protected static ?string $navigationIcon = 'heroicon-o-squares-2x2';
 
     public ?string $name = '';
 
@@ -46,8 +46,9 @@ class MinistryResource extends Resource
                     ->columnSpan(2)
                     ->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state))),
                 TextInput::make('slug')
+                    ->columnSpan(2)
                     ->disabled()
-                    ->columnSpan(2),
+                    ->dehydrated(),
                 Textarea::make('meeting_info')
                 ->label('Meeting Info')
                 ->columnSpan(4),
