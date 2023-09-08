@@ -8,8 +8,8 @@ use App\Models\Devotion;
 class DevotionController extends Controller
 {
     public function index(){
-        // Get all the devotions
-        $devotions = Devotion::where('published', true)->orderBy('published_at', 'desc')->paginate(5);
+        // Get all the devotions that are published and the day is less than or equal to today
+        $devotions = Devotion::where('published', true)->where('published_at', '<=', now())->orderBy('published_at', 'desc')->paginate(5);
         // If the devotion has a youtube_url then get the youtube_id which is between the = and the & in the url
         foreach($devotions as $devotion){
             if($devotion->video_url){
