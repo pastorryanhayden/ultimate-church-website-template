@@ -24,7 +24,9 @@
   <audio controls src="{{ asset('storage/'. $devotion->audio_url) }}">
     <a href="{{ asset('storage/'. $devotion->audio_url) }}"> Download audio </a>
   </audio>
+  <a href="{{ asset('storage/'. $devotion->audio_url) }}"> Download audio </a>
 </figure>
+
 @endif 
 <article class="prose">
 {!!  $devotion->body !!}
