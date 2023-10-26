@@ -1,0 +1,125 @@
+
+nav.main-navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 2rem 1rem;
+        margin: 0 auto;
+        color: $gray-600;
+        max-width: 1200px;
+        text-align: left;
+        position: absolute; 
+        z-index: 20;
+        top: 0;
+        @media screen and (min-width: $large)
+        {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        a {
+            color: $gray-600;;
+            text-decoration: none;
+            text-align: left;
+        }
+        a.logo {
+            
+            text-transform: uppercase;
+            text-align: center;
+            width: inherit;
+            margin-bottom: $s4;
+            @include text-2xl;
+            @include tracking-wide;
+            @media screen and (min-width: $large)
+            {
+                text-align: left;
+                margin: 0;
+            }
+        }
+        button.mobile-toggle {
+            display: block;
+            background: none;
+            border: none;
+            color: $gray-600;;
+            cursor: pointer;
+            text-transform: uppercase;
+            @include text-xl;
+            @include tracking-wide;
+            @include font-sans;
+            @media screen and (min-width: $large) {
+                display: none;
+            }
+        }
+        ul {
+            display: none;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: inherit;
+            li {
+                margin: 0 1rem;
+                @include text-xl;
+                @include transition;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        @media screen and (min-width: $large) {
+            ul {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+}
+aside.mobile-menu {
+    height: 100vh;
+    width: 100%;
+    background: $gray-100;
+    background-color: $gray-100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    padding: $s8;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media screen and (min-width: $large) {
+    display: none;
+    @include transition
+    }
+    button.close {
+        color: $gray-600;
+        width: $s12;
+        height: $s12;
+        position: absolute;
+        top: $s4;
+        right: $s4;
+        cursor: pointer;
+        background-color: $gray-100;
+    }
+    ul {
+        width: 100%;
+    }
+    ul li {
+        @include text-2xl;
+        text-align: center;
+        width: 100%;
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $gray-600;
+            // margin: $s8 0;
+            display: block;
+            padding: $s4 $s4;
+            @include transition;
+        &:hover {
+            background-color: $gray-200;
+        }
+        }
+    }
+}

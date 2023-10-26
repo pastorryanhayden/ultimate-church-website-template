@@ -1,0 +1,29 @@
+body.page header {
+    background-color: $white;
+    height: $s40;
+    display: flex;
+    justify-content: center;
+    padding-top: $s40;
+    padding-bottom: $s16;
+    border-bottom: 1px solid $gray-200;
+    margin-bottom: $s12;
+    @media screen and (min-width: $large) {
+        padding-top: $s32;
+        padding-bottom: $s24;
+        margin-bottom: $s12;
+    }
+
+    h1 {
+        @include font-sans;
+        @include font-bold;
+        @include text-2xl;
+        color: $gray-800;
+     
+
+        @media screen and (min-width: $large) {
+            @include text-4xl;
+            
+        }
+        
+    }
+}
