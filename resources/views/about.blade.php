@@ -6,7 +6,7 @@
 <p>If you are planning on visiting a service at Bible Baptist, you probably want to know what the services are like. Services at BBC could be described in the following four ways:</p>
 <img src="/images/gospel-centered.jpg" alt="">
 <h3>Gospel Centered</h3>
-<p>We beleive that the gospel (Christ's earning our Salvation through His work on the cross) is to be the central theme of our ministry.  The gospel is thus at the heart of everythign we do.  We preach it, sing about it, and try to work out its implications in our lives.  We send missionaries around the world to preach the gospel and meet weekly to help print and prepare Bibles and other gospel literature for them to use.</p>
+<p>We believe that the gospel (Christ's earning our Salvation through His work on the cross) is to be the central theme of our ministry.  The gospel is thus at the heart of everything we do.  We preach it, sing about it, and try to work out its implications in our lives.  We send missionaries around the world to preach the gospel and meet weekly to help print and prepare Bibles and other gospel literature for them to use.</p>
 <img src="/images/bible-based.jpg" alt="">
 <h3>Bible Based</h3>
 <p>At Bible Baptist we try to live up to our name and keep everything Bible based.  Every service will have a Bible message. Our pastors regularly preach expository sermons through books of the Bible.</p>
