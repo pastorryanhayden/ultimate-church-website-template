@@ -25,6 +25,8 @@ use Filament\Tables\Columns\ToggleColumn;
 use Illuminate\Support\Str;
 use Filament\Forms\Components\Section;
 
+
+
 use Closure;
 
 class EventResource extends Resource
@@ -35,6 +37,8 @@ class EventResource extends Resource
 
     public ?string $title = '';
     // public ?string $slug = '';
+
+   
 
     public static function form(Form $form): Form
     {
@@ -134,8 +138,5 @@ class EventResource extends Resource
         ];
     }    
 
-    public static function getEloquentQuery(): Builder
-    {
-        return parent::getEloquentQuery()->orderBy('start_date', 'desc');
-    }
+   
 }
