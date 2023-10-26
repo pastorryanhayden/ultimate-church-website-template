@@ -45,7 +45,7 @@ class EventResource extends Resource
                 ->columns(4)
                 ->schema([
                 TextInput::make('title')
-                    ->reactive()
+                    ->live(debounce: 500)
                     ->required()
                     ->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state)))
                     ->columnSpan(2),
