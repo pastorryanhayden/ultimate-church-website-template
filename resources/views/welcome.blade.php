@@ -16,8 +16,8 @@
         <header>
             <section class="top" style="background-image: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0, .5));">
             <div class="overlay"></div>
-            <video  autoplay muted loop poster="/storage/{{asset($site_global->header_image)}}">
-            <source src="/storage/{{asset($site_global->header_video)}}" type="video/mp4">
+            <video  autoplay muted loop poster="/storage/{{$site_global->header_image}}">
+            <source src="/storage/{{$site_global->header_video}}" type="video/mp4">
             </video>
             @include('partials._main-nav')
             <h1>{{ $site_global->heading }}</h1>
