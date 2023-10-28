@@ -1,14 +1,10 @@
+@if(count($site_global->action_links) > 0)
 <section class="actions">
+    @foreach($site_global->action_links as $action)
     <div>
-    <p>New to BBC?</p>
-        <a href="/about">Learn More</a>
+    <p>{{$action['link_subtext']}}</p>
+        <a href="{{$action['link_url']}}">{{$action['link_text']}}</a>
     </div>
-    <div>
-    <p>Can't Make It?</p>
-        <a href="https://www.youtube.com/@biblebaptistchurch7203/streams" target="blank">Watch Live</a>
-    </div>
-    <div>
-    <p>For Members</p>
-        <a href="https://tithe.ly/give?c=247580" target="blank">Give Online</a>
-    </div>
+    @endforeach
 </section>
+@endif 

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Ministry;
 use App\Models\Event;
 use App\Models\Devotion;
+use App\Models\SiteGlobal;
 
 class HomePageController extends Controller
 {
@@ -19,6 +20,7 @@ class HomePageController extends Controller
         $event = Event::where('start_date', '>=', $yesterday)->where('on_homepage', true)->orderBy('start_date', 'asc')->first();
         // Get all the devotions published in the last 30 days
         $recent_devotions = Devotion::where('published', true)->where('published_at', '>=', $today->subDays(30))->orderBy('created_at', 'desc')->limit(6)->get();   
-        return view('welcome', compact('ministries', 'event', 'recent_devotions'));
+        $site_global = SiteGlobal::first();
+        return view('welcome', compact('ministries', 'event', 'recent_devotions', 'site_global'));
     }
 }

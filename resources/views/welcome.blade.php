@@ -16,14 +16,13 @@
         <header>
             <section class="top" style="background-image: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0, .5));">
             <div class="overlay"></div>
-            <video  autoplay muted loop poster="/images/traditional.jpg">
-            <source src="/images/hero.mp4" type="video/mp4">
+            <video  autoplay muted loop poster="{{$site_global->header_image}}">
+            <source src="{{$site_global->header_video}}" type="video/mp4">
             </video>
             @include('partials._main-nav')
-            <h1>Find hope, purpose, and fellowship at BBC.</h1>
+            <h1>{{ $site_global->heading }}</h1>
         </section>
         </header>
-      
       
           @include('partials._actions')
           @include('partials._event')
