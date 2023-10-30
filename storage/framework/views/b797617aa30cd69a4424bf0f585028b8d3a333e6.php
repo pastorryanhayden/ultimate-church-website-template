@@ -16,8 +16,8 @@
         <header>
             <section class="top" style="background-image: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0, .5));">
             <div class="overlay"></div>
-            <video  autoplay muted loop poster="<?php echo e($site_global->header_image); ?>">
-            <source src="<?php echo e($site_global->header_video); ?>" type="video/mp4">
+            <video  autoplay muted loop poster="/storage/<?php echo e($site_global->header_image); ?>">
+            <source src="/storage/<?php echo e($site_global->header_video); ?>" type="video/mp4">
             </video>
             <?php echo $__env->make('partials._main-nav', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
             <h1><?php echo e($site_global->heading); ?></h1>

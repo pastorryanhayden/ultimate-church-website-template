@@ -121,4 +121,9 @@ class LeaderResource extends Resource
             'edit' => Pages\EditLeader::route('/{record}/edit'),
         ];
     }    
+
+    protected static ?string $navigationGroup = 'Setup';
+
+    protected static ?int $navigationSort = 5;
+
 }

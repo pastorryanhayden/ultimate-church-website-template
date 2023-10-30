@@ -1,19 +1,10 @@
 <?php $__env->startSection('content'); ?>
 <section>
-<h2>What are your services like?</h2>
-<p>If you are planning on visiting a service at Bible Baptist, you probably want to know what the services are like. Services at BBC could be described in the following four ways:</p>
-<img src="/images/gospel-centered.jpg" alt="">
-<h3>Gospel Centered</h3>
-<p>We believe that the gospel (Christ's earning our Salvation through His work on the cross) is to be the central theme of our ministry.  The gospel is thus at the heart of everything we do.  We preach it, sing about it, and try to work out its implications in our lives.  We send missionaries around the world to preach the gospel and meet weekly to help print and prepare Bibles and other gospel literature for them to use.</p>
-<img src="/images/bible-based.jpg" alt="">
-<h3>Bible Based</h3>
-<p>At Bible Baptist we try to live up to our name and keep everything Bible based.  Every service will have a Bible message. Our pastors regularly preach expository sermons through books of the Bible.</p>
-<p>We believe that the Bible is our ultimate authority and that God has provided us with everythign we need to live sucessful Christian lives in His word.  So we make a lot of the Bible and spend most of our gathered time in Bible preaching and teaching.</p>
-<img src="/images/traditional.jpg" alt="">
-<h3>Traditional</h3>
-<p>At Bible Baptist, we honor the traditions of our past.  We sing from hymn books.  We have a choir. We sit on pews.  Many of our people still dress up in "church clothes."  While we are not stuffy or legalistic about these things, we are definitely a traditional church.</p>
-<p>A typical service at Bible Baptist lasts around an hour.  We sing, we pray, we preach and we break for fellowship.  Everything about our services is intended to be as simple and as close to what the apostles did thousands of years ago as possible.</p>
+<h2><?php echo e($about->what_services_like_title); ?></h2>
+<?php echo $about->what_services_like; ?>
+
 </section>
+<?php if($about->show_pastors): ?>
 <section>
 <h2>Who are your pastors?</h2>
 <?php $__currentLoopData = $leaders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $leader): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -40,6 +31,7 @@
 <?php endif; ?> 
 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 </section>
+<?php endif; ?> 
 <section>
 <h2>What is your church like?</h2>
 <h3>Friendly</h3>

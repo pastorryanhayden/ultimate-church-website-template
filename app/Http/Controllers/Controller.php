@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
+use App\Models\SiteGlobal;
 use Illuminate\Routing\Controller as BaseController;
 use App\Models\Announcement;
 use App\Models\Event;
@@ -30,11 +31,15 @@ class Controller extends BaseController
 
         // Show ministries if there are any.
         $showMinistries = Ministry::count() > 0;
+
+        // Get globals
+        $site_global = SiteGlobal::first();
         
         View::share('showMinistries', $showMinistries);
         View::share('showEvents', $showEvents);
         View::share('announcement', $announcement);
         View::share('showDevotions', $showDevotions);
+        View::share('site_global', $site_global);
     }
    
 }

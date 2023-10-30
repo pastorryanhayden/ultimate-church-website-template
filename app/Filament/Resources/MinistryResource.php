@@ -127,4 +127,9 @@ class MinistryResource extends Resource
             'edit' => Pages\EditMinistry::route('/{record}/edit'),
         ];
     }    
+
+    protected static ?string $navigationGroup = 'Setup';
+
+    protected static ?int $navigationSort = 4;
+
 }

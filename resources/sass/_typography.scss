@@ -19,6 +19,10 @@ article img {
     border: 4px solid $gray-400;
 }
 
+section figcaption {
+    display: none;
+}
+
 p {
     @include font-serif;
     @include text-base;
@@ -47,6 +51,12 @@ h3 {
     margin-top: $s6;
     @include font-bold;
     color: $gray-700;
+    display: block;
+}
+
+h3 figure {
+ display: inline-block;
+ margin-bottom: $s6;   
 }
 h4 {
     @include text-xl;

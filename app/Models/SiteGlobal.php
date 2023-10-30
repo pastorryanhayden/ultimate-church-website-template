@@ -13,7 +13,7 @@ class SiteGlobal extends Model
 
     protected $casts = [
         'action_links' => 'array',
-        'footer_links' => 'array',
+        'useful_links' => 'array',
     ];
     
 }

@@ -20,6 +20,7 @@ footer {
             font-style: italic;
             @include font-sans;
         }
+        
     }
     section.grid {
         padding: 0 $s6;
@@ -71,6 +72,11 @@ footer {
                 color: $white;
                 text-decoration: underline;
             }
+        }
+        div.schedule h3 {
+            @include text-lg;
+            @include font-bold;
+            @include tracking-wide;
         }
     }
     svg {

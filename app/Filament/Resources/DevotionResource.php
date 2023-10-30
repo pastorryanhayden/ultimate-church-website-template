@@ -31,7 +31,7 @@ class DevotionResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-book-open';
 
-    protected static ?string $navigationGroup = 'Devotions';
+    protected static ?string $navigationGroup = 'Time Sensative';
 
 
     public static function form(Form $form): Form

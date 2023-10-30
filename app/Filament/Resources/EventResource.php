@@ -38,7 +38,7 @@ class EventResource extends Resource
     public ?string $title = '';
     // public ?string $slug = '';
 
-   
+    protected static ?string $navigationGroup = 'Time Sensative';
 
     public static function form(Form $form): Form
     {

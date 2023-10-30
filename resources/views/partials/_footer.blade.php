@@ -9,35 +9,26 @@
         <section class="grid">
             <article>
             <h3>Bible Baptist</h3>
-            <p>The best way to experience Bible Baptist is by visiting us for one of our weekly services. We want to extend a personal invitation to you and your family to join us this week for church!</p>
+            {!! $site_global->footer_about !!}
             </article>
             <article>
             <h3>Schedule</h3>
-            <h4>Sunday Schedule</h4>
-            <p>9:30 AM - Sunday School</p>
-            <p>10:30 AM - Morning Worship</p>
-            <p>6:00 PM - Evening Worship*</p>
-            <p class="explanation">On the first Sunday of the month, there is no evening service.  Instead, a meal is provided after the morning service and an afternoon service is held at 1PM.</p>
-             <h4>Midweek Schedule</h4>
-             <p>Wednesday @ 7PM - Midweek Service</p>
-             <p>Thursday @ 9AM - Seed Sowers</p>
-             <p>Thursday @ 6:30PM - Youth Group/Awana</p>
+            <div class="schedule">
+            {!! $site_global->footer_schedule !!}
+            </div>
             </article>
             <article>
             <h3>Contact Us</h3>
-            <p>@include('partials.icons.place') 3401 Marion Ave. Mattoon, IL 61938</p>
-            <p>@include('partials.icons.phone')  (217) 499-0822</p>
-            <p>@include('partials.icons.mail')  office@biblebaptistmattoon.org</p>
-            <p>@include('partials.icons.link')  https://biblebaptistmattoon.org</p>
+            <p>@include('partials.icons.place') {{$site_global->church_address}}</p>
+            <p>@include('partials.icons.phone')  {{$site_global->church_phone}}</p>
+            <p>@include('partials.icons.mail') {{$site_global->church_email}}</p>
+            <p>@include('partials.icons.link') {{$site_global->church_url}}</p>
             </article>
             <article>
             <h3>Useful Links</h3>
-             <p>@include('partials.icons.chevright') <a href="https://tithe.ly/give?c=247580" target="blank">Give Online</a></p>
-             <p>@include('partials.icons.chevright') <a href="https://www.youtube.com/@biblebaptistchurch7203/streams" target="blank">Watch Live</a></p>
-             <p>@include('partials.icons.chevright') <a href="#">Church Facebook</a></p>
-            
-             <p>@include('partials.icons.chevright') <a href="/documents/constitution.pdf" target="blank">Church Constitution</a></p>
-             <p>@include('partials.icons.chevright') <a href="/documents/ChurchCovenant.pdf" target="blank">Church Covenant</a></p>
+            @foreach($site_global->useful_links as $link)
+             <p>@include('partials.icons.chevright') <a href="{{$link['URL']}}" target="blank">{{$link['text']}}</a></p>
+             @endforeach
             </article>
         </section>
         <section class="copywrite">
