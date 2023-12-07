@@ -16,14 +16,13 @@
         <header>
             <section class="top" style="background-image: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0, .5));">
             <div class="overlay"></div>
-            <video  autoplay muted loop poster="/images/traditional.jpg">
-            <source src="/images/hero.mp4" type="video/mp4">
+            <video  autoplay muted loop poster="/storage/<?php echo e($site_global->header_image); ?>">
+            <source src="/storage/<?php echo e($site_global->header_video); ?>" type="video/mp4">
             </video>
             <?php echo $__env->make('partials._main-nav', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-            <h1>Find hope, purpose, and fellowship at BBC.</h1>
+            <h1><?php echo e($site_global->heading); ?></h1>
         </section>
         </header>
-      
       
           <?php echo $__env->make('partials._actions', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
           <?php echo $__env->make('partials._event', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>

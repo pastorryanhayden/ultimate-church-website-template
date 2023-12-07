@@ -1,14 +1,10 @@
+<?php if(count($site_global->action_links) > 0): ?>
 <section class="actions">
+    <?php $__currentLoopData = $site_global->action_links; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $action): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
     <div>
-    <p>New to BBC?</p>
-        <a href="/about">Learn More</a>
+    <p><?php echo e($action['link_subtext']); ?></p>
+        <a href="<?php echo e($action['link_url']); ?>"><?php echo e($action['link_text']); ?></a>
     </div>
-    <div>
-    <p>Can't Make It?</p>
-        <a href="https://www.youtube.com/@biblebaptistchurch7203/streams" target="blank">Watch Live</a>
-    </div>
-    <div>
-    <p>For Members</p>
-        <a href="https://tithe.ly/give?c=247580" target="blank">Give Online</a>
-    </div>
-</section><?php /**PATH /Users/ryanhayden/code/church/biblebaptistmattoon.org/resources/views/partials/_actions.blade.php ENDPATH**/ ?>
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+</section>
+<?php endif; ?> <?php /**PATH /Users/ryanhayden/code/church/biblebaptistmattoon.org/resources/views/partials/_actions.blade.php ENDPATH**/ ?>
