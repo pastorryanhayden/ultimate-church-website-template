@@ -7,7 +7,11 @@
 </section>
 @if($about->show_pastors)
 <section>
+@if($leaders->count() > 1)
 <h2>Who are your pastors?</h2>
+@else 
+h2>Who is your pastor?</h2>
+@endif
 @foreach ($leaders as $leader)
     
 @if($leader->lead_pastor == true)
