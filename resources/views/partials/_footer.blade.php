@@ -3,12 +3,12 @@
         <iframe src="{{$site_global->map_url}}" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 @endif 
         <hgroup>
-        <h2>Experience Bible Baptist</h2>
+        <h2>Experience {{ env('CHURCH_NAME') }}</h2>
         <h4>Join us this week for church</h4>
         </hgroup>
         <section class="grid">
             <article>
-            <h3>Bible Baptist</h3>
+            <h3>{{ env('CHURCH_NAME') }}</h3>
             {!! $site_global->footer_about !!}
             </article>
             <article>
