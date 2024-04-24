@@ -36,14 +36,12 @@
 <h2>{{ $about->what_church_like_title }}</h2>
 {!! $about->what_church_like !!}
 </section>
+@endif 
+@if($about->other_info)
 <section>
-<h2>Other Information</h2>
-<p>Below you'll find links to important information that can answer other questions you may have about Bible Baptist.</p>
-<ul class="link-list">
-<li><a href="/documents/sof.pdf" target="blank">Statement of Faith</a></li>
-<li><a href="/documents/ChurchCovenant.pdf" target="blank">Church Covenant</a></li>
-<li><a href="/documents/constitution.pdf" target="blank">Church Constituation</a></li>
-</ul>
+<h2>{{ $about->other_info_title }}</h2>
+{!! $about->other_info !!}
 </section>
 @endif 
+
 @endsection
