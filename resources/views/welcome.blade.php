@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
          @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     </head>
-    <body class="home">
+    <body class="home bg-white w-full">
     @include('partials._mobile-menu')
     @include('partials._announcements')
         <header>

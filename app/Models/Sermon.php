@@ -14,7 +14,7 @@ class Sermon extends Model
         'slug',
         'speaker_id',
         'series_id',
-        'service',
+        'service_id',
         'manuscript',
         'description',
         'mp3',
@@ -22,8 +22,7 @@ class Sermon extends Model
         'handout',
         'featured',
         'date',
-        'video_url',
-        'views'
+        'youtube_id',
     ];
 
     protected $casts = [
@@ -40,6 +39,10 @@ class Sermon extends Model
     {
         return $this->belongsTo(Series::class);
     }
+    public function service()
+    {
+        return $this->belongsTo(Service::class);
+    }
     public function book()
     {
         return $this->belongsToMany(Book::class);
@@ -47,6 +50,10 @@ class Sermon extends Model
     public function chapter()
     {
         return $this->belongsToMany(Chapter::class)->withPivot('verseStart', 'verseEnd');
+    }
+    public function chapterSermons()
+    {
+        return $this->hasMany(ChapterSermon::class);
     }
     public function complete()
     {

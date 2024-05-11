@@ -5,6 +5,8 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\SermonResource\Pages;
 use App\Filament\Resources\SermonResource\RelationManagers;
 use App\Models\Sermon;
+use App\Models\Speaker;
+use App\Models\Series;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -12,6 +14,18 @@ use Filament\Tables\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Radio;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\MarkdownEditor;
+use Filament\Forms\Set;
+use Filament\Forms\Get;
+use Illuminate\Support\Str;
+use Filament\Forms\Components\Checkbox;
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\Repeater;
 
 class SermonResource extends Resource
 {
@@ -25,7 +39,147 @@ class SermonResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Section::make('Main Details')
+                ->aside()
+                ->description('The main details of the sermon.')
+                ->columns(2)
+                ->schema([
+                    TextInput::make('title')
+                    ->columnSpan(1)
+                    ->live(onBlur: true)
+                    ->afterStateUpdated(function (Get $get, Set $set, ?string $old, ?string $state) {
+                        if (($get('slug') ?? '') !== Str::slug($old)) {
+                            return;
+                        }
+                    
+                        $set('slug', Str::slug($state));
+                    }),
+                    TextInput::make('slug')
+                    ->disabled()
+                    ->dehydrated()
+                    ->columnSpan(1),
+                    Textarea::make('description')
+                    ->columnSpan(2),
+                    DatePicker::make('date')
+                    ->label('Date of Sermon')
+                    ->columnSpan(1),
+                    Checkbox::make('featured')
+                    ->columnSpan(1),
+                    Select::make('speaker')
+                    ->columnSpan(2)
+                    ->relationship(name: 'speaker', titleAttribute: 'name')
+                    ->label('Speaker')
+                    ->preload()
+                    ->createOptionForm([
+                        TextInput::make('name')
+                        ->reactive()
+                        ->live(onBlur: true)
+                        ->required()
+                        ->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state))),
+                    TextInput::make('slug')
+                    ->disabled()
+                    ->dehydrated(),
+                    Select::make('position')
+                ->options([
+                    'Lead Pastor' => 'Lead Pastor',
+                    'Youth Pastor' => 'Youth Pastor',
+                    'Music Pastor' => 'Music Pastor',
+                    'Pastoral Apprentice' => 'Pastoral Apprentice',
+                    'Deacon' => 'Deacon',
+                    'Sunday School Teacher' => 'Sunday School Teacher',
+                    'Missionary' => 'Missionary',
+                    'Evangelist' => 'Evangelist',
+                    'Special Speaker' => 'Special Speaker',
+                    'Elder' => 'Elder',
+                    'Other' => 'Other',
+                ])
+                    ])
+                    ->searchable(),
+                    Select::make('series')
+                    ->columnSpan(2)
+                    ->relationship(name: 'series', titleAttribute: 'title')
+                    ->label('Series')
+                    ->preload()
+                    ->createOptionForm([
+                        TextInput::make('title')
+                        ->reactive()
+                        ->required()
+                        ->live(onBlur: true)
+                        ->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state))),
+                    TextInput::make('slug')
+                    ->disabled()
+                    ->dehydrated(),
+                    Textarea::make('description')
+                        ->required(),   
+                    ])
+                    ->searchable(),
+                    Select::make('service')
+                    ->columnSpan(2)
+                    ->relationship(name: 'service', titleAttribute: 'name')
+                    ->label('Service')
+                    ->preload()
+                    
+                    ->createOptionForm([
+                        TextInput::make('name')
+                        ->required(),
+                    ])
+                    ->editOptionForm([
+                        TextInput::make('name')
+                        ->required(),
+                    ])
+                    ]),
+                    Section::make('Bible Texts')
+                    ->aside()
+                    ->description('The Bible chapter for this text.  This allows us to filter and sort sermons by Bible Text.')
+                    ->columns(1)
+                    ->schema([
+                        Repeater::make('chapterSermons')
+                        ->label('Texts')
+                        ->relationship()
+                        ->addActionLabel('Add text')
+                        ->defaultItems(0)
+                        ->columns(3)
+                        ->schema([
+                            Select::make('book')
+                        ->columnSpan(1)
+                        ->live(onBlur: true)
+                        ->label('Book')
+                        ->relationship(name: 'book', titleAttribute: 'name', modifyQueryUsing: function (Builder $query) {
+                            $query->orderBy('id');
+                        })
+                        ->searchable()
+                        ->preload(),
+                        Select::make('chapter')
+                        ->columnSpan(1)
+                        ->label('Chapter')
+                        ->relationship(name: 'chapter', titleAttribute: 'number', modifyQueryUsing: function (Builder $query, Get $get) {
+                            $query->where('book_id', $get('book'));
+                        })
+                        ->searchable()
+                        ->preload()
+                        ->hidden(fn (Get $get): bool =>  $get('book') === null),
+                        TextInput::make('verse')
+                        ->columnSpan(1)
+                        ->label('Verses')
+                        ->placeholder('1-4')
+                        ->hidden(fn (Get $get): bool =>  $get('book') === null)
+                        ])
+                    ]),
+                    Section::make('Media')
+                    ->aside()
+                    ->description('The audio and video files for the sermon.')
+                    ->columns(2)
+                    ->schema([
+
+                    ]),
+                    Section::make('Text Content')
+                    ->aside()
+                    ->description('The text content for the sermon (optional).')
+                    ->columns(1)
+                    ->schema([
+                        MarkdownEditor::make('manuscript')
+
+                    ]),
             ]);
     }
 
