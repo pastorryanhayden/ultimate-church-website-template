@@ -26,6 +26,10 @@ use Illuminate\Support\Str;
 use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\FileUpload;
+use App\Services\GetYoutubeIdService;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\SelectFilter;
 
 class SermonResource extends Resource
 {
@@ -40,12 +44,12 @@ class SermonResource extends Resource
         return $form
             ->schema([
                 Section::make('Main Details')
-                ->aside()
+                // ->aside()
                 ->description('The main details of the sermon.')
-                ->columns(2)
+                ->columns(['md' => 2])
                 ->schema([
                     TextInput::make('title')
-                    ->columnSpan(1)
+                    ->columnSpan(['md' => 1])
                     ->live(onBlur: true)
                     ->afterStateUpdated(function (Get $get, Set $set, ?string $old, ?string $state) {
                         if (($get('slug') ?? '') !== Str::slug($old)) {
@@ -57,14 +61,14 @@ class SermonResource extends Resource
                     TextInput::make('slug')
                     ->disabled()
                     ->dehydrated()
-                    ->columnSpan(1),
+                    ->columnSpan(['md' => 1]),
                     Textarea::make('description')
                     ->columnSpan(2),
                     DatePicker::make('date')
                     ->label('Date of Sermon')
-                    ->columnSpan(1),
+                    ->columnSpan(['sm' => 2,  'md' => 1]),
                     Checkbox::make('featured')
-                    ->columnSpan(1),
+                    ->columnSpan(['sm' => 2,  'md' => 1]),
                     Select::make('speaker')
                     ->columnSpan(2)
                     ->relationship(name: 'speaker', titleAttribute: 'name')
@@ -129,7 +133,7 @@ class SermonResource extends Resource
                     ])
                     ]),
                     Section::make('Bible Texts')
-                    ->aside()
+                    // ->aside()
                     ->description('The Bible chapter for this text.  This allows us to filter and sort sermons by Bible Text.')
                     ->columns(1)
                     ->schema([
@@ -138,10 +142,10 @@ class SermonResource extends Resource
                         ->relationship()
                         ->addActionLabel('Add text')
                         ->defaultItems(0)
-                        ->columns(3)
+                        ->columns(['md' => 3])
                         ->schema([
-                            Select::make('book')
-                        ->columnSpan(1)
+                            Select::make('book_id')
+                        ->columnSpan(['sm' => 2,  'md' => 1])
                         ->live(onBlur: true)
                         ->label('Book')
                         ->relationship(name: 'book', titleAttribute: 'name', modifyQueryUsing: function (Builder $query) {
@@ -149,35 +153,65 @@ class SermonResource extends Resource
                         })
                         ->searchable()
                         ->preload(),
-                        Select::make('chapter')
-                        ->columnSpan(1)
+                        Select::make('chapter_id')
+                        ->columnSpan(['sm' => 2,  'md' => 1])
                         ->label('Chapter')
                         ->relationship(name: 'chapter', titleAttribute: 'number', modifyQueryUsing: function (Builder $query, Get $get) {
-                            $query->where('book_id', $get('book'));
+                            $query->where('book_id', $get('book_id'));
                         })
                         ->searchable()
                         ->preload()
-                        ->hidden(fn (Get $get): bool =>  $get('book') === null),
+                        ->hidden(fn (Get $get): bool =>  $get('book_id') === null),
                         TextInput::make('verse')
-                        ->columnSpan(1)
+                        ->columnSpan(['sm' => 2,  'md' => 1])
                         ->label('Verses')
                         ->placeholder('1-4')
-                        ->hidden(fn (Get $get): bool =>  $get('book') === null)
+                        ->hidden(fn (Get $get): bool =>  $get('book_id') === null)
                         ])
                     ]),
                     Section::make('Media')
-                    ->aside()
-                    ->description('The audio and video files for the sermon.')
-                    ->columns(2)
+                    // ->aside()
+                    ->description('The audio and video files for the sermon. In order for podcasting to work, the sermon must have an MP3 file. We suggest having a video file or a sermon file at a minimum, but the sermons will show without them.')
+                    ->columns(['md' => 2])
                     ->schema([
-
+                        FileUpload::make('mp3')
+                        ->acceptedFileTypes(['audio/mpeg', 'audio/mp3'])
+                        ->columnSpan(2),
+                        TextInput::make('youtube_url')
+                        ->label('Video URL')
+                        ->placeholder('https://www.youtube.com/watch?v=4ZqR_M20Y48')
+                        ->helperText('The video must be hosted on YouTube. Paste the URL of the video here.')
+                        ->live()
+                        ->afterStateUpdated(function (Set $set, ?string $state) {
+                            if($state == null) return;
+                            $set('youtube_id', GetYoutubeIdService::getId($state));
+                        }),
+                        TextInput::make('youtube_id')
+                        ->disabled()
+                        ->dehydrated()
+                        ->label('YouTube ID'),
                     ]),
                     Section::make('Text Content')
-                    ->aside()
+                    // ->aside()
                     ->description('The text content for the sermon (optional).')
                     ->columns(1)
                     ->schema([
                         MarkdownEditor::make('manuscript')
+
+                    ])
+                    ->collapsed(),
+                   Section::make('Additional Media')
+                    // ->aside()
+                    ->collapsed()
+                    ->description('These are less common media types that can be added to the sermon.')
+                    ->columns(['md' => 2])
+                    ->schema([
+                        FileUpload::make('slides')
+                        ->acceptedFileTypes(['audio/mpeg', 'audio/mp3'])
+                        ->columnSpan(2),
+                        FileUpload::make('handout')
+                        ->acceptedFileTypes(['audio/mpeg', 'audio/mp3'])
+                        ->columnSpan(2),
 
                     ]),
             ]);
@@ -187,10 +221,32 @@ class SermonResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('title')
+                ->searchable()
+                ->sortable(),
+                TextColumn::make('date')
+                ->label('Date')
+                ->date()
+                ->sortable(),
+                TextColumn::make('speaker.name')
+                ->label('Speaker')
+                ->searchable()
+                ->sortable(),
+                TextColumn::make('series.title')
+                ->label('Series')
+                ->searchable()
+                ->sortable(),
+                TextColumn::make('service.name')
+                ->label('Service')
+                ->sortable(),
+               
+
             ])
             ->filters([
-                //
+                SelectFilter::make('Speaker')
+                    ->relationship('speaker', 'name'),
+                SelectFilter::make('Series')
+                    ->relationship('series', 'title'),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
