@@ -28,8 +28,13 @@ use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\FileUpload;
 use App\Services\GetYoutubeIdService;
+use App\Services\CleanUpManuscriptService;
+use Doctrine\DBAL\Schema\View;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
+use Filament\Tables\Columns\ViewColumn;
+use Filament\Tables\Filters\Filter;
+
 
 class SermonResource extends Resource
 {
@@ -197,6 +202,7 @@ class SermonResource extends Resource
                     ->columns(1)
                     ->schema([
                         MarkdownEditor::make('manuscript')
+                        ->dehydrateStateUsing(fn (string $state): string => CleanUpManuscriptService::clean($state))
 
                     ])
                     ->collapsed(),
@@ -236,6 +242,8 @@ class SermonResource extends Resource
                 ->label('Series')
                 ->searchable()
                 ->sortable(),
+                ViewColumn::make('text')->view('tables.columns.bible-text'),
+                // TextColumn::make('texts'),
                 TextColumn::make('service.name')
                 ->label('Service')
                 ->sortable(),
@@ -247,6 +255,7 @@ class SermonResource extends Resource
                     ->relationship('speaker', 'name'),
                 SelectFilter::make('Series')
                     ->relationship('series', 'title'),
+                
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -271,4 +280,6 @@ class SermonResource extends Resource
             'edit' => Pages\EditSermon::route('/{record}/edit'),
         ];
     }    
+
+    
 }

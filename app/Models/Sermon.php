@@ -4,7 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Attributes\ObservedBy;
+use App\Observers\SermonObserver;
 
+#[ObservedBy([SermonObserver::class])]
 class Sermon extends Model
 {
     use HasFactory;
@@ -43,17 +46,25 @@ class Sermon extends Model
     {
         return $this->belongsTo(Service::class);
     }
-    public function book()
+    public function books()
     {
-        return $this->belongsToMany(Book::class);
+        return $this->hasManyThrough(Book::class, ChapterSermon::class, 'sermon_id', 'id', 'id', 'book_id');
     }
     public function chapter()
     {
-        return $this->belongsToMany(Chapter::class)->withPivot('verseStart', 'verseEnd');
+        return $this->belongsToMany(Chapter::class)->using(ChapterSermom::class);
     }
     public function chapterSermons()
     {
         return $this->hasMany(ChapterSermon::class);
+    }
+    public function texts()
+    {
+        $texts = [];
+        foreach($this->chapterSermons as $chapterSermon) {
+            $text[] = $chapterSermon->book->name . ' ' . $chapterSermon->chapter->number . ':' . $chapterSermon->verse;
+        }
+        return $texts;
     }
     public function complete()
     {
