@@ -43,6 +43,7 @@ class SeriesResource extends Resource
                     ->schema([
                         TextInput::make('title')
                         ->reactive()
+                        ->live(onBlur: true)
                         ->required()
                         ->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state))),
                     TextInput::make('slug')

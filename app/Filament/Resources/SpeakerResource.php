@@ -43,6 +43,7 @@ class SpeakerResource extends Resource
                         TextInput::make('name')
                         ->reactive()
                         ->required()
+                        ->live(onBlur: true)
                         ->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state))),
                     TextInput::make('slug')
                     ->disabled()
