@@ -7,6 +7,8 @@ use App\Filament\Resources\SermonResource\RelationManagers;
 use App\Models\Sermon;
 use App\Models\Speaker;
 use App\Models\Series;
+use App\Models\Book;
+use App\Models\BookSermon;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -255,7 +257,19 @@ class SermonResource extends Resource
                     ->relationship('speaker', 'name'),
                 SelectFilter::make('Series')
                     ->relationship('series', 'title'),
-                
+                SelectFilter::make('Book')
+                    ->label('Book')
+                    ->relationship('books', 'name', function (Builder $query) {
+                        $existingbooks = BookSermon::all()->pluck('book_id');
+                        $query =  $query->whereIn('books.id', $existingbooks);
+                        return $query->orderBy('books.id');
+                        }),
+                    // ->query(function (Builder $query, $value) {
+                    //     dd($value);
+                    //     return $query->whereHas('chapterSermons', function ($query) use ($value) {
+                    //         $query->where('books_id', $value);
+                    //     });
+                    // })
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

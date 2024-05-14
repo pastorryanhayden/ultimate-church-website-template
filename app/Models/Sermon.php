@@ -48,11 +48,15 @@ class Sermon extends Model
     }
     public function books()
     {
-        return $this->hasManyThrough(Book::class, ChapterSermon::class, 'sermon_id', 'id', 'id', 'book_id');
+        return $this->belongsToMany(Book::class);
     }
     public function chapter()
     {
         return $this->belongsToMany(Chapter::class)->using(ChapterSermom::class);
+    }
+    public function bookSermons()
+    {
+        return $this->hasMany(BookSermon::class);
     }
     public function chapterSermons()
     {
