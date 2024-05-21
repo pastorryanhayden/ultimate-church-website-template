@@ -228,7 +228,7 @@ $__split = function ($name, $params = []) {
 };
 [$__name, $__params] = $__split(Filament\Livewire\GlobalSearch::class, ['lazy' => true]);
 
-$__html = app('livewire')->mount($__name, $__params, 'sbRgQlC', $__slots ?? [], get_defined_vars());
+$__html = app('livewire')->mount($__name, $__params, 'e44eco1', $__slots ?? [], get_defined_vars());
 
 echo $__html;
 
@@ -250,7 +250,7 @@ $__split = function ($name, $params = []) {
 };
 [$__name, $__params] = $__split(Filament\Livewire\DatabaseNotifications::class, ['lazy' => true]);
 
-$__html = app('livewire')->mount($__name, $__params, 'EAGU5o0', $__slots ?? [], get_defined_vars());
+$__html = app('livewire')->mount($__name, $__params, 'YQwMbee', $__slots ?? [], get_defined_vars());
 
 echo $__html;
 

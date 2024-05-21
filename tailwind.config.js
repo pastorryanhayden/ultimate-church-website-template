@@ -1,9 +1,12 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
+// import preset from './vendor/filament/support/tailwind.config.preset'
+
+export default {
+    // presets: [preset],
+    content: [
+        './resources/views/**/*.blade.php',
+        './resources/js/**/*.js',
+        './resources/css/**/*.css',
+    ],
+   
 }
 

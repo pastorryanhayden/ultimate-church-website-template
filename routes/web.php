@@ -6,6 +6,7 @@ use App\Http\Controllers\AboutPageController;
 use App\Http\Controllers\MinistryController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\DevotionController;
+use App\Http\Controllers\SermonController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,5 @@ Route::get('/events', [EventController::class, 'index']);
 Route::get('/events/{slug}', [EventController::class, 'show']);
 Route::get('/devotion', [DevotionController::class, 'index']);
 Route::get('/devotion/{id}', [DevotionController::class, 'show']);
+Route::get('/sermons', [SermonController::class, 'index']);
+Route::get('/sermons/{slug}', [SermonController::class, 'show']);
