@@ -16,6 +16,8 @@
         <livewire:home.hero />
         <livewire:home.actions />
         <livewire:home.ministries />
+        <livewire:home.map />
+        <livewire:footer />
         @livewireScripts
     </body>
 </html>

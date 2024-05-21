@@ -19,7 +19,7 @@ $__split = function ($name, $params = []) {
 };
 [$__name, $__params] = $__split('navigation', ['transparent' => true]);
 
-$__html = app('livewire')->mount($__name, $__params, 'SPRwMoM', $__slots ?? [], get_defined_vars());
+$__html = app('livewire')->mount($__name, $__params, 'mn6PHz7', $__slots ?? [], get_defined_vars());
 
 echo $__html;
 
@@ -35,7 +35,7 @@ $__split = function ($name, $params = []) {
 };
 [$__name, $__params] = $__split('home.hero', []);
 
-$__html = app('livewire')->mount($__name, $__params, 'WfrzlT4', $__slots ?? [], get_defined_vars());
+$__html = app('livewire')->mount($__name, $__params, '6A7SEgD', $__slots ?? [], get_defined_vars());
 
 echo $__html;
 
@@ -51,7 +51,7 @@ $__split = function ($name, $params = []) {
 };
 [$__name, $__params] = $__split('home.actions', []);
 
-$__html = app('livewire')->mount($__name, $__params, '6uPCA6n', $__slots ?? [], get_defined_vars());
+$__html = app('livewire')->mount($__name, $__params, 'bfjxP0a', $__slots ?? [], get_defined_vars());
 
 echo $__html;
 
@@ -67,7 +67,39 @@ $__split = function ($name, $params = []) {
 };
 [$__name, $__params] = $__split('home.ministries', []);
 
-$__html = app('livewire')->mount($__name, $__params, 'azljvOK', $__slots ?? [], get_defined_vars());
+$__html = app('livewire')->mount($__name, $__params, 'eOGn7zg', $__slots ?? [], get_defined_vars());
+
+echo $__html;
+
+unset($__html);
+unset($__name);
+unset($__params);
+unset($__split);
+if (isset($__slots)) unset($__slots);
+?>
+        <?php
+$__split = function ($name, $params = []) {
+    return [$name, $params];
+};
+[$__name, $__params] = $__split('home.map', []);
+
+$__html = app('livewire')->mount($__name, $__params, 'hMXYAyb', $__slots ?? [], get_defined_vars());
+
+echo $__html;
+
+unset($__html);
+unset($__name);
+unset($__params);
+unset($__split);
+if (isset($__slots)) unset($__slots);
+?>
+        <?php
+$__split = function ($name, $params = []) {
+    return [$name, $params];
+};
+[$__name, $__params] = $__split('footer', []);
+
+$__html = app('livewire')->mount($__name, $__params, 'JcVckti', $__slots ?? [], get_defined_vars());
 
 echo $__html;
 
