@@ -5,10 +5,10 @@
     @foreach($ministries as $ministry)
         <article class="flex h-48">
             <img src="{{ asset('storage/' . $ministry->image )}}" alt="{{$ministry->name}}" class="object-cover w-1/2">
-            <div class="bg-white w-1/2">
-                <h4>{{$ministry->for}}</h4>
-                <h3>{{$ministry->name}}</h3>
-                <a href="/ministry/{{$ministry->slug}}">Learn More @include('partials.icons.chevright', ['classes' => 'h-4 inline'])</a>
+            <div class="bg-white w-1/2 flex flex-col items-start justify-center p-4 text-left hover:bg-gray-100">
+                <h4 class="font-sans text-gray-400 uppercase">{{$ministry->for}}</h4>
+                <h3 class="font-sans font-bold text-2xl text-gray-700">{{$ministry->name}}</h3>
+                <a class="uppercase font-sans text-gray-400 inline-flex items-center" href="/ministry/{{$ministry->slug}}">Learn More @include('partials.icons.chevright', ['classes' => 'h-4 inline'])</a>
             </div>
         </article>
     @endforeach

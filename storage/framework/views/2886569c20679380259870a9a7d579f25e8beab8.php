@@ -5,10 +5,10 @@
     <?php $__currentLoopData = $ministries; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $ministry): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <article class="flex h-48">
             <img src="<?php echo e(asset('storage/' . $ministry->image )); ?>" alt="<?php echo e($ministry->name); ?>" class="object-cover w-1/2">
-            <div class="bg-white w-1/2">
-                <h4><?php echo e($ministry->for); ?></h4>
-                <h3><?php echo e($ministry->name); ?></h3>
-                <a href="/ministry/<?php echo e($ministry->slug); ?>">Learn More <?php echo $__env->make('partials.icons.chevright', ['classes' => 'h-4 inline'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?></a>
+            <div class="bg-white w-1/2 flex flex-col items-start justify-center p-4 text-left hover:bg-gray-100">
+                <h4 class="font-sans text-gray-400 uppercase"><?php echo e($ministry->for); ?></h4>
+                <h3 class="font-sans font-bold text-2xl text-gray-700"><?php echo e($ministry->name); ?></h3>
+                <a class="uppercase font-sans text-gray-400 inline-flex items-center" href="/ministry/<?php echo e($ministry->slug); ?>">Learn More <?php echo $__env->make('partials.icons.chevright', ['classes' => 'h-4 inline'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?></a>
             </div>
         </article>
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
