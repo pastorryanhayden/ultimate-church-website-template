@@ -18,6 +18,7 @@
         <livewire:home.ministries />
         <livewire:home.map />
         <livewire:footer />
+        <livewire:announcement />
         @livewireScripts
     </body>
 </html>
