@@ -66,11 +66,6 @@ class MinistryResource extends Resource
                     'girls' => 'girls'
                 ])
                 ->columnSpan(3),
-                Select::make('leader_id')
-                ->label('Leader')
-                ->options(Leader::all()->pluck('name', 'id'))
-                ->searchable()
-                ->columnSpan(3),
                 Checkbox::make('homepage')
                 ->label('Show on homepage?')
                 ->columnSpan(3),
