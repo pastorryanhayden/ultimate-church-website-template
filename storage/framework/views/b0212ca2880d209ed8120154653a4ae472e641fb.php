@@ -21,10 +21,10 @@
         <article>
             <h3 class="text-2xl font-sans uppercase font-bold mb-2">Contact Us</h3>
             <div class="text-sm font-sans">
-            <p class="flex items-center mb-2"><?php echo $__env->make('partials.icons.place', ['classes' => 'h-4 inline mr-2'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?> <?php echo e($site_global->church_address); ?></p>
-            <p class="flex items-center mb-2"><?php echo $__env->make('partials.icons.phone', ['classes' => 'h-4 inline mr-2'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>  <?php echo e($site_global->church_phone); ?></p>
-            <p class="flex items-center mb-2"><?php echo $__env->make('partials.icons.mail', ['classes' => 'h-4 inline mr-2'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?> <?php echo e($site_global->church_email); ?></p>
-            <p class="flex items-center mb-2"><?php echo $__env->make('partials.icons.link', ['classes' => 'h-4 inline mr-2'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?> <?php echo e($site_global->church_url); ?></p>
+            <p class="flex items-center mb-2"><?php echo $__env->make('partials.icons.place', ['classes' => 'h-4 inline mr-2'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?> <?php echo e($settings->church_address); ?></p>
+            <p class="flex items-center mb-2"><?php echo $__env->make('partials.icons.phone', ['classes' => 'h-4 inline mr-2'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>  <?php echo e($settings->church_phone); ?></p>
+            <p class="flex items-center mb-2"><?php echo $__env->make('partials.icons.mail', ['classes' => 'h-4 inline mr-2'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?> <?php echo e($settings->church_email); ?></p>
+            <p class="flex items-center mb-2"><?php echo $__env->make('partials.icons.link', ['classes' => 'h-4 inline mr-2'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?> <?php echo e($settings->church_url); ?></p>
             </div>
         </article>
         <article>

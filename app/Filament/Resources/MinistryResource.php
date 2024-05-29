@@ -130,6 +130,6 @@ class MinistryResource extends Resource
 
     protected static ?string $navigationGroup = 'Setup';
 
-    protected static ?int $navigationSort = 4;
+    protected static ?int $navigationSort = 3;
 
 }

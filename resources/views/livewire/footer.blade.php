@@ -19,10 +19,10 @@
         <article>
             <h3 class="text-2xl font-sans uppercase font-bold mb-2">Contact Us</h3>
             <div class="text-sm font-sans">
-            <p class="flex items-center mb-2">@include('partials.icons.place', ['classes' => 'h-4 inline mr-2']) {{$site_global->church_address}}</p>
-            <p class="flex items-center mb-2">@include('partials.icons.phone', ['classes' => 'h-4 inline mr-2'])  {{$site_global->church_phone}}</p>
-            <p class="flex items-center mb-2">@include('partials.icons.mail', ['classes' => 'h-4 inline mr-2']) {{$site_global->church_email}}</p>
-            <p class="flex items-center mb-2">@include('partials.icons.link', ['classes' => 'h-4 inline mr-2']) {{$site_global->church_url}}</p>
+            <p class="flex items-center mb-2">@include('partials.icons.place', ['classes' => 'h-4 inline mr-2']) {{$settings->church_address}}</p>
+            <p class="flex items-center mb-2">@include('partials.icons.phone', ['classes' => 'h-4 inline mr-2'])  {{$settings->church_phone}}</p>
+            <p class="flex items-center mb-2">@include('partials.icons.mail', ['classes' => 'h-4 inline mr-2']) {{$settings->church_email}}</p>
+            <p class="flex items-center mb-2">@include('partials.icons.link', ['classes' => 'h-4 inline mr-2']) {{$settings->church_url}}</p>
             </div>
         </article>
         <article>

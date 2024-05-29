@@ -7,6 +7,10 @@ export default {
         './resources/js/**/*.js',
         './resources/css/**/*.css',
     ],
+    plugins: [
+    require('@tailwindcss/typography'),
+    // ...
+  ],
    
 }
 

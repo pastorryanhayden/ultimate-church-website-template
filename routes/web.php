@@ -7,6 +7,7 @@ use App\Http\Controllers\MinistryController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\DevotionController;
 use App\Http\Controllers\SermonController;
+use App\Livewire\About\Page as AboutPage;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +21,7 @@ use App\Http\Controllers\SermonController;
 */
 
 Route::get('/', [HomePageController::class, 'show']);
-Route::get('/about', [AboutPageController::class, 'show']);
+Route::get('/about', AboutPage::class);
 Route::get('/ministries', [MinistryController::class, 'index']);
 Route::get('/ministry/{slug}', [MinistryController::class, 'show']);
 Route::get('/events', [EventController::class, 'index']);
