@@ -12,6 +12,7 @@
          @livewireStyles
     </head>
     <body class="bg-white w-full font-serif">
+        <livewire:announcement />
         <livewire:navigation :transparent="true" />
         <livewire:home.hero />
         <livewire:home.actions />
@@ -19,7 +20,6 @@
         <livewire:home.ministries />
         <livewire:home.map />
         <livewire:footer />
-        <livewire:announcement />
         @livewireScripts
     </body>
 </html>

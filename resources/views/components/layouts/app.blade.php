@@ -9,10 +9,11 @@
          @livewireStyles
     </head>
     <body class="bg-white w-full font-serif">
+        <livewire:announcement />
         <livewire:navigation/>
         {{ $slot }}
         <livewire:footer />
-        <livewire:announcement />
+        
          @livewireScripts
     </body>
 </html>

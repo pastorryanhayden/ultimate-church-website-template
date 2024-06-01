@@ -32,3 +32,9 @@ Route::get('/devotion', [DevotionController::class, 'index']);
 Route::get('/devotion/{id}', [DevotionController::class, 'show']);
 Route::get('/sermons', [SermonController::class, 'index']);
 Route::get('/sermons/{slug}', [SermonController::class, 'show']);
+
+// This is just for testing to help clear cookies
+Route::get('/clear-announcement-cookie', function () {
+    Cookie::queue(Cookie::forget('announcement_shown'));
+    return redirect('/');
+});
