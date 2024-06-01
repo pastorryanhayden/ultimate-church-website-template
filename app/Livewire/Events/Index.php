@@ -19,6 +19,7 @@ class Index extends Component
 
     public function render()
     {
-        return view('livewire.events.index');
+        return view('livewire.events.index')
+         ->title('Upcoming events at Bible Baptist Church in Mattoon, IL');
     }
 }
