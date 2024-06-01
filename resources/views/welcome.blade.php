@@ -15,6 +15,7 @@
         <livewire:navigation :transparent="true" />
         <livewire:home.hero />
         <livewire:home.actions />
+        <livewire:home.events />
         <livewire:home.ministries />
         <livewire:home.map />
         <livewire:footer />
