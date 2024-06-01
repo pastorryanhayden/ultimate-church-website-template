@@ -57,8 +57,11 @@ class DevotionResource extends Resource
             ->url(),
              FileUpload::make('audio_url')->label('MP3 File')->acceptedFileTypes(['audio/mpeg']),
              FileUpload::make('image_url')->label('Image')->image(),
-            RichEditor::make('body')->placeholder('Something about the devotion here...')
-            ->required(),
+            Forms\Components\MarkdownEditor::make('body')
+                ->placeholder('Something about the devotion here...')
+                ->hint(str('[Uses Markdown](https://www.markdownguide.org/cheat-sheet/)')->inlineMarkdown()->toHtmlString())
+            ->required()
+            ->hint(str('[Uses Markdown](https://www.markdownguide.org/cheat-sheet/)')->inlineMarkdown()->toHtmlString()),
             Select::make('leader_id')
                 ->label('Author')
                 ->options(Leader::all()->pluck('name', 'id'))

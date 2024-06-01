@@ -204,6 +204,7 @@ class SermonResource extends Resource
                     ->columns(1)
                     ->schema([
                         MarkdownEditor::make('manuscript')
+                        ->hint(str('[Uses Markdown](https://www.markdownguide.org/cheat-sheet/)')->inlineMarkdown()->toHtmlString())
                         ->dehydrateStateUsing(fn (string $state): string => CleanUpManuscriptService::clean($state))
 
                     ])

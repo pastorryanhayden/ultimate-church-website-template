@@ -3,8 +3,7 @@
     <p class="text-base font-semibold leading-7 text-gray-400"><?php echo e($section->heading); ?></p>
     <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"><?php echo e($section->section_heading); ?></h1>
     <div class="prose">
-         <?php echo $section->content; ?>
-
+      <?php echo app(App\Services\MarkdownService::class)->toHtml($section->content); ?>
     </div>
   </div>
 </div>

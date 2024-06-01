@@ -5,7 +5,7 @@ $__split = function ($name, $params = []) {
 };
 [$__name, $__params] = $__split('ministries.header', []);
 
-$__html = app('livewire')->mount($__name, $__params, 'H84rGrP', $__slots ?? [], get_defined_vars());
+$__html = app('livewire')->mount($__name, $__params, 'thcO0EK', $__slots ?? [], get_defined_vars());
 
 echo $__html;
 

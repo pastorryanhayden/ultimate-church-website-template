@@ -14,9 +14,25 @@
 $__split = function ($name, $params = []) {
     return [$name, $params];
 };
+[$__name, $__params] = $__split('announcement', []);
+
+$__html = app('livewire')->mount($__name, $__params, 'qsM1pRP', $__slots ?? [], get_defined_vars());
+
+echo $__html;
+
+unset($__html);
+unset($__name);
+unset($__params);
+unset($__split);
+if (isset($__slots)) unset($__slots);
+?>
+        <?php
+$__split = function ($name, $params = []) {
+    return [$name, $params];
+};
 [$__name, $__params] = $__split('navigation', []);
 
-$__html = app('livewire')->mount($__name, $__params, 'LXWuI4M', $__slots ?? [], get_defined_vars());
+$__html = app('livewire')->mount($__name, $__params, 'CIr3CiY', $__slots ?? [], get_defined_vars());
 
 echo $__html;
 
@@ -34,7 +50,7 @@ $__split = function ($name, $params = []) {
 };
 [$__name, $__params] = $__split('footer', []);
 
-$__html = app('livewire')->mount($__name, $__params, 'RngddOt', $__slots ?? [], get_defined_vars());
+$__html = app('livewire')->mount($__name, $__params, 'r4Zr5PP', $__slots ?? [], get_defined_vars());
 
 echo $__html;
 
@@ -44,22 +60,7 @@ unset($__params);
 unset($__split);
 if (isset($__slots)) unset($__slots);
 ?>
-        <?php
-$__split = function ($name, $params = []) {
-    return [$name, $params];
-};
-[$__name, $__params] = $__split('announcement', []);
-
-$__html = app('livewire')->mount($__name, $__params, 'lszMgcJ', $__slots ?? [], get_defined_vars());
-
-echo $__html;
-
-unset($__html);
-unset($__name);
-unset($__params);
-unset($__split);
-if (isset($__slots)) unset($__slots);
-?>
+        
          <?php echo \Livewire\Mechanisms\FrontendAssets\FrontendAssets::scripts(); ?>
 
     </body>

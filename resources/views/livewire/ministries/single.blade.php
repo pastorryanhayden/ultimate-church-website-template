@@ -45,7 +45,7 @@
         <img src="{{ asset('storage/' . $ministry->image )}}" alt="" class="w-full block mx-auto">
         @endif 
 
-        {!! $ministry->body !!}
+        @markdown($ministry->body)
         
     </div>
 </div>

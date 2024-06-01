@@ -45,8 +45,7 @@
         <img src="<?php echo e(asset('storage/' . $ministry->image )); ?>" alt="" class="w-full block mx-auto">
         <?php endif; ?> 
 
-        <?php echo $ministry->body; ?>
-
+        <?php echo app(App\Services\MarkdownService::class)->toHtml($ministry->body); ?>
         
     </div>
 </div>

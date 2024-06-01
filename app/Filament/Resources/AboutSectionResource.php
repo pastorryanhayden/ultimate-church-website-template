@@ -45,7 +45,9 @@ class AboutSectionResource extends Resource
                 ->description('How the actual section will look.')
                 ->schema([
                     Forms\Components\TextInput::make('section_heading')->required(),
-                    Forms\Components\RichEditor::make('content')->required(),
+                    Forms\Components\MarkdownEditor::make('content')
+                    ->required()
+                    ->hint(str('[Uses Markdown](https://www.markdownguide.org/cheat-sheet/)')->inlineMarkdown()->toHtmlString()),
                 ])
             ]);
     }

@@ -16,7 +16,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\ToggleColumn;
 use Filament\Forms\Components\Select;
-use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\FileUpload;
 use App\Models\Leader;
@@ -80,7 +80,7 @@ class MinistryResource extends Resource
                 Section::make('Content')
                 ->columns(4)
                 ->schema([
-                RichEditor::make('body')
+                MarkdownEditor::make('body')
                 ->label('Description')
                 ->columnSpan(4)
                 ])

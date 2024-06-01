@@ -10,6 +10,7 @@ use App\Http\Controllers\SermonController;
 use App\Livewire\About\Page as AboutPage;
 use App\Livewire\Ministries\Index as MinistryIndex;
 use App\Livewire\Ministries\Single as MinistrySingle;
+use App\Livewire\Events\Index as EventsIndex;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +27,7 @@ Route::get('/', [HomePageController::class, 'show']);
 Route::get('/about', AboutPage::class);
 Route::get('/ministries', MinistryIndex::class);
 Route::get('/ministry/{slug}', MinistrySingle::class);
-Route::get('/events', [EventController::class, 'index']);
+Route::get('/events', EventsIndex::class);
 Route::get('/events/{slug}', [EventController::class, 'show']);
 Route::get('/devotion', [DevotionController::class, 'index']);
 Route::get('/devotion/{id}', [DevotionController::class, 'show']);

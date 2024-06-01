@@ -10,7 +10,7 @@ $__split = function ($name, $params = []) {
 };
 [$__name, $__params] = $__split('about.header', ['sections' => $sections,'details' => $details]);
 
-$__html = app('livewire')->mount($__name, $__params, 'aNq4WjU', $__slots ?? [], get_defined_vars());
+$__html = app('livewire')->mount($__name, $__params, 'hZXNTSh', $__slots ?? [], get_defined_vars());
 
 echo $__html;
 
@@ -27,7 +27,7 @@ $__split = function ($name, $params = []) {
 };
 [$__name, $__params] = $__split('about.section', ['section' => $section,'place' => $loop->iteration]);
 
-$__html = app('livewire')->mount($__name, $__params, 'OgxLGmL', $__slots ?? [], get_defined_vars());
+$__html = app('livewire')->mount($__name, $__params, 'YiXBaJg', $__slots ?? [], get_defined_vars());
 
 echo $__html;
 
