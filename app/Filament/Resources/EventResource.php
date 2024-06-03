@@ -18,7 +18,7 @@ use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Checkbox;
-use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\FileUpload;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
@@ -94,7 +94,7 @@ class EventResource extends Resource
                 ]),
                 Section::make('Content')
                 ->schema([
-                    RichEditor::make('body')
+                    MarkdownEditor::make('body')
                     ->required(),
                 ]),
                

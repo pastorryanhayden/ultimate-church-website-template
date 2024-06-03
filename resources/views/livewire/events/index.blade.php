@@ -17,7 +17,8 @@
           </div>
           <div>
             <div class="flex items-center gap-x-4 text-xs">
-              <a href="/events/{{$event->slug}}" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">{{ Illuminate\Support\Str::title($event->for) }}</a>
+              <a href="/events/{{$event->slug}}" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">For {{ Illuminate\Support\Str::title($event->for) }}</a>
+              <span>{{ date_format($event->start_date, 'F j') }}@if($event->end_date)- {{ date_format($event->end_date, 'F j') }}@endif</span>
             </div>
             <div class="group relative max-w-xl">
               <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
