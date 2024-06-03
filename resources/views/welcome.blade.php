@@ -18,6 +18,7 @@
         <livewire:home.actions />
         <livewire:home.events />
         <livewire:home.ministries />
+        <livewire:home.devotions />
         <livewire:home.map />
         <livewire:footer />
         @livewireScripts

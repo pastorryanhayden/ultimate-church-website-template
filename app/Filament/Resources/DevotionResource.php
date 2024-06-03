@@ -20,7 +20,6 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\Select;
-use App\Models\Leader;
 use Illuminate\Support\Facades\Auth;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
@@ -62,12 +61,7 @@ class DevotionResource extends Resource
                 ->hint(str('[Uses Markdown](https://www.markdownguide.org/cheat-sheet/)')->inlineMarkdown()->toHtmlString())
             ->required()
             ->hint(str('[Uses Markdown](https://www.markdownguide.org/cheat-sheet/)')->inlineMarkdown()->toHtmlString()),
-            Select::make('leader_id')
-                ->label('Author')
-                ->options(Leader::all()->pluck('name', 'id'))
-                ->searchable()
-                ->required(),
-
+            
 
                 ])
             

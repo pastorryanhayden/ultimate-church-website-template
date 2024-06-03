@@ -9,6 +9,8 @@ use App\Livewire\Ministries\Index as MinistryIndex;
 use App\Livewire\Ministries\Single as MinistrySingle;
 use App\Livewire\Events\Index as EventsIndex;
 use App\Livewire\Events\Single as EventsSingle;
+use App\Livewire\Devotion\Index as DevotionIndex;
+use App\Livewire\Devotion\Single as DevotionSingle;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,8 +29,8 @@ Route::get('/ministries', MinistryIndex::class);
 Route::get('/ministry/{slug}', MinistrySingle::class);
 Route::get('/events', EventsIndex::class);
 Route::get('/events/{slug}', EventsSingle::class);
-Route::get('/devotion', [DevotionController::class, 'index']);
-Route::get('/devotion/{id}', [DevotionController::class, 'show']);
+Route::get('/devotion', DevotionIndex::class);
+Route::get('/devotion/{id}', DevotionSingle::class);
 Route::get('/sermons', [SermonController::class, 'index']);
 Route::get('/sermons/{slug}', [SermonController::class, 'show']);
 
