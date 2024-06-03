@@ -5,15 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>{{ $title ?? 'Page Title' }}</title>
-         @vite(['resources/css/app.css', 'resources/js/app.js'])
-         @livewireStyles
+         <style>
+            [x-cloak] {
+                display: none !important;
+            }
+         </style>
+         @filamentStyles
+         @vite('resources/css/app.css')
+         {{-- @livewireStyles --}}
+  
     </head>
-    <body class="bg-white w-full font-serif">
+    <body class="bg-white w-full font-serif antialiased">
         <livewire:announcement />
         <livewire:navigation/>
         {{ $slot }}
         <livewire:footer />
         
-         @livewireScripts
+         {{-- @livewireScripts --}}
+         @filamentScripts
+         @vite('resources/js/app.js')
     </body>
 </html>

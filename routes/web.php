@@ -30,7 +30,7 @@ Route::get('/ministry/{slug}', MinistrySingle::class);
 Route::get('/events', EventsIndex::class);
 Route::get('/events/{slug}', EventsSingle::class);
 Route::get('/devotion', DevotionIndex::class);
-Route::get('/devotion/{id}', DevotionSingle::class);
+Route::get('/devotion/{id}', DevotionSingle::class)->name('devotion.single');
 Route::get('/sermons', [SermonController::class, 'index']);
 Route::get('/sermons/{slug}', [SermonController::class, 'show']);
 
