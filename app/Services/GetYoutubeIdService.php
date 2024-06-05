@@ -10,8 +10,13 @@ class GetYoutubeIdService
             $match
           );
 
+        if(count($match) > 0)
+        {
+            return $match[1];
+        }else 
+        {return '';}
 
-        return $match[1];
+        
     }
 
     public static function getImage( String $url ) : String

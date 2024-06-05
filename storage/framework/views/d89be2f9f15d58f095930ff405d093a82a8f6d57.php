@@ -128,7 +128,7 @@ $__split = function ($name, $params = []) {
 };
 [$__name, $__params] = $__split(Filament\Livewire\Notifications::class);
 
-$__html = app('livewire')->mount($__name, $__params, 'YRlNXiG', $__slots ?? [], get_defined_vars());
+$__html = app('livewire')->mount($__name, $__params, 'p2CXPgV', $__slots ?? [], get_defined_vars());
 
 echo $__html;
 
