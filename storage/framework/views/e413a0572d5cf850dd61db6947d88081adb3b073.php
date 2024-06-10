@@ -15,14 +15,14 @@
          
   
     </head>
-    <body class="bg-gray-800 w-full font-serif antialiased">
+    <body class="bg-gray-100 w-full font-serif antialiased">
         <?php
 $__split = function ($name, $params = []) {
     return [$name, $params];
 };
 [$__name, $__params] = $__split('announcement', []);
 
-$__html = app('livewire')->mount($__name, $__params, '8W9AgpB', $__slots ?? [], get_defined_vars());
+$__html = app('livewire')->mount($__name, $__params, '7j1BIuI', $__slots ?? [], get_defined_vars());
 
 echo $__html;
 
@@ -38,7 +38,7 @@ $__split = function ($name, $params = []) {
 };
 [$__name, $__params] = $__split('navigation', []);
 
-$__html = app('livewire')->mount($__name, $__params, 'dMq613O', $__slots ?? [], get_defined_vars());
+$__html = app('livewire')->mount($__name, $__params, 'uRNp1uu', $__slots ?? [], get_defined_vars());
 
 echo $__html;
 
@@ -59,7 +59,7 @@ $__split = function ($name, $params = []) {
 };
 [$__name, $__params] = $__split('footer', []);
 
-$__html = app('livewire')->mount($__name, $__params, '5XqzlPA', $__slots ?? [], get_defined_vars());
+$__html = app('livewire')->mount($__name, $__params, 'BlCDL8f', $__slots ?? [], get_defined_vars());
 
 echo $__html;
 

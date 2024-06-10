@@ -15,7 +15,7 @@
          {{-- @livewireStyles --}}
   
     </head>
-    <body class="bg-gray-800 w-full font-serif antialiased">
+    <body class="bg-gray-100 w-full font-serif antialiased">
         <livewire:announcement />
         <livewire:navigation/>
         <div class="max-w-7xl mx-auto bg-white">

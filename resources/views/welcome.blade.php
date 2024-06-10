@@ -17,7 +17,7 @@
          @filamentStyles
          @vite('resources/css/app.css')
     </head>
-    <body class="bg-gray-800 w-full font-serif antialiased">
+    <body class="bg-gray-100 w-full font-serif antialiased">
 
         <livewire:announcement />
         <livewire:navigation :transparent="true" />

@@ -33,7 +33,9 @@ Route::get('/events/{slug}', EventsSingle::class);
 Route::get('/devotion', DevotionIndex::class);
 Route::get('/devotion/{id}', DevotionSingle::class)->name('devotion.single');
 Route::get('/sermons', SermonsIndex::class);
-Route::get('/sermons/{slug}', [SermonController::class, 'show']);
+Route::get('/sermons/{slug}', [SermonController::class, 'show'])->name('sermon.single');
+Route::get('/series', SermonsIndex::class);
+Route::get('/seris/{slug}', [SermonController::class, 'show'])->name('series.single');
 
 // This is just for testing to help clear cookies
 Route::get('/clear-announcement-cookie', function () {
