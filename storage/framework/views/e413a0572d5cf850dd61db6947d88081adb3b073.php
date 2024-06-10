@@ -15,14 +15,14 @@
          
   
     </head>
-    <body class="bg-white w-full font-serif antialiased">
+    <body class="bg-gray-800 w-full font-serif antialiased">
         <?php
 $__split = function ($name, $params = []) {
     return [$name, $params];
 };
 [$__name, $__params] = $__split('announcement', []);
 
-$__html = app('livewire')->mount($__name, $__params, 'kZV6gLk', $__slots ?? [], get_defined_vars());
+$__html = app('livewire')->mount($__name, $__params, '8W9AgpB', $__slots ?? [], get_defined_vars());
 
 echo $__html;
 
@@ -38,7 +38,7 @@ $__split = function ($name, $params = []) {
 };
 [$__name, $__params] = $__split('navigation', []);
 
-$__html = app('livewire')->mount($__name, $__params, 'AMLWWEk', $__slots ?? [], get_defined_vars());
+$__html = app('livewire')->mount($__name, $__params, 'dMq613O', $__slots ?? [], get_defined_vars());
 
 echo $__html;
 
@@ -48,15 +48,18 @@ unset($__params);
 unset($__split);
 if (isset($__slots)) unset($__slots);
 ?>
+        <div class="max-w-7xl mx-auto bg-white">
         <?php echo e($slot); ?>
 
+        
+        </div>
         <?php
 $__split = function ($name, $params = []) {
     return [$name, $params];
 };
 [$__name, $__params] = $__split('footer', []);
 
-$__html = app('livewire')->mount($__name, $__params, 'sbvvfuv', $__slots ?? [], get_defined_vars());
+$__html = app('livewire')->mount($__name, $__params, '5XqzlPA', $__slots ?? [], get_defined_vars());
 
 echo $__html;
 
@@ -66,7 +69,6 @@ unset($__params);
 unset($__split);
 if (isset($__slots)) unset($__slots);
 ?>
-        
          
          <?php echo \Filament\Support\Facades\FilamentAsset::renderScripts() ?>
          <?php echo app('Illuminate\Foundation\Vite')('resources/js/app.js'); ?>

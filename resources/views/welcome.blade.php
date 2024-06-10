@@ -17,16 +17,20 @@
          @filamentStyles
          @vite('resources/css/app.css')
     </head>
-    <body class="bg-white w-full font-serif antialiased">
+    <body class="bg-gray-800 w-full font-serif antialiased">
+
         <livewire:announcement />
         <livewire:navigation :transparent="true" />
+        <div class="max-w-7xl mx-auto bg-white">
         <livewire:home.hero />
         <livewire:home.actions />
         <livewire:home.events />
         <livewire:home.ministries />
         <livewire:home.devotions />
         <livewire:home.map />
-        <livewire:footer /> 
+        <livewire:footer />
+        </div>
+         
         {{-- @livewireScripts --}}
         @filamentScripts
         @vite('resources/js/app.js')

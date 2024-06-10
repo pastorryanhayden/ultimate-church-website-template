@@ -22,11 +22,80 @@
         @if($events)
         <a href="/events" class="text-sm font-semibold leading-6 {{$transparent ? 'text-white' : 'text-gray-900'}}">Upcoming Events</a>
         @endif 
+        @if($resources)
+        <div class="relative" x-data="{showmenu: false}" @mouseover="showmenu = true" >
+        <button type="button" class="flex items-center gap-x-1 text-sm font-semibold leading-6 {{$transparent ? 'text-white' : ''}}" aria-expanded="false">
+          Resources
+          <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+          </svg>
+        </button>
+
+        <!--
+          'Product' flyout menu, show/hide based on flyout menu state.
+
+          Entering: "transition ease-out duration-200"
+            From: "opacity-0 translate-y-1"
+            To: "opacity-100 translate-y-0"
+          Leaving: "transition ease-in duration-150"
+            From: "opacity-100 translate-y-0"
+            To: "opacity-0 translate-y-1"
+        -->
+        <div x-show="showmenu" class="absolute -right-4 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5" @mouseleave="showmenu = false">
+          <div class="p-4">
+            @if($sermons)
+            <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+              <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                <x-heroicon-o-microphone class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" />
+              </div>
+              <div class="flex-auto">
+                <a href="#" class="block font-semibold text-gray-900">
+                  Sermons
+                  <span class="absolute inset-0"></span>
+                </a>
+                <p class="mt-1 text-gray-600">Listen to our sermons</p>
+              </div>
+            </div>
+            @endif
+            @if($blog)
+            <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+              <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                <x-heroicon-o-document-text class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" />
+              </div>
+              <div class="flex-auto">
+                <a href="#" class="block font-semibold text-gray-900">
+                  Blog
+                  <span class="absolute inset-0"></span>
+                </a>
+                <p class="mt-1 text-gray-600">Articles from our pastor and staff</p>
+              </div>
+            </div>
+            @endif
+            @if($devotions)
+            <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+              <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                <x-heroicon-o-book-open class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" />
+              </div>
+              <div class="flex-auto">
+                <a href="#" class="block font-semibold text-gray-900">
+                  Devotions
+                  <span class="absolute inset-0"></span>
+                </a>
+                <p class="mt-1 text-gray-600">Devotional content.</p>
+              </div>
+            </div>
+            @endif
+          </div>
+          
+        </div>
+      </div>
+        @else 
         @if($devotions)
         <a href="/devotion" class="text-sm font-semibold leading-6 {{$transparent ? 'text-white' : 'text-gray-900'}}">Devotions</a>
         @endif
         @if($sermons)
         <a href="/sermons" class="text-sm font-semibold leading-6 {{$transparent ? 'text-white' : 'text-gray-900'}}">Sermons</a>
+        @endif 
         @endif 
       </div>
       

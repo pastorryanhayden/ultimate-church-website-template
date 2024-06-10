@@ -15,12 +15,14 @@
          {{-- @livewireStyles --}}
   
     </head>
-    <body class="bg-white w-full font-serif antialiased">
+    <body class="bg-gray-800 w-full font-serif antialiased">
         <livewire:announcement />
         <livewire:navigation/>
+        <div class="max-w-7xl mx-auto bg-white">
         {{ $slot }}
-        <livewire:footer />
         
+        </div>
+        <livewire:footer />
          {{-- @livewireScripts --}}
          @filamentScripts
          @vite('resources/js/app.js')

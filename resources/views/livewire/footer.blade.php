@@ -1,4 +1,5 @@
-<footer class="bg-gray-800 p-8 text-white">
+<footer class="bg-gray-700">
+    <div class="max-w-7xl mx-auto p-8 text-white">
     <div class="my-8 text-center">
         <h2 class="text-white font-serif text-4xl uppercase tracking-wide">Experience {{ env('CHURCH_NAME')}}</h2>
         <p class="mt-4 text-white font-sans italic text-lg">Join us this week for church.</p>
@@ -33,7 +34,8 @@
         </article>
     </div>
     <section class="p-8">
-        <p class="text-center italic text-sm text-gray-400 font-sans">&copy; 2024 - Ryan Hayden</p>
+        <p class="text-center italic text-sm text-gray-400 font-sans">&copy; 2024 - <a href="https://ultimatechurchwebsites./com">Ultimate Church Websites</a></p>
     </section>
+    </div>
 </footer>
 

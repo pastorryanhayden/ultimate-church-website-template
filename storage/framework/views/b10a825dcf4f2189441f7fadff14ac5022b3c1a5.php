@@ -22,11 +22,122 @@
         <?php if($events): ?>
         <a href="/events" class="text-sm font-semibold leading-6 <?php echo e($transparent ? 'text-white' : 'text-gray-900'); ?>">Upcoming Events</a>
         <?php endif; ?> 
+        <?php if($resources): ?>
+        <div class="relative" x-data="{showmenu: false}" @mouseover="showmenu = true" >
+        <button type="button" class="flex items-center gap-x-1 text-sm font-semibold leading-6 <?php echo e($transparent ? 'text-white' : ''); ?>" aria-expanded="false">
+          Resources
+          <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+          </svg>
+        </button>
+
+        <!--
+          'Product' flyout menu, show/hide based on flyout menu state.
+
+          Entering: "transition ease-out duration-200"
+            From: "opacity-0 translate-y-1"
+            To: "opacity-100 translate-y-0"
+          Leaving: "transition ease-in duration-150"
+            From: "opacity-100 translate-y-0"
+            To: "opacity-0 translate-y-1"
+        -->
+        <div x-show="showmenu" class="absolute -right-4 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5" @mouseleave="showmenu = false">
+          <div class="p-4">
+            <?php if($sermons): ?>
+            <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+              <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                <?php if (isset($component)) { $__componentOriginalcd9972c8156dfa6e5fd36675ca7bf5f21b506e2e = $component; } ?>
+<?php $component = BladeUI\Icons\Components\Svg::resolve([] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('heroicon-o-microphone'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(BladeUI\Icons\Components\Svg::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['class' => 'h-6 w-6 text-gray-600 group-hover:text-indigo-600']); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalcd9972c8156dfa6e5fd36675ca7bf5f21b506e2e)): ?>
+<?php $component = $__componentOriginalcd9972c8156dfa6e5fd36675ca7bf5f21b506e2e; ?>
+<?php unset($__componentOriginalcd9972c8156dfa6e5fd36675ca7bf5f21b506e2e); ?>
+<?php endif; ?>
+              </div>
+              <div class="flex-auto">
+                <a href="#" class="block font-semibold text-gray-900">
+                  Sermons
+                  <span class="absolute inset-0"></span>
+                </a>
+                <p class="mt-1 text-gray-600">Listen to our sermons</p>
+              </div>
+            </div>
+            <?php endif; ?>
+            <?php if($blog): ?>
+            <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+              <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                <?php if (isset($component)) { $__componentOriginalcd9972c8156dfa6e5fd36675ca7bf5f21b506e2e = $component; } ?>
+<?php $component = BladeUI\Icons\Components\Svg::resolve([] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('heroicon-o-document-text'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(BladeUI\Icons\Components\Svg::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['class' => 'h-6 w-6 text-gray-600 group-hover:text-indigo-600']); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalcd9972c8156dfa6e5fd36675ca7bf5f21b506e2e)): ?>
+<?php $component = $__componentOriginalcd9972c8156dfa6e5fd36675ca7bf5f21b506e2e; ?>
+<?php unset($__componentOriginalcd9972c8156dfa6e5fd36675ca7bf5f21b506e2e); ?>
+<?php endif; ?>
+              </div>
+              <div class="flex-auto">
+                <a href="#" class="block font-semibold text-gray-900">
+                  Blog
+                  <span class="absolute inset-0"></span>
+                </a>
+                <p class="mt-1 text-gray-600">Articles from our pastor and staff</p>
+              </div>
+            </div>
+            <?php endif; ?>
+            <?php if($devotions): ?>
+            <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+              <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                <?php if (isset($component)) { $__componentOriginalcd9972c8156dfa6e5fd36675ca7bf5f21b506e2e = $component; } ?>
+<?php $component = BladeUI\Icons\Components\Svg::resolve([] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('heroicon-o-book-open'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(BladeUI\Icons\Components\Svg::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['class' => 'h-6 w-6 text-gray-600 group-hover:text-indigo-600']); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalcd9972c8156dfa6e5fd36675ca7bf5f21b506e2e)): ?>
+<?php $component = $__componentOriginalcd9972c8156dfa6e5fd36675ca7bf5f21b506e2e; ?>
+<?php unset($__componentOriginalcd9972c8156dfa6e5fd36675ca7bf5f21b506e2e); ?>
+<?php endif; ?>
+              </div>
+              <div class="flex-auto">
+                <a href="#" class="block font-semibold text-gray-900">
+                  Devotions
+                  <span class="absolute inset-0"></span>
+                </a>
+                <p class="mt-1 text-gray-600">Devotional content.</p>
+              </div>
+            </div>
+            <?php endif; ?>
+          </div>
+          
+        </div>
+      </div>
+        <?php else: ?> 
         <?php if($devotions): ?>
         <a href="/devotion" class="text-sm font-semibold leading-6 <?php echo e($transparent ? 'text-white' : 'text-gray-900'); ?>">Devotions</a>
         <?php endif; ?>
         <?php if($sermons): ?>
         <a href="/sermons" class="text-sm font-semibold leading-6 <?php echo e($transparent ? 'text-white' : 'text-gray-900'); ?>">Sermons</a>
+        <?php endif; ?> 
         <?php endif; ?> 
       </div>
       

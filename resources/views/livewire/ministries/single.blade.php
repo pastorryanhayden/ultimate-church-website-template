@@ -1,5 +1,5 @@
 <div>
-    <div class="relative isolate overflow-hidden bg-gray-800 py-24 sm:py-32">
+    <div class="relative isolate overflow-hidden bg-gray-700 py-24 sm:py-32">
       <img src="{{ asset('storage/' . $ministry->image )}}" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover opacity-20">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:mx-0">

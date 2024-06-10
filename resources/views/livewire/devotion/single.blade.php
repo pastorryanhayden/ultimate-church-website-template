@@ -1,5 +1,5 @@
 <div>
-    <div class="bg-gray-800 px-6 py-12 sm:py-12 lg:px-8">
+    <div class="bg-gray-700 px-6 py-12 sm:py-12 lg:px-8">
       <div class="mx-auto max-w-2xl text-center">
         <h2 class="text-3xl font-bold tracking-tight text-white sm:text-5xl">Devotion: {{$devotion->title}}</h2>
       </div>
