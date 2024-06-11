@@ -63,7 +63,7 @@
 <?php endif; ?>
               </div>
               <div class="flex-auto">
-                <a href="#" class="block font-semibold text-gray-900">
+                <a href="/sermons" class="block font-semibold text-gray-900">
                   Sermons
                   <span class="absolute inset-0"></span>
                 </a>
@@ -91,7 +91,7 @@
 <?php endif; ?>
               </div>
               <div class="flex-auto">
-                <a href="#" class="block font-semibold text-gray-900">
+                <a href="/blog" class="block font-semibold text-gray-900">
                   Blog
                   <span class="absolute inset-0"></span>
                 </a>
@@ -119,7 +119,7 @@
 <?php endif; ?>
               </div>
               <div class="flex-auto">
-                <a href="#" class="block font-semibold text-gray-900">
+                <a href="/devotion" class="block font-semibold text-gray-900">
                   Devotions
                   <span class="absolute inset-0"></span>
                 </a>
@@ -137,6 +137,9 @@
         <?php endif; ?>
         <?php if($sermons): ?>
         <a href="/sermons" class="text-sm font-semibold leading-6 <?php echo e($transparent ? 'text-white' : 'text-gray-900'); ?>">Sermons</a>
+        <?php endif; ?> 
+        <?php if($blog): ?>
+        <a href="/blog" class="text-sm font-semibold leading-6 <?php echo e($transparent ? 'text-white' : 'text-gray-900'); ?>">Blog</a>
         <?php endif; ?> 
         <?php endif; ?> 
       </div>
@@ -178,6 +181,9 @@
               <?php endif; ?> 
               <?php if($sermons): ?>
               <a href="/sermons" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Sermons</a>
+              <?php endif; ?>
+              <?php if($blog): ?>
+              <a href="/blog" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Blog</a>
               <?php endif; ?>
             </div>
           </div>

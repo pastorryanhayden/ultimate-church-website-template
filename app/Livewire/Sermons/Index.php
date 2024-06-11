@@ -32,7 +32,7 @@ class Index extends Component implements HasForms, HasTable
      public function table(Table $table): Table
     {
         return $table
-            ->query(Sermon::orderBy('date', 'desc'))
+            ->query(Sermon::query())
             ->columns([
                 Split::make([
                     Stack::make([
@@ -106,7 +106,8 @@ class Index extends Component implements HasForms, HasTable
             ])
             ->bulkActions([
                 // ...
-            ]);
+            ])
+            ->defaultSort('date', 'desc');
     }
 
     public function render(): View

@@ -61,7 +61,6 @@ class SeriesResource extends Resource
                 Section::make('Content')
                 ->schema([
                     RichEditor::make('body')
-                ->label('Content')
                 ]),
             ]);
     }

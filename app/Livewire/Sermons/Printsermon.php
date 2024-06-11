@@ -20,6 +20,7 @@ class Printsermon extends Component
     public function render()
     {
         return view('livewire.sermons.printsermon')
-        ->layout('layouts.printsermon');
+        ->layout('layouts.printsermon')
+            ->title('Print Sermon');
     }
 }
