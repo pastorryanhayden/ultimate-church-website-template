@@ -15,7 +15,6 @@ use Illuminate\Database\Eloquent\Model;
 use Filament\Tables\Columns\ViewColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Filters\Filter;
-use App\Models\BookSermon;
 use Illuminate\Database\Eloquent\Builder;
 use Filament\Tables\Columns\Layout\Stack;
 use Filament\Support\Enums\Alignment;
