@@ -214,6 +214,10 @@
 
         </div>
         @endif
+        @if($sermon->manuscript && $sermon->manuscript != '')
         @markdown($sermon->manuscript)
+        @else
+        <p> No manuscript for this sermon.</p>
+        @endif
     </div>
 </div>

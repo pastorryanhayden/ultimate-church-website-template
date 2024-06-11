@@ -214,7 +214,11 @@
 
         </div>
         <?php endif; ?>
+        <?php if($sermon->manuscript && $sermon->manuscript != ''): ?>
         <?php echo app(App\Services\MarkdownService::class)->toHtml($sermon->manuscript); ?>
+        <?php else: ?>
+        <p> No manuscript for this sermon.</p>
+        <?php endif; ?>
     </div>
 </div>
 <?php /**PATH /Users/ryanhayden/Herd/biblebaptistmattoon/resources/views/livewire/sermons/single.blade.php ENDPATH**/ ?>
