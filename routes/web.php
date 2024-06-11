@@ -13,6 +13,7 @@ use App\Livewire\Devotion\Index as DevotionIndex;
 use App\Livewire\Devotion\Single as DevotionSingle;
 use App\Livewire\Sermons\Index as SermonsIndex;
 use App\Livewire\Sermons\Single as SermonsSingle;
+use App\Livewire\Sermons\Printsermon as SermonsPrint;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,7 @@ Route::get('/events/{slug}', EventsSingle::class);
 Route::get('/devotion', DevotionIndex::class);
 Route::get('/devotion/{id}', DevotionSingle::class)->name('devotion.single');
 Route::get('/sermons', SermonsIndex::class);
+Route::get('print/sermons/{id}', SermonsPrint::class)->name('sermon.print');
 Route::get('/sermons/{slug}', SermonsSingle::class)->name('sermon.single');
 Route::get('/series', SermonsIndex::class);
 Route::get('/seris/{slug}', [SermonController::class, 'show'])->name('series.single');

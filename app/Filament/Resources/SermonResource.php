@@ -204,6 +204,7 @@ class SermonResource extends Resource
                     ->columns(1)
                     ->schema([
                         MarkdownEditor::make('manuscript')
+                        ->required()
                         ->hint(str('[Uses Markdown](https://www.markdownguide.org/cheat-sheet/)')->inlineMarkdown()->toHtmlString())
                         ->dehydrateStateUsing(fn (string $state): string => CleanUpManuscriptService::clean($state))
 
@@ -216,10 +217,10 @@ class SermonResource extends Resource
                     ->columns(['md' => 2])
                     ->schema([
                         FileUpload::make('slides')
-                        ->acceptedFileTypes(['audio/mpeg', 'audio/mp3'])
+                        ->acceptedFileTypes(['application/pdf'])
                         ->columnSpan(2),
                         FileUpload::make('handout')
-                        ->acceptedFileTypes(['audio/mpeg', 'audio/mp3'])
+                        ->acceptedFileTypes(['application/pdf'])
                         ->columnSpan(2),
 
                     ]),
@@ -250,9 +251,8 @@ class SermonResource extends Resource
                 TextColumn::make('service.name')
                 ->label('Service')
                 ->sortable(),
-               
-
             ])
+            ->defaultSort('date', 'desc')
             ->filters([
                 SelectFilter::make('Speaker')
                     ->relationship('speaker', 'name'),

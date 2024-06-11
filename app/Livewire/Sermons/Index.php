@@ -32,7 +32,7 @@ class Index extends Component implements HasForms, HasTable
      public function table(Table $table): Table
     {
         return $table
-            ->query(Sermon::query())
+            ->query(Sermon::orderBy('date', 'desc'))
             ->columns([
                 Split::make([
                     Stack::make([
@@ -111,6 +111,7 @@ class Index extends Component implements HasForms, HasTable
 
     public function render(): View
     {
-        return view('livewire.sermons.index');
+        return view('livewire.sermons.index')
+        ->title('Sermons');
     }
 }
