@@ -55,12 +55,14 @@ public function table(Table $table): Table
                          ->state(function (): string {
                             return 'Sermons';
                         })
+                         ->visibleFrom('md')
                          ->alignment(Alignment::Center),
                          TextColumn::make('sermon_count')
                         ->label('Sermons')
                         ->state(function (Speaker $record): int {
                             return $record->sermons->count();
                         })
+                        ->visibleFrom('md')
                          ->alignment(Alignment::Center),
                     ]),
                     ])

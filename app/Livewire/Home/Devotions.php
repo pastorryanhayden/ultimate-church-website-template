@@ -16,9 +16,10 @@ class Devotions extends Component
     {
 
         // If the latest devotion is less than a month old, set devotions as true
-        $this->show = Devotion::latest()->first()->created_at->diffInDays(now()) < 30 ? true : false;
+        $this->show = Devotion::latest()->first()->published_at->diffInDays(now()) < 30 ? true : false;
 
-        $this->devotions = Devotion::where('published', true)->latest()->take(3)->get();
+        $this->devotions = Devotion::where('published', true)->orderBy('created_at', 'desc')->take(3)->get();
+
 
         foreach($this->devotions as $devotion)
         {

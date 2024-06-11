@@ -22,7 +22,7 @@
         </div>
         <div class="max-w-xl">
           <div class="mt-8 flex items-center gap-x-4 text-xs">
-            <time datetime="2020-03-16 {{ date_format($devotion->published_at, 'o-m-d') }}" class="text-gray-500">{{ date_format($devotion->published_at, 'M j, o') }}</time>
+            <time datetime="{{ date_format($devotion->published_at, 'o-m-d') }}" class="text-gray-500">{{ date_format($devotion->published_at, 'M j, o') }}</time>
             <a href="/devotion/{{$devotion->id}}" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">{{$devotion->text}}</a>
           </div>
           <div class="group relative">

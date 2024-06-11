@@ -55,12 +55,14 @@ class Index extends Component implements HasForms, HasTable
                          ->state(function (): string {
                             return 'Sermons';
                         })
+                         ->visibleFrom('md')
                          ->alignment(Alignment::Center),
                          TextColumn::make('sermon_count')
                         ->label('Sermons')
                         ->state(function (Series $record): int {
                             return $record->sermons->count();
                         })
+                        ->visibleFrom('md')
                          ->alignment(Alignment::Center),
                     ]),
                     ])
