@@ -48,7 +48,7 @@
     frameborder="0" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen
-    class="w-full aspect-video mb-6 max-w-4xl mx-auto">
+    class="w-full aspect-w-16 aspect-h-9 mb-6 max-w-4xl mx-auto">
     </iframe>
     @elseif($sermon->series->photo)
     <img src="{{ Storage::disk('vultr')->url($sermon->series->photo) }}" alt="" class="w-full max-w-lg mx-auto mb-12">
