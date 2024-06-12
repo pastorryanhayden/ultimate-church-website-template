@@ -1,6 +1,6 @@
 <div>
     <div class="relative isolate overflow-hidden bg-gray-700 py-24 sm:py-32">
-      <img src="{{ asset('storage/' . $ministry->image )}}" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover opacity-20">
+      <img src="{{ Storage::disk('vultr')->url($ministry->image) }}" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover opacity-20">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:mx-0">
           <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">{{$ministry->name}}</h2>
@@ -42,7 +42,7 @@
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 prose">
         
         @if(isset($ministry->image))
-        <img src="{{ asset('storage/' . $ministry->image )}}" alt="" class="w-full block mx-auto">
+        <img src="{{ Storage::disk('vultr')->url($ministry->image) }}" alt="" class="w-full block mx-auto">
         @endif 
 
         @markdown($ministry->body)
