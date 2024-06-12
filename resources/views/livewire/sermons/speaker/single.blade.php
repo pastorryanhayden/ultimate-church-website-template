@@ -43,11 +43,9 @@
           </ol>
         </nav>
     <div class="w-full flex justify-center items-center">
-    @if($speaker->thumbnail)
-    <img src="/{{ $speaker->thumbnail }}" alt="" class="h-32 w-32 object-cover rounded-full">
-    @else 
-    <img src="{{env('APP_URL')}}/images/speaker-placeholder.jpg" alt="" class="h-32 w-32 object-cover rounded-full">
-    @endif 
+   
+    <img src="{{$speaker->thumbnail ? Storage::disk('vultr')->url($speaker->thumbnail) : env('APP_URL') .'/images/speaker-placeholder.jpg' }}" alt="" class="h-32 w-32 object-cover rounded-full">
+    
     </div>
     
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 prose">

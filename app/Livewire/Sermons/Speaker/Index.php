@@ -39,6 +39,7 @@ public function table(Table $table): Table
                         ->defaultImageUrl(url('/images/speaker-placeholder.jpg'))
                         ->size(50)
                         ->circular()
+                        ->disk('vultr')
                         ,
                     ])
                      ->grow(false),
