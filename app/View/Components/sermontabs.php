@@ -36,11 +36,10 @@ class Sermontabs extends Component
      */
     public function render()
     {
-        return view('components.sermontabs')->with([
-            'selected' => $this->selected,
-            'sermonscount' => $this->sermonscount,
-            'seriescount' => $this->seriescount,
-            'speakercount' => $this->speakercount
-        ]);
+        if($this->sermonscount && $this->seriescount && $this->speakercount)
+        {
+            return view('components.sermontabs');
+        }
+        
     }
 }
