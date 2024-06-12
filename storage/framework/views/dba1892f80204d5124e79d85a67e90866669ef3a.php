@@ -1,7 +1,7 @@
 <div x-data="{ showDetails: true }">
     <div class="bg-gray-700 px-6 py-12 sm:py-12 lg:px-8">
       <div class="mx-auto max-w-2xl text-center">
-        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-5xl">Sermons: {{$sermon->title}}</h2>
+        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-5xl">Sermons: <?php echo e($sermon->title); ?></h2>
       </div>
     </div>
     <nav class="flex max-w-4xl mx-auto py-6 w-full justify-center" aria-label="Breadcrumb">
@@ -29,7 +29,7 @@
                 <svg class="h-5 w-5 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                   <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
                 </svg>
-                <a href="/series/{{$sermon->series->slug}}" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">{{$sermon->series->title}}</a>
+                <a href="/series/<?php echo e($sermon->series->slug); ?>" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700"><?php echo e($sermon->series->title); ?></a>
               </div>
             </li>
             <li>
@@ -37,27 +37,27 @@
                 <svg class="h-5 w-5 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                   <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
                 </svg>
-                <a href="#" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700" aria-current="page">{{$sermon->title}}</a>
+                <a href="#" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700" aria-current="page"><?php echo e($sermon->title); ?></a>
               </div>
             </li>
           </ol>
         </nav>
-    @if($sermon->youtube_id)
+    <?php if($sermon->youtube_id): ?>
     <div class="aspect-w-16 aspect-h-6 my-6 max-w-4xl mx-auto">
     <iframe 
-    src="https://www.youtube.com/embed/{{ $sermon->youtube_id }}" 
+    src="https://www.youtube.com/embed/<?php echo e($sermon->youtube_id); ?>" 
     frameborder="0" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen
     >
     </iframe>
     </div>
-    @elseif($sermon->series->photo)
-    <img src="{{ Storage::disk('vultr')->url($sermon->series->photo) }}" alt="" class="w-full max-w-lg mx-auto mb-12">
-    @endif 
-    @if($sermon->mp3)
+    <?php elseif($sermon->series->photo): ?>
+    <img src="<?php echo e(Storage::disk('vultr')->url($sermon->series->photo)); ?>" alt="" class="w-full max-w-lg mx-auto mb-12">
+    <?php endif; ?> 
+    <?php if($sermon->mp3): ?>
     <audio controls class="w-full mt-6 max-w-4xl px-4 sm:px-6 lg:px-8 mx-auto">
-        <source src="/{{ $sermon->mp3 }}" type="audio/mpeg">
+        <source src="/<?php echo e($sermon->mp3); ?>" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
     <div class="w-full mt-2 max-w-4xl px-4 sm:px-6 lg:px-8 mx-auto mb-6">
@@ -69,7 +69,7 @@
         Download MP3
         </button>
     </div>
-    @endif
+    <?php endif; ?>
     <div x-show="!showDetails" class="p-6 w-full mx-auto max-w-4xl">
     <div class="rounded-md bg-gray-50 p-4" >
       <div class="flex">
@@ -99,35 +99,35 @@
         <div class="overflow-hidden bg-white shadow sm:rounded-lg w-full max-w-4xl">
   <div class="px-4 py-6 sm:px-6">
     <h3 class="text-base font-semibold leading-7 text-gray-900">Sermon Information</h3>
-    {{-- <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Details and application.</p> --}}
+    
   </div>
   <div class="border-t border-gray-100">
     <dl class="divide-y divide-gray-100">
       <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
         <dt class="text-sm font-medium text-gray-900">Title</dt>
-        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{$sermon->title}}</dd>
+        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0"><?php echo e($sermon->title); ?></dd>
       </div>
       <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
         <dt class="text-sm font-medium text-gray-900">Description</dt>
-        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ $sermon->description }}</dd>
+        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0"><?php echo e($sermon->description); ?></dd>
       </div>
       <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
         <dt class="text-sm font-medium text-gray-900">Date</dt>
-        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{$sermon->date->format('F j, Y')}}</dd>
+        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0"><?php echo e($sermon->date->format('F j, Y')); ?></dd>
       </div>
       <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
         <dt class="text-sm font-medium text-gray-900">Speaker</dt>
         <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
             <div class="flex">
-                <img src="{{$sermon->speaker->thumbnail ? Storage::disk('vultr')->url($sermon->speaker->thumbnail) : env('APP_URL') .'/images/speaker-placeholder.jpg' }}" alt="" class="h-16 w-16 object-cover rounded-full mr-4 mb-4">
+                <img src="<?php echo e($sermon->speaker->thumbnail ? Storage::disk('vultr')->url($sermon->speaker->thumbnail) : env('APP_URL') .'/images/speaker-placeholder.jpg'); ?>" alt="" class="h-16 w-16 object-cover rounded-full mr-4 mb-4">
                 <div>
-                <h3 class="text-md font-bold underline text-indigo-500"><a href="/speaker/{{$sermon->speaker->slug}}">{{$sermon->speaker->name}}</a></h3>
-                <p class="italic">{{$sermon->speaker->position}}</p>
+                <h3 class="text-md font-bold underline text-indigo-500"><a href="/speaker/<?php echo e($sermon->speaker->slug); ?>"><?php echo e($sermon->speaker->name); ?></a></h3>
+                <p class="italic"><?php echo e($sermon->speaker->position); ?></p>
                 </div>
             </div>
             <hr>
-            <div class="prose-sm my-4">{!! $sermon->speaker->bio !!}</div>
-            <a href="/speaker/{{$sermon->speaker->slug}}" class="rounded bg-indigo-50 px-2 py-1 text-xs font-semibold text-indigo-600 shadow-sm hover:bg-indigo-100">View all from this Speaker</a>
+            <div class="prose-sm my-4"><?php echo $sermon->speaker->bio; ?></div>
+            <a href="/speaker/<?php echo e($sermon->speaker->slug); ?>" class="rounded bg-indigo-50 px-2 py-1 text-xs font-semibold text-indigo-600 shadow-sm hover:bg-indigo-100">View all from this Speaker</a>
 
         </dd>
       </div>
@@ -135,23 +135,23 @@
         <dt class="text-sm font-medium text-gray-900">Series</dt>
         <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
             <div class="flex">
-                <img src="{{$sermon->series->photo ? Storage::disk('vultr')->url($sermon->series->photo) : env('APP_URL') .'/images/devotional-placeholder.jpg' }}" alt="" class="h-16 w-16 object-cover rounded-full mr-4 mb-4">
+                <img src="<?php echo e($sermon->series->photo ? Storage::disk('vultr')->url($sermon->series->photo) : env('APP_URL') .'/images/devotional-placeholder.jpg'); ?>" alt="" class="h-16 w-16 object-cover rounded-full mr-4 mb-4">
                 <div>
-                <h3 class="text-md font-bold underline text-indigo-500"><a href="/series/{{$sermon->series->slug}}">{{$sermon->series->title}}</a></h3>
+                <h3 class="text-md font-bold underline text-indigo-500"><a href="/series/<?php echo e($sermon->series->slug); ?>"><?php echo e($sermon->series->title); ?></a></h3>
                 </div>
             </div>
             <hr>
-            <div class="prose-sm my-4">{!! $sermon->series->description !!}</div>
-            <a href="/series/{{$sermon->series->slug}}" class="rounded bg-indigo-50 px-2 py-1 text-xs font-semibold text-indigo-600 shadow-sm hover:bg-indigo-100">View all from this Series</a>
+            <div class="prose-sm my-4"><?php echo $sermon->series->description; ?></div>
+            <a href="/series/<?php echo e($sermon->series->slug); ?>" class="rounded bg-indigo-50 px-2 py-1 text-xs font-semibold text-indigo-600 shadow-sm hover:bg-indigo-100">View all from this Series</a>
         </dd>
       </div>
       
-      @if($sermon->mp3 || $sermon->handout || $sermon->slides)
+      <?php if($sermon->mp3 || $sermon->handout || $sermon->slides): ?>
       <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
         <dt class="text-sm font-medium leading-6 text-gray-900">Downloads</dt>
         <dd class="mt-2 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
           <ul role="list" class="divide-y divide-gray-100 rounded-md border border-gray-200">
-            @if($sermon->mp3)
+            <?php if($sermon->mp3): ?>
             <li class="flex items-center justify-between py-4 pl-4 pr-5 text-sm leading-6">
               <div class="flex w-0 flex-1 items-center">
                 <svg class="h-5 w-5 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -166,8 +166,8 @@
                 <button wire:click="downloadMp3" class="font-medium text-indigo-600 hover:text-indigo-500">Download</button>
               </div>
             </li>
-            @endif
-            @if($sermon->slides)
+            <?php endif; ?>
+            <?php if($sermon->slides): ?>
             <li class="flex items-center justify-between py-4 pl-4 pr-5 text-sm leading-6">
               <div class="flex w-0 flex-1 items-center">
                 <svg class="h-5 w-5 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -181,8 +181,8 @@
                 <button wire:click="downloadSlides" class="font-medium text-indigo-600 hover:text-indigo-500">Download</button>
               </div>
             </li>
-            @endif
-            @if($sermon->handout)
+            <?php endif; ?>
+            <?php if($sermon->handout): ?>
             <li class="flex items-center justify-between py-4 pl-4 pr-5 text-sm leading-6">
               <div class="flex w-0 flex-1 items-center">
                 <svg class="h-5 w-5 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -196,20 +196,20 @@
                 <button wire:click="downloadHandout" class="font-medium text-indigo-600 hover:text-indigo-500">Download</button>
               </div>
             </li>
-            @endif
+            <?php endif; ?>
           </ul>
         </dd>
       </div>
-      @endif
+      <?php endif; ?>
     </dl>
   </div>
 </div>
 
     </div>
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 prose">
-        @if($moreThanFiftyWords)
+        <?php if($moreThanFiftyWords): ?>
         <div class="mb-6 w-full flex justify-end">
-        <a  target="_blank" href="/print/sermons/{{$sermon->id}}" class="inline-flex items-center rounded-md bg-indigo-50 px-2.5 py-1.5 text-sm font-semibold text-indigo-600 shadow-sm hover:bg-indigo-100">
+        <a  target="_blank" href="/print/sermons/<?php echo e($sermon->id); ?>" class="inline-flex items-center rounded-md bg-indigo-50 px-2.5 py-1.5 text-sm font-semibold text-indigo-600 shadow-sm hover:bg-indigo-100">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4 mr-1">
           <path fill-rule="evenodd" d="M5 2.75C5 1.784 5.784 1 6.75 1h6.5c.966 0 1.75.784 1.75 1.75v3.552c.377.046.752.097 1.126.153A2.212 2.212 0 0 1 18 8.653v4.097A2.25 2.25 0 0 1 15.75 15h-.241l.305 1.984A1.75 1.75 0 0 1 14.084 19H5.915a1.75 1.75 0 0 1-1.73-2.016L4.492 15H4.25A2.25 2.25 0 0 1 2 12.75V8.653c0-1.082.775-2.034 1.874-2.198.374-.056.75-.107 1.127-.153L5 6.25v-3.5Zm8.5 3.397a41.533 41.533 0 0 0-7 0V2.75a.25.25 0 0 1 .25-.25h6.5a.25.25 0 0 1 .25.25v3.397ZM6.608 12.5a.25.25 0 0 0-.247.212l-.693 4.5a.25.25 0 0 0 .247.288h8.17a.25.25 0 0 0 .246-.288l-.692-4.5a.25.25 0 0 0-.247-.212H6.608Z" clip-rule="evenodd" />
         </svg>
@@ -218,11 +218,12 @@
         </a>
 
         </div>
-        @endif
-        @if($sermon->manuscript && $sermon->manuscript != '')
-        @markdown($sermon->manuscript)
-        @else
+        <?php endif; ?>
+        <?php if($sermon->manuscript && $sermon->manuscript != ''): ?>
+        <?php echo app(App\Services\MarkdownService::class)->toHtml($sermon->manuscript); ?>
+        <?php else: ?>
         <p> No manuscript for this sermon.</p>
-        @endif
+        <?php endif; ?>
     </div>
 </div>
+<?php /**PATH /Users/ryanhayden/Herd/biblebaptistmattoon/resources/views/livewire/sermons/single.blade.php ENDPATH**/ ?>

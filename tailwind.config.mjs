@@ -11,6 +11,9 @@ export default {
         './vendor/filament/**/*.blade.php',
         './resources/**/*.blade.php',
     ],
+    corePlugins: {
+    aspectRatio: false,
+    },
     theme: {
         extend: {
           fontFamily: {
