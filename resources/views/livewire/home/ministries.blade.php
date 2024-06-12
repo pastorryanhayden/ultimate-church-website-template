@@ -4,7 +4,7 @@
    <div class="grid mt-12 mx-auto" id="ministrygrid">
     @foreach($ministries as $ministry)
         <article class="flex h-48 mb-8">
-            <img src="{{ asset('storage/' . $ministry->image )}}" alt="{{$ministry->name}}" class="object-cover w-1/2">
+            <img src="{{ Storage::disk('vultr')->url($ministry->image) }}" alt="{{$ministry->name}}" class="object-cover w-1/2">
             <div class="bg-white w-1/2 flex flex-col items-start justify-center p-4 text-left hover:bg-gray-100">
                 <h4 class="font-sans text-gray-400 uppercase">{{$ministry->for}}</h4>
                 <h3 class="font-sans font-bold text-2xl text-gray-700">{{$ministry->name}}</h3>

@@ -90,11 +90,16 @@ class EventResource extends Resource
                 ]),
                 Section::make('Photo')
                 ->schema([
-                    FileUpload::make('photo'),
+                    FileUpload::make('photo')->disk('vultr')
+                    ->directory('images')
+                    ->visibility('public'),
                 ]),
                 Section::make('Content')
                 ->schema([
                     MarkdownEditor::make('body')
+                    ->fileAttachmentsDisk('vultr')
+                    ->fileAttachmentsDirectory('images')
+                    ->fileAttachmentsVisibility('public')
                     ->required(),
                 ]),
                

@@ -56,7 +56,7 @@ $__split = function ($name, $params = []) {
 };
 [$__name, $__params] = $__split($normalizeWidgetClass($widget), [...(($widget instanceof \Filament\Widgets\WidgetConfiguration) ? $widget->properties : $widget::getDefaultProperties()), ...$data], $key);
 
-$__html = app('livewire')->mount($__name, $__params, '69Dhyvn', $__slots ?? [], get_defined_vars());
+$__html = app('livewire')->mount($__name, $__params, 'riUEtgz', $__slots ?? [], get_defined_vars());
 
 echo $__html;
 

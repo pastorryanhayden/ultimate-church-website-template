@@ -4,7 +4,7 @@
    <div class="grid mt-12 mx-auto" id="ministrygrid">
     <?php $__currentLoopData = $ministries; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $ministry): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <article class="flex h-48 mb-8">
-            <img src="<?php echo e(asset('storage/' . $ministry->image )); ?>" alt="<?php echo e($ministry->name); ?>" class="object-cover w-1/2">
+            <img src="<?php echo e(Storage::disk('vultr')->url($ministry->image)); ?>" alt="<?php echo e($ministry->name); ?>" class="object-cover w-1/2">
             <div class="bg-white w-1/2 flex flex-col items-start justify-center p-4 text-left hover:bg-gray-100">
                 <h4 class="font-sans text-gray-400 uppercase"><?php echo e($ministry->for); ?></h4>
                 <h3 class="font-sans font-bold text-2xl text-gray-700"><?php echo e($ministry->name); ?></h3>

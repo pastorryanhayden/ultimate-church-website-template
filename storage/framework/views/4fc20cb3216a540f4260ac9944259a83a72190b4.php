@@ -1,8 +1,8 @@
 <div class="relative isolate overflow-hidden pt-14">
-    <img src="<?php echo e($settings->header_image); ?>" alt="" class="absolute inset-0 -z-20 h-full w-full object-cover">
+    <img src="<?php echo e(Storage::disk('vultr')->url($settings->header_image)); ?>" alt="" class="absolute inset-0 -z-20 h-full w-full object-cover">
     <?php if($settings->header_video): ?>
     <video id="video" autoplay muted loop playsinline poster="/storage/<?php echo e($settings->header_image); ?>" class="absolute inset-0 -z-20 h-full w-full object-cover">
-      <source src="/storage/<?php echo e($settings->header_video); ?>" type="video/mp4">
+      <source src="<?php echo e(Storage::disk('vultr')->url($settings->header_video)); ?>" type="video/mp4">
         
       </video>
       <script>

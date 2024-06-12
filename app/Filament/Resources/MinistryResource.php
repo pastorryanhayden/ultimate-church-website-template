@@ -75,6 +75,9 @@ class MinistryResource extends Resource
                 ->schema([
                     FileUpload::make('image')
                     ->label('Ministry Image')
+                    ->disk('vultr')
+                    ->directory('images')
+                    ->visibility('public')
                     ->columnSpan(4)
                 ]),
                 Section::make('Content')
@@ -82,6 +85,9 @@ class MinistryResource extends Resource
                 ->schema([
                 MarkdownEditor::make('body')
                 ->label('Description')
+                ->fileAttachmentsDisk('vultr')
+                    ->fileAttachmentsDirectory('images')
+                    ->fileAttachmentsVisibility('public')
                 ->columnSpan(4)
                 ])
 

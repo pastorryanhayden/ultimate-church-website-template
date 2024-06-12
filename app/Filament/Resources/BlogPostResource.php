@@ -12,6 +12,10 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Set;
+use Filament\Forms\Get;
+use Illuminate\Support\Str;
+use Filament\Tables\Columns\TextColumn;
 
 class BlogPostResource extends Resource
 {
@@ -32,6 +36,7 @@ class BlogPostResource extends Resource
                 ->schema([
                     Forms\Components\TextInput::make('title')
                     ->reactive()
+                    ->live(onBlur: true)
                     ->columnSpan(2)
                     ->required()
                     ->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state))),
@@ -49,12 +54,18 @@ class BlogPostResource extends Resource
                      ->columnSpan(1),
                     Forms\Components\FileUpload::make('image')
                     ->label('Featured Image')
+                    ->disk('vultr')
+                    ->directory('images')
+                    ->visibility('public')
                     ->columnSpan(4)
                     ->required()
                 ]),
                 Forms\Components\Section::make('Post')
                 ->schema([
                     Forms\Components\MarkdownEditor::make('body')
+                    ->fileAttachmentsDisk('vultr')
+                    ->fileAttachmentsDirectory('images')
+                    ->fileAttachmentsVisibility('public')
                     ->hint(str('[Uses Markdown](https://www.markdownguide.org/cheat-sheet/)')->inlineMarkdown()->toHtmlString())
                     ->required(),
                 ])
@@ -65,7 +76,13 @@ class BlogPostResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('title')
+                ->searchable()
+                ->sortable(),
+                TextColumn::make('created_at')
+                ->label('Date')
+                ->date()
+                ->sortable(),
             ])
             ->filters([
                 //

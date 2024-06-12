@@ -51,7 +51,7 @@
     class="w-full aspect-video mb-6 max-w-4xl mx-auto">
     </iframe>
     @elseif($sermon->series->photo)
-    <img src="/{{ $sermon->series->photo }}" alt="" class="w-full max-w-lg mx-auto mb-12">
+    <img src="{{ Storage::disk('vultr')->url($sermon->series->photo) }}" alt="" class="w-full max-w-lg mx-auto mb-12">
     @endif 
     @if($sermon->mp3)
     <audio controls class="w-full mt-6 max-w-4xl px-4 sm:px-6 lg:px-8 mx-auto">
@@ -117,7 +117,7 @@
         <dt class="text-sm font-medium text-gray-900">Speaker</dt>
         <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
             <div class="flex">
-                <img src="{{$sermon->speaker->thumbnail ? asset('storage/' . $sermon->speaker->thumbnail ) : env('APP_URL') .'/images/speaker-placeholder.jpg' }}" alt="" class="h-16 w-16 object-cover rounded-full mr-4 mb-4">
+                <img src="{{$sermon->speaker->thumbnail ? Storage::disk('vultr')->url($sermon->speaker->thumbnail) : env('APP_URL') .'/images/speaker-placeholder.jpg' }}" alt="" class="h-16 w-16 object-cover rounded-full mr-4 mb-4">
                 <div>
                 <h3 class="text-md font-bold underline text-indigo-500"><a href="/speaker/{{$sermon->speaker->slug}}">{{$sermon->speaker->name}}</a></h3>
                 <p class="italic">{{$sermon->speaker->position}}</p>
@@ -133,7 +133,7 @@
         <dt class="text-sm font-medium text-gray-900">Series</dt>
         <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
             <div class="flex">
-                <img src="{{$sermon->series->photo ? asset('storage/' . $sermon->series->photo ) : env('APP_URL') .'/images/devotional-placeholder.jpg' }}" alt="" class="h-16 w-16 object-cover rounded-full mr-4 mb-4">
+                <img src="{{$sermon->series->photo ? Storage::disk('vultr')->url($sermon->series->photo) : env('APP_URL') .'/images/devotional-placeholder.jpg' }}" alt="" class="h-16 w-16 object-cover rounded-full mr-4 mb-4">
                 <div>
                 <h3 class="text-md font-bold underline text-indigo-500"><a href="/series/{{$sermon->series->slug}}">{{$sermon->series->title}}</a></h3>
                 </div>

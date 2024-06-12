@@ -54,8 +54,14 @@ class HomePage extends Page implements HasForms
                     ->required(),
                 FileUpload::make('header_image')
                 ->image()
-                ->imageEditor(),
+                ->imageEditor()
+                ->disk('vultr')
+                    ->directory('images')
+                    ->visibility('public'),
                 FileUpload::make('header_video')
+                ->disk('vultr')
+                    ->directory('images')
+                    ->visibility('public')
                 ->acceptedFileTypes([
                     'video/mp4',
                     'video/mpeg'

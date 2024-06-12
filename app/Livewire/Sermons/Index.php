@@ -23,6 +23,7 @@ use Filament\Support\Enums\Alignment;
 use Filament\Tables\Columns\Layout\Split;
 use Filament\Support\Enums\FontWeight;
 use Filament\Tables\Columns\ImageColumn;
+use Illuminate\Support\Facades\Storage;
 
 class Index extends Component implements HasForms, HasTable
 {
@@ -37,10 +38,14 @@ class Index extends Component implements HasForms, HasTable
                 Split::make([
                     Stack::make([
                         ImageColumn::make('series.photo')
-                        ->defaultImageUrl(url('/images/devotional-placeholder.jpg'))
                         ->size(50)
+                        ->disk('vultr')
                         ->circular()
-                        ,
+                        ->defaultImageUrl('/images/series-placeholder.jpg')
+                        // ->state(function (Speaker $record): string {
+                        //     return $record->thumbnail ? Storage::disk('vultr')->url($record->thumbnail) : '/images/speaker-placeholder.jpg';
+                        // })
+                       ,
                     ])
                      ->grow(false),
                     Stack::make([

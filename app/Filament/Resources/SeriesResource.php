@@ -22,7 +22,7 @@ use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Section;
 use Illuminate\Support\Str;
 
@@ -56,11 +56,17 @@ class SeriesResource extends Resource
                 Section::make('Media')
                 ->schema([
                     FileUpload::make('photo')
+                    ->disk('vultr')
+                    ->directory('images')
+                    ->visibility('public')
                     ->image(),
                 ]),
                 Section::make('Content')
                 ->schema([
-                    RichEditor::make('body')
+                    MarkdownEditor::make('body')
+                    ->fileAttachmentsDisk('vultr')
+                    ->fileAttachmentsDirectory('images')
+                    ->fileAttachmentsVisibility('public')
                 ]),
             ]);
     }

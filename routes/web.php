@@ -16,6 +16,8 @@ use App\Livewire\Sermons\Series\Index as SeriesIndex;
 use App\Livewire\Sermons\Series\Single as SeriesSingle;
 use App\Livewire\Sermons\Speaker\Index as SpeakerIndex;
 use App\Livewire\Sermons\Speaker\Single as SpeakerSingle;
+use App\Livewire\Blog\Single as BlogSingle;
+use App\Livewire\Blog\Index as BlogIndex;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +45,7 @@ Route::get('/series', SeriesIndex::class);
 Route::get('/series/{slug}', SeriesSingle::class)->name('series.single');
 Route::get('/speakers', SpeakerIndex::class);
 Route::get('/speaker/{slug}', SpeakerSingle::class)->name('speaker.single');
+Route::get('/blog', BlogIndex::class);
 
 // This is just for testing to help clear cookies
 Route::get('/clear-announcement-cookie', function () {

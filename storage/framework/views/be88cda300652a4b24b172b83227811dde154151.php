@@ -14,7 +14,7 @@
       <article class="flex flex-col items-start justify-between">
         <div class="relative w-full">
           <?php if($devotion->image): ?>
-          <img src="<?php echo e(asset('storage/'. $devotion->image)); ?>" alt="" class="aspect-[16/9] w-full bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]">
+          <img src="<?php echo e(Storage::disk('vultr')->url($devotion->image)); ?>" alt="" class="aspect-[16/9] w-full bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]">
           <?php else: ?> 
           <img src="/images/bible.jpg" alt="" class="aspect-[16/9] w-full bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]">
           <?php endif; ?> 

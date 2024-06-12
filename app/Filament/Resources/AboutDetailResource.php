@@ -37,7 +37,9 @@ class AboutDetailResource extends Resource
                 ->schema([
                     Forms\Components\TextInput::make('heading')->required(),
                     Forms\Components\TextInput::make('subheading')->required(),
-                    Forms\Components\FileUpload::make('image')->required(),
+                    Forms\Components\FileUpload::make('image')->disk('vultr')
+                    ->directory('images')
+                    ->visibility('public')->required(),
                 ])                
             ]);
     }
@@ -48,7 +50,7 @@ class AboutDetailResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('heading'),
                 Tables\Columns\TextColumn::make('subheading'),
-                Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\ImageColumn::make('image')->disk('vultr'),
             ])
             ->filters([
                 //

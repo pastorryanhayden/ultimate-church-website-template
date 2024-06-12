@@ -49,7 +49,8 @@ class Single extends Component implements HasForms, HasTable
                 Split::make([
                     Stack::make([
                         ImageColumn::make('series.photo')
-                        ->defaultImageUrl(url('/images/devotional-placeholder.jpg'))
+                        ->disk('vultr')
+                        ->defaultImageUrl(url('/images/series-placeholder.jpg'))
                         ->size(50)
                         ->circular()
                         ,

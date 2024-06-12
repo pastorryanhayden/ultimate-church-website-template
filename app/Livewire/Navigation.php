@@ -34,7 +34,7 @@ class Navigation extends Component
         // If the latest devotion is less than a month old, set devotions as true
         $this->devotions = Devotion::latest()->first()->published_at->diffInDays(now()) < 30 ? true : false;
 
-        $this->blog = BlogPost::count() > 1 ? true : false;
+        $this->blog = BlogPost::count() > 0 ? true : false;
 
         // If both devotions and sermons exist then set resources to true
         

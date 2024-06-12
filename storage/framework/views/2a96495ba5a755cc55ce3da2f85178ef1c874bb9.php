@@ -4,7 +4,7 @@
         <a href="/events/<?php echo e($event->slug); ?>"><h2 class="text-white font-serif text-3xl"><?php echo e($event->title); ?></h2></a>
         <p class="text-gray-200 font-sans text-lg mt-2"><?php echo e(date_format($event->start_date, 'F j')); ?><?php if($event->end_date): ?>- <?php echo e(date_format($event->end_date, 'F j')); ?><?php endif; ?></p>
         <?php if($event->photo): ?>
-            <a href="/events/<?php echo e($event->slug); ?>"><img class="w-96 mt-4 border border-gray-800" src="<?php echo e(asset('storage/'. $event->photo)); ?>" alt="<?php echo e($event->title); ?>"></a>
+            <a href="/events/<?php echo e($event->slug); ?>"><img class="w-96 mt-4 border border-gray-800" src="<?php echo e(Storage::disk('vultr')->url($event->photo)); ?>" alt="<?php echo e($event->title); ?>"></a>
         <?php else: ?>
             <a href="/events/<?php echo e($event->slug); ?>"><img src="/images/placeholder.jpg" alt="placeholder image"></a>
         <?php endif; ?>

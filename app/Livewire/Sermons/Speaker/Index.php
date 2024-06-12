@@ -21,6 +21,7 @@ use Filament\Support\Enums\Alignment;
 use Filament\Tables\Columns\Layout\Split;
 use Filament\Support\Enums\FontWeight;
 use Filament\Tables\Columns\ImageColumn;
+use Illuminate\Support\Facades\Storage;
 
 class Index extends Component implements HasForms, HasTable
 {

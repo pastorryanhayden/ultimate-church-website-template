@@ -1,8 +1,8 @@
 <div class="relative isolate overflow-hidden pt-14">
-    <img src="{{$settings->header_image}}" alt="" class="absolute inset-0 -z-20 h-full w-full object-cover">
+    <img src="{{ Storage::disk('vultr')->url($settings->header_image) }}" alt="" class="absolute inset-0 -z-20 h-full w-full object-cover">
     @if($settings->header_video)
     <video id="video" autoplay muted loop playsinline poster="/storage/{{$settings->header_image}}" class="absolute inset-0 -z-20 h-full w-full object-cover">
-      <source src="/storage/{{$settings->header_video}}" type="video/mp4">
+      <source src="{{ Storage::disk('vultr')->url($settings->header_video) }}" type="video/mp4">
         {{-- <source src="/images/hero.mp4" type="video/mp4"> --}}
       </video>
       <script>

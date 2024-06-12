@@ -46,6 +46,9 @@ class AboutSectionResource extends Resource
                 ->schema([
                     Forms\Components\TextInput::make('section_heading')->required(),
                     Forms\Components\MarkdownEditor::make('content')
+                    ->fileAttachmentsDisk('vultr')
+                    ->fileAttachmentsDirectory('images')
+                    ->fileAttachmentsVisibility('public')
                     ->required()
                     ->hint(str('[Uses Markdown](https://www.markdownguide.org/cheat-sheet/)')->inlineMarkdown()->toHtmlString()),
                 ])

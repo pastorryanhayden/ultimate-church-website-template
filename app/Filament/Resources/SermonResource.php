@@ -183,7 +183,10 @@ class SermonResource extends Resource
                     ->schema([
                         FileUpload::make('mp3')
                         ->acceptedFileTypes(['audio/mpeg', 'audio/mp3'])
-                        ->columnSpan(2),
+                        ->columnSpan(2)
+                        ->disk('vultr')
+                    ->directory('mp3')
+                    ->visibility('public'),
                         TextInput::make('youtube_url')
                         ->label('Video URL')
                         ->placeholder('https://www.youtube.com/watch?v=4ZqR_M20Y48')
@@ -204,6 +207,9 @@ class SermonResource extends Resource
                     ->columns(1)
                     ->schema([
                         MarkdownEditor::make('manuscript')
+                        ->fileAttachmentsDisk('vultr')
+                    ->fileAttachmentsDirectory('images')
+                    ->fileAttachmentsVisibility('public')
                         ->hint(str('[Uses Markdown](https://www.markdownguide.org/cheat-sheet/)')->inlineMarkdown()->toHtmlString())
                     ])
                     ->collapsed(),
@@ -215,9 +221,15 @@ class SermonResource extends Resource
                     ->schema([
                         FileUpload::make('slides')
                         ->acceptedFileTypes(['application/pdf'])
-                        ->columnSpan(2),
+                        ->columnSpan(2)
+                        ->disk('vultr')
+                    ->directory('slides')
+                    ->visibility('public'),
                         FileUpload::make('handout')
                         ->acceptedFileTypes(['application/pdf'])
+                        ->disk('vultr')
+                    ->directory('handouts')
+                    ->visibility('public')
                         ->columnSpan(2),
 
                     ]),
