@@ -22,7 +22,7 @@ $__split = function ($name, $params = []) {
 };
 [$__name, $__params] = $__split('announcement', []);
 
-$__html = app('livewire')->mount($__name, $__params, 'ZiDB1rB', $__slots ?? [], get_defined_vars());
+$__html = app('livewire')->mount($__name, $__params, '8K11FJG', $__slots ?? [], get_defined_vars());
 
 echo $__html;
 
@@ -38,7 +38,7 @@ $__split = function ($name, $params = []) {
 };
 [$__name, $__params] = $__split('navigation', []);
 
-$__html = app('livewire')->mount($__name, $__params, 'w5Yl9ng', $__slots ?? [], get_defined_vars());
+$__html = app('livewire')->mount($__name, $__params, 'vo9x6Z3', $__slots ?? [], get_defined_vars());
 
 echo $__html;
 
@@ -59,7 +59,7 @@ $__split = function ($name, $params = []) {
 };
 [$__name, $__params] = $__split('footer', []);
 
-$__html = app('livewire')->mount($__name, $__params, 'UXya4QY', $__slots ?? [], get_defined_vars());
+$__html = app('livewire')->mount($__name, $__params, 'Hwrqs7e', $__slots ?? [], get_defined_vars());
 
 echo $__html;
 

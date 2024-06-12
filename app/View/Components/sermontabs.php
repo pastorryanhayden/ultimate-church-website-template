@@ -7,7 +7,7 @@ use App\Models\Sermon;
 use App\Models\Series;
 use App\Models\Speaker;
 
-class sermontabs extends Component
+class Sermontabs extends Component
 {
 
     public $selected = 'Sermons';
