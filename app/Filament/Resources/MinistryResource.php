@@ -16,7 +16,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\ToggleColumn;
 use Filament\Forms\Components\Select;
-use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\FileUpload;
 use App\Models\Leader;
@@ -66,11 +66,6 @@ class MinistryResource extends Resource
                     'girls' => 'girls'
                 ])
                 ->columnSpan(3),
-                Select::make('leader_id')
-                ->label('Leader')
-                ->options(Leader::all()->pluck('name', 'id'))
-                ->searchable()
-                ->columnSpan(3),
                 Checkbox::make('homepage')
                 ->label('Show on homepage?')
                 ->columnSpan(3),
@@ -80,13 +75,19 @@ class MinistryResource extends Resource
                 ->schema([
                     FileUpload::make('image')
                     ->label('Ministry Image')
+                    ->disk('vultr')
+                    ->directory('images')
+                    ->visibility('public')
                     ->columnSpan(4)
                 ]),
                 Section::make('Content')
                 ->columns(4)
                 ->schema([
-                RichEditor::make('body')
+                MarkdownEditor::make('body')
                 ->label('Description')
+                ->fileAttachmentsDisk('vultr')
+                    ->fileAttachmentsDirectory('images')
+                    ->fileAttachmentsVisibility('public')
                 ->columnSpan(4)
                 ])
 
@@ -130,6 +131,6 @@ class MinistryResource extends Resource
 
     protected static ?string $navigationGroup = 'Setup';
 
-    protected static ?int $navigationSort = 4;
+    protected static ?int $navigationSort = 3;
 
 }

@@ -28,7 +28,7 @@ class Footer extends Page implements HasForms
 
     protected static string $view = 'filament.pages.footer';
 
-    protected static ?int $navigationSort = 2;
+    protected static ?int $navigationSort = 5;
 
     protected static ?string $navigationGroup = 'Setup';
 

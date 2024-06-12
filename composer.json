@@ -6,12 +6,20 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
+        "blade-ui-kit/blade-heroicons": "^2.3",
+        "blade-ui-kit/blade-icons": "^1.6",
+        "erusev/parsedown": "^1.7",
         "filament/filament": "^3.0-stable",
+        "guava/filament-icon-picker": "^2.0",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
+        "league/commonmark": "^2.4",
+        "league/flysystem-aws-s3-v3": "^3.0",
+        "league/html-to-markdown": "^5.1",
         "livewire/livewire": "^3.0@beta",
+        "spatie/eloquent-sortable": "^4.3",
         "staudenmeir/belongs-to-through": "^2.5"
     },
     "require-dev": {
@@ -39,7 +47,8 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "@php artisan filament:upgrade"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force",

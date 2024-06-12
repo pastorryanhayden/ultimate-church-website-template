@@ -3,6 +3,7 @@
 namespace App\Observers;
 
 use App\Models\Sermon;
+use App\Services\CleanUpManuscriptService;
 
 class SermonObserver
 {
@@ -14,7 +15,9 @@ class SermonObserver
      */
     public function created(Sermon $sermon)
     {
-        //
+        if($sermon->manuscript && $sermon->manuscript != '')
+        $sermon->manuscript = CleanUpManuscriptService::clean($sermon->manuscript);
+        $sermon->save();
     }
 
     /**
@@ -25,7 +28,9 @@ class SermonObserver
      */
     public function updated(Sermon $sermon)
     {
-        //
+        if($sermon->manuscript && $sermon->manuscript != '')
+        $sermon->manuscript = CleanUpManuscriptService::clean($sermon->manuscript);
+        $sermon->save();
     }
 
     /**

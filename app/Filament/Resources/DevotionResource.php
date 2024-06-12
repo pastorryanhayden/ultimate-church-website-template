@@ -20,7 +20,6 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\Select;
-use App\Models\Leader;
 use Illuminate\Support\Facades\Auth;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
@@ -55,16 +54,21 @@ class DevotionResource extends Resource
             TextInput::make('video_url')->label('Youtube URL')
             ->placeholder('https://youtube.com/watch?v=...')
             ->url(),
-             FileUpload::make('audio_url')->label('MP3 File')->acceptedFileTypes(['audio/mpeg']),
-             FileUpload::make('image_url')->label('Image')->image(),
-            RichEditor::make('body')->placeholder('Something about the devotion here...')
-            ->required(),
-            Select::make('leader_id')
-                ->label('Author')
-                ->options(Leader::all()->pluck('name', 'id'))
-                ->searchable()
-                ->required(),
-
+             FileUpload::make('audio_url')->disk('vultr')
+                    ->directory('mp3')
+                    ->visibility('public')->label('MP3 File')->acceptedFileTypes(['audio/mpeg']),
+             FileUpload::make('image_url')->disk('vultr')
+                    ->directory('images')
+                    ->visibility('public')->label('Image')->image(),
+            Forms\Components\MarkdownEditor::make('body')
+            ->fileAttachmentsDisk('vultr')
+                    ->fileAttachmentsDirectory('images')
+                    ->fileAttachmentsVisibility('public')
+                ->placeholder('Something about the devotion here...')
+                ->hint(str('[Uses Markdown](https://www.markdownguide.org/cheat-sheet/)')->inlineMarkdown()->toHtmlString())
+            ->required()
+            ->hint(str('[Uses Markdown](https://www.markdownguide.org/cheat-sheet/)')->inlineMarkdown()->toHtmlString()),
+            
 
                 ])
             

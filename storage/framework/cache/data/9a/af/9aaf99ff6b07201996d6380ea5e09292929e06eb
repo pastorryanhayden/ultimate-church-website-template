@@ -1,0 +1,266 @@
+1717429858a:24:{s:22:"heroicon-c-user-circle";s:762:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path fill-rule="evenodd" d="M15 8A7 7 0 1 1 1 8a7 7 0 0 1 14 0Zm-5-2a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM8 9c-1.825 0-3.422.977-4.295 2.437A5.49 5.49 0 0 0 8 13.5a5.49 5.49 0 0 0 4.294-2.063A4.997 4.997 0 0 0 8 9Z" clip-rule="evenodd"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-c-user-circle</small>
+	</div>
+</div>
+";s:21:"heroicon-c-user-group";s:1002:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path d="M8 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5ZM3.156 11.763c.16-.629.44-1.21.813-1.72a2.5 2.5 0 0 0-2.725 1.377c-.136.287.102.58.418.58h1.449c.01-.077.025-.156.045-.237ZM12.847 11.763c.02.08.036.16.046.237h1.446c.316 0 .554-.293.417-.579a2.5 2.5 0 0 0-2.722-1.378c.374.51.653 1.09.813 1.72ZM14 7.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM3.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM5 13c-.552 0-1.013-.455-.876-.99a4.002 4.002 0 0 1 7.753 0c.136.535-.324.99-.877.99H5Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-c-user-group</small>
+	</div>
+</div>
+";s:21:"heroicon-c-user-minus";s:731:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path d="M8.5 4.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM10 13c.552 0 1.01-.452.9-.994a5.002 5.002 0 0 0-9.802 0c-.109.542.35.994.902.994h8ZM10.75 5.25a.75.75 0 0 0 0 1.5h3.5a.75.75 0 0 0 0-1.5h-3.5Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-c-user-minus</small>
+	</div>
+</div>
+";s:20:"heroicon-c-user-plus";s:799:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path d="M8.5 4.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM10 13c.552 0 1.01-.452.9-.994a5.002 5.002 0 0 0-9.802 0c-.109.542.35.994.902.994h8ZM12.5 3.5a.75.75 0 0 1 .75.75v1h1a.75.75 0 0 1 0 1.5h-1v1a.75.75 0 0 1-1.5 0v-1h-1a.75.75 0 0 1 0-1.5h1v-1a.75.75 0 0 1 .75-.75Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-c-user-plus</small>
+	</div>
+</div>
+";s:15:"heroicon-c-user";s:670:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-c-user</small>
+	</div>
+</div>
+";s:16:"heroicon-c-users";s:839:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path d="M8.5 4.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM10.9 12.006c.11.542-.348.994-.9.994H2c-.553 0-1.01-.452-.902-.994a5.002 5.002 0 0 1 9.803 0ZM14.002 12h-1.59a2.556 2.556 0 0 0-.04-.29 6.476 6.476 0 0 0-1.167-2.603 3.002 3.002 0 0 1 3.633 1.911c.18.522-.283.982-.836.982ZM12 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-c-users</small>
+	</div>
+</div>
+";s:22:"heroicon-m-user-circle";s:778:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-5.5-2.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM10 12a5.99 5.99 0 0 0-4.793 2.39A6.483 6.483 0 0 0 10 16.5a6.483 6.483 0 0 0 4.793-2.11A5.99 5.99 0 0 0 10 12Z" clip-rule="evenodd"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-m-user-circle</small>
+	</div>
+</div>
+";s:21:"heroicon-m-user-group";s:1053:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path d="M10 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM6 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM1.49 15.326a.78.78 0 0 1-.358-.442 3 3 0 0 1 4.308-3.516 6.484 6.484 0 0 0-1.905 3.959c-.023.222-.014.442.025.654a4.97 4.97 0 0 1-2.07-.655ZM16.44 15.98a4.97 4.97 0 0 0 2.07-.654.78.78 0 0 0 .357-.442 3 3 0 0 0-4.308-3.517 6.484 6.484 0 0 1 1.907 3.96 2.32 2.32 0 0 1-.026.654ZM18 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM5.304 16.19a.844.844 0 0 1-.277-.71 5 5 0 0 1 9.947 0 .843.843 0 0 1-.277.71A6.975 6.975 0 0 1 10 18a6.974 6.974 0 0 1-4.696-1.81Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-m-user-group</small>
+	</div>
+</div>
+";s:21:"heroicon-m-user-minus";s:783:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM2.046 15.253c-.058.468.172.92.57 1.175A9.953 9.953 0 0 0 8 18c1.982 0 3.83-.578 5.384-1.573.398-.254.628-.707.57-1.175a6.001 6.001 0 0 0-11.908 0ZM12.75 7.75a.75.75 0 0 0 0 1.5h5.5a.75.75 0 0 0 0-1.5h-5.5Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-m-user-minus</small>
+	</div>
+</div>
+";s:20:"heroicon-m-user-plus";s:834:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path d="M10 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM1.615 16.428a1.224 1.224 0 0 1-.569-1.175 6.002 6.002 0 0 1 11.908 0c.058.467-.172.92-.57 1.174A9.953 9.953 0 0 1 7 18a9.953 9.953 0 0 1-5.385-1.572ZM16.25 5.75a.75.75 0 0 0-1.5 0v2h-2a.75.75 0 0 0 0 1.5h2v2a.75.75 0 0 0 1.5 0v-2h2a.75.75 0 0 0 0-1.5h-2v-2Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-m-user-plus</small>
+	</div>
+</div>
+";s:15:"heroicon-m-user";s:718:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path d="M10 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM3.465 14.493a1.23 1.23 0 0 0 .41 1.412A9.957 9.957 0 0 0 10 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 0 0-13.074.003Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-m-user</small>
+	</div>
+</div>
+";s:16:"heroicon-m-users";s:912:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path d="M7 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM14.5 9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5ZM1.615 16.428a1.224 1.224 0 0 1-.569-1.175 6.002 6.002 0 0 1 11.908 0c.058.467-.172.92-.57 1.174A9.953 9.953 0 0 1 7 18a9.953 9.953 0 0 1-5.385-1.572ZM14.5 16h-.106c.07-.297.088-.611.048-.933a7.47 7.47 0 0 0-1.588-3.755 4.502 4.502 0 0 1 5.874 2.636.818.818 0 0 1-.36.98A7.465 7.465 0 0 1 14.5 16Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-m-users</small>
+	</div>
+</div>
+";s:22:"heroicon-o-user-circle";s:823:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-o-user-circle</small>
+	</div>
+</div>
+";s:21:"heroicon-o-user-group";s:1133:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-o-user-group</small>
+	</div>
+</div>
+";s:21:"heroicon-o-user-minus";s:805:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M22 10.5h-6m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM4 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 10.374 21c-2.331 0-4.512-.645-6.374-1.766Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-o-user-minus</small>
+	</div>
+</div>
+";s:20:"heroicon-o-user-plus";s:821:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-o-user-plus</small>
+	</div>
+</div>
+";s:15:"heroicon-o-user";s:768:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-o-user</small>
+	</div>
+</div>
+";s:16:"heroicon-o-users";s:995:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-o-users</small>
+	</div>
+</div>
+";s:22:"heroicon-s-user-circle";s:939:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-s-user-circle</small>
+	</div>
+</div>
+";s:21:"heroicon-s-user-group";s:1218:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path fill-rule="evenodd" d="M8.25 6.75a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0ZM15.75 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM2.25 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM6.31 15.117A6.745 6.745 0 0 1 12 12a6.745 6.745 0 0 1 6.709 7.498.75.75 0 0 1-.372.568A12.696 12.696 0 0 1 12 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 0 1-.372-.568 6.787 6.787 0 0 1 1.019-4.38Z" clip-rule="evenodd"/>
+  <path d="M5.082 14.254a8.287 8.287 0 0 0-1.308 5.135 9.687 9.687 0 0 1-1.764-.44l-.115-.04a.563.563 0 0 1-.373-.487l-.01-.121a3.75 3.75 0 0 1 3.57-4.047ZM20.226 19.389a8.287 8.287 0 0 0-1.308-5.135 3.75 3.75 0 0 1 3.57 4.047l-.01.121a.563.563 0 0 1-.373.486l-.115.04c-.567.2-1.156.349-1.764.441Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-s-user-group</small>
+	</div>
+</div>
+";s:21:"heroicon-s-user-minus";s:846:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path d="M10.375 2.25a4.125 4.125 0 1 0 0 8.25 4.125 4.125 0 0 0 0-8.25ZM10.375 12a7.125 7.125 0 0 0-7.124 7.247.75.75 0 0 0 .363.63 13.067 13.067 0 0 0 6.761 1.873c2.472 0 4.786-.684 6.76-1.873a.75.75 0 0 0 .364-.63l.001-.12v-.002A7.125 7.125 0 0 0 10.375 12ZM16 9.75a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5h-6Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-s-user-minus</small>
+	</div>
+</div>
+";s:20:"heroicon-s-user-plus";s:899:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path d="M5.25 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM2.25 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM18.75 7.5a.75.75 0 0 0-1.5 0v2.25H15a.75.75 0 0 0 0 1.5h2.25v2.25a.75.75 0 0 0 1.5 0v-2.25H21a.75.75 0 0 0 0-1.5h-2.25V7.5Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-s-user-plus</small>
+	</div>
+</div>
+";s:15:"heroicon-s-user";s:762:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-s-user</small>
+	</div>
+</div>
+";s:16:"heroicon-s-users";s:995:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.157v.003Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-s-users</small>
+	</div>
+</div>
+";}

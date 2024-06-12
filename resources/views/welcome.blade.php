@@ -8,25 +8,31 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
-         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+        <style>
+            [x-cloak] {
+                display: none !important;
+            }
+        </style>
+         {{-- @livewireStyles --}}
+         @filamentStyles
+         @vite('resources/css/app.css')
     </head>
-    <body class="home bg-white w-full">
-    @include('partials._mobile-menu')
-    @include('partials._announcements')
-        <header>
-            <section class="top" style="background-image: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0, .5));">
-            <div class="overlay"></div>
-            <video  autoplay muted loop poster="/storage/{{$site_global->header_image}}">
-            <source src="/storage/{{$site_global->header_video}}" type="video/mp4">
-            </video>
-            @include('partials._main-nav')
-            <h1>{{ $site_global->heading }}</h1>
-        </section>
-        </header>
-      
-          @include('partials._actions')
-          @include('partials._event')
-        @include('partials._ministries')  
-       @include('partials._footer', ['show_map' => true])
-    </body>
+    <body class="bg-gray-100 w-full font-serif antialiased">
+
+        <livewire:announcement />
+        <livewire:navigation :transparent="true" />
+        <div class="max-w-7xl mx-auto bg-white">
+        <livewire:home.hero />
+        <livewire:home.actions />
+        <livewire:home.events />
+        <livewire:home.ministries />
+        <livewire:home.featured-series />
+        <livewire:home.devotions />
+        <livewire:home.map />
+        <livewire:footer />
+        </div>
+         
+        {{-- @livewireScripts --}}
+        @filamentScripts
+        @vite('resources/js/app.js')
 </html>

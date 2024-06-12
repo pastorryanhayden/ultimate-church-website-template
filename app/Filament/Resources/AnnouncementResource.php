@@ -33,11 +33,12 @@ class AnnouncementResource extends Resource
             ->schema([
                 Card::make()
                 ->schema([
+                TextInput::make('title')->required(),    
                 Textarea::make('announcement')->placeholder('No church Sunday')
                 ->maxLength(140)
                 ->required(),
-                DateTimePicker::make('start')->firstDayOfWeek(7)->required(),
-                DateTimePicker::make('end')->firstDayOfWeek(7)->required()
+                DateTimePicker::make('start')->firstDayOfWeek(7)->native(false)->required()->seconds(false)->timezone('America/Chicago'),
+                DateTimePicker::make('end')->firstDayOfWeek(7)->native(false)->required()->seconds(false)->timezone('America/Chicago')
                 ])
                 
 
@@ -49,10 +50,10 @@ class AnnouncementResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('title')->sortable(),
+                Tables\Columns\TextColumn::make('announcement'),
                 Tables\Columns\TextColumn::make('start')->dateTime()->sortable(),
                 Tables\Columns\TextColumn::make('end')->dateTime()->sortable(),
-                Tables\Columns\TextColumn::make('announcement'),
-                
             ])
             ->filters([
                 //

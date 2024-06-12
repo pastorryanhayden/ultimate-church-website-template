@@ -22,7 +22,7 @@ use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Section;
 use Illuminate\Support\Str;
 
@@ -66,11 +66,17 @@ class SpeakerResource extends Resource
                 Section::make('Media')
                 ->schema([
                     FileUpload::make('thumbnail')
-                    ->image(),
+                    ->image()
+                    ->disk('vultr')
+                    ->directory('images')
+                    ->visibility('public'),
                 ]),
                 Section::make('Content')
                 ->schema([
-                    RichEditor::make('bio')
+                    MarkdownEditor::make('bio')
+                    ->fileAttachmentsDisk('vultr')
+                    ->fileAttachmentsDirectory('images')
+                    ->fileAttachmentsVisibility('public')
                 ->label('Content')
                 ]),
             ]);
