@@ -19,16 +19,15 @@ return new class extends Migration
             $table->string('slug');
             $table->unsignedBigInteger('speaker_id')->nullable();
             $table->unsignedBigInteger('series_id')->nullable();
-            $table->string('service')->nullable();
             $table->text('manuscript')->nullable();
             $table->mediumText('description')->nullable();
+            $table->unsignedBigInteger('service_id')->nullable();
+            $table->string('youtube_id')->nullable();
             $table->string('mp3')->nullable();
             $table->string('slides')->nullable();
             $table->string('handout')->nullable();
             $table->boolean('featured')->default(0)->nullable();
             $table->date('date')->default('2019-10-02 00:00:00');
-            $table->string('video_url')->nullable();
-            $table->unsignedBigInteger('views')->default(0);
             $table->timestamps();
         });
     }

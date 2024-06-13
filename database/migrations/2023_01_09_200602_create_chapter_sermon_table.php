@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('chapter_id');
             $table->unsignedBigInteger('sermon_id');
-            $table->unsignedBigInteger('verseStart')->nullable();
-            $table->unsignedBigInteger('verseEnd')->nullable();
+            $table->unsignedBigInteger('book_id');
+            $table->string('verse')->nullable();
             $table->timestamps();
         });
     }

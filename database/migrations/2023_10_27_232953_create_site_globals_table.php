@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('heading');
             $table->json('action_links')->nullable();
             $table->string('header_image')->nullable();
+            $table->mediumText('map_url')->nullable();
             $table->string('header_video')->nullable();
-            $table->string('map_address')->nullable();
             $table->mediumText('footer_about')->nullable();
             $table->mediumText('footer_schedule')->nullable();
             $table->string('church_phone')->nullable();

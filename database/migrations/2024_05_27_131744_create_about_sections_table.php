@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('icon');
             $table->mediumText('description');
             $table->string('section_heading');
+            $table->integer('order_column')->nullable();
             $table->mediumtext('content');
             $table->timestamps();
         });
