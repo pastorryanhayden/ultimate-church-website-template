@@ -4,7 +4,7 @@
         <h2 class="text-3xl font-bold tracking-tight text-white sm:text-5xl">Sermons: <?php echo e($sermon->title); ?></h2>
       </div>
     </div>
-    <nav class="flex max-w-4xl mx-auto py-6 w-full justify-center" aria-label="Breadcrumb">
+    <nav class="hidden md:flex max-w-4xl mx-auto py-6 w-full justify-center" aria-label="Breadcrumb">
           <ol role="list" class="flex items-center space-x-4">
             <li>
               <div>

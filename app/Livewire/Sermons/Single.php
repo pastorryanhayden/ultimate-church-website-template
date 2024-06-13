@@ -30,17 +30,17 @@ class Single extends Component
     public function downloadMp3()
     {
           $name = $this->sermon->slug . '.mp3';
-          return Storage::disk('public')->download($this->sermon->mp3, $name);
+          return Storage::disk('vultr')->download($this->sermon->mp3, $name);
     }
     public function downloadSlides()
     {
           $name = $this->sermon->slug .'-slides.pdf';
-          return Storage::disk('public')->download($this->sermon->slides, $name);
+          return Storage::disk('vultr')->download($this->sermon->slides, $name);
     }
     public function downloadHandout()
     {
           $name = $this->sermon->slug .'-handout.pdf';
-          return Storage::disk('public')->download($this->sermon->handout, $name);
+          return Storage::disk('vultr')->download($this->sermon->handout, $name);
     }
 
     
