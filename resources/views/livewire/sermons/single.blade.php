@@ -90,7 +90,7 @@
       </div>
     </div>
     </div>
-    <div class="w-full bg-gray-50 p-24 flex items-center justify-center relative" x-show="showDetails">
+    <div class="w-full bg-gray-50  p-6 lg:p-24 flex items-center justify-center relative" x-show="showDetails">
         <button class="absolute top-0 right-0 mr-6 mt-6" title="Hide Details" x-on:click="showDetails = false" >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-8 w-8">
               <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
