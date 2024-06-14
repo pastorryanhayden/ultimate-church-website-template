@@ -85,9 +85,11 @@ class SpeakerResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->modifyQueryUsing(fn (Builder $query) => $query->withCount('sermons'))
             ->columns([
                 TextColumn::make('name')->sortable(),
                 TextColumn::make('position')->sortable(),
+                TextColumn::make('sermons_count')->label('Sermons')->sortable(),
             ])
             ->filters([
                 //
@@ -97,7 +99,8 @@ class SpeakerResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
-            ]);
+            ])
+            ->defaultSort('sermons_count', 'desc');
     }
     
     public static function getRelations(): array

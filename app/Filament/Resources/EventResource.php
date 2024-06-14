@@ -124,7 +124,8 @@ class EventResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
-            ]);
+            ])
+            ->defaultSort('start_date', 'desc');
     }
     
     public static function getRelations(): array

@@ -97,7 +97,8 @@ class BlogPostResource extends Resource
             ])
             ->emptyStateActions([
                 Tables\Actions\CreateAction::make(),
-            ]);
+            ])
+            ->defaultSort('created_at', 'desc');
     }
     
     public static function getRelations(): array

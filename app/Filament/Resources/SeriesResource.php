@@ -74,9 +74,11 @@ class SeriesResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->modifyQueryUsing(fn (Builder $query) => $query->withCount('sermons'))
             ->columns([
                 TextColumn::make('title')->sortable(),
                 TextColumn::make('description')->sortable(),
+                TextColumn::make('sermons_count')->label('Sermons')->sortable(),
                 ToggleColumn::make('featured'),
             ])
             ->filters([
@@ -87,7 +89,8 @@ class SeriesResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
-            ]);
+            ])
+            ->defaultSort('sermons_count', 'desc');
     }
     
     public static function getRelations(): array
