@@ -30,15 +30,15 @@
             </div>
             <div class="mt-6 flex border-t border-gray-900/5 pt-6">
               <div class="relative flex items-center gap-x-4">
-                <img src="{{$post->image ? Storage::disk('vultr')->url($post->image) : env('APP_URL') .'/images/devotional-placeholder.jpg' }}" alt="" class="h-10 w-10 rounded-full bg-gray-50">
+                <img src="{{$post->author->thumbnail ? Storage::disk('vultr')->url($post->author->thumbnail) : env('APP_URL') .'/images/speaker-placeholder.jpg' }}" alt="" class="h-10 w-10 object-cover rounded-full bg-gray-50">
                 <div class="text-sm leading-6">
                   <p class="font-semibold text-gray-900">
                     <a href="#">
                       <span class="absolute inset-0"></span>
-                      Michael Foster
+                      {{$post->author->name}}
                     </a>
                   </p>
-                  <p class="text-gray-600">Co-Founder / CTO</p>
+                  <p class="text-gray-600">{{$post->author->position}}</p>
                 </div>
               </div>
             </div>
@@ -47,6 +47,10 @@
         @endforeach
       </div>
     </div>
+
   </div>
+  <div class="flex justify-center mt-12">
+   {{ $posts->links() }}
+   </div>
 </div>
 </div>

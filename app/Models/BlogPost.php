@@ -13,4 +13,9 @@ class BlogPost extends Model
     protected $casts = [
         'published' => 'boolean'
     ];
+
+    public function author()
+    {
+        return $this->belongsTo(Speaker::class, 'speaker_id');
+    }
 }

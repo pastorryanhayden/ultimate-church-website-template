@@ -12,10 +12,13 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Set;
 use Filament\Forms\Get;
 use Illuminate\Support\Str;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ToggleColumn;
 
 class BlogPostResource extends Resource
 {
@@ -47,9 +50,38 @@ class BlogPostResource extends Resource
                     Forms\Components\Textarea::make('description')
                     ->required()
                     ->columnSpan(4),
-                    Forms\Components\TextInput::make('author')
+                    Select::make('speaker_id')
+                    ->columnSpan(3)
+                    ->relationship(name: 'author', titleAttribute: 'name')
+                    ->label('Author')
+                    ->helperText('This comes from the "speaker" section under sermons.')
+                    ->preload()
                     ->required()
-                     ->columnSpan(3),
+                    ->createOptionForm([
+                        TextInput::make('name')
+                        ->reactive()
+                        ->live(onBlur: true)
+                        ->required()
+                        ->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state))),
+                    TextInput::make('slug')
+                    ->disabled()
+                    ->dehydrated(),
+                    Select::make('position')
+                ->options([
+                    'Lead Pastor' => 'Lead Pastor',
+                    'Youth Pastor' => 'Youth Pastor',
+                    'Music Pastor' => 'Music Pastor',
+                    'Pastoral Apprentice' => 'Pastoral Apprentice',
+                    'Deacon' => 'Deacon',
+                    'Sunday School Teacher' => 'Sunday School Teacher',
+                    'Missionary' => 'Missionary',
+                    'Evangelist' => 'Evangelist',
+                    'Special Speaker' => 'Special Speaker',
+                    'Elder' => 'Elder',
+                    'Other' => 'Other',
+                ])
+                    ])
+                    ->searchable(),
                     Forms\Components\Toggle::make('published')
                      ->columnSpan(1),
                     Forms\Components\FileUpload::make('image')
@@ -79,6 +111,10 @@ class BlogPostResource extends Resource
                 TextColumn::make('title')
                 ->searchable()
                 ->sortable(),
+                TextColumn::make('author.name')
+                ->searchable()
+                ->sortable(),
+                ToggleColumn::make('published'),
                 TextColumn::make('created_at')
                 ->label('Date')
                 ->date()

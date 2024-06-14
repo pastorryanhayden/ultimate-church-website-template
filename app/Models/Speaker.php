@@ -20,4 +20,9 @@ class Speaker extends Model
        {
            return $this->hasMany(Sermon::class);
        }
+
+       public function posts()
+       {
+           return $this->hasMany(BlogPost::class);
+       }
 }
