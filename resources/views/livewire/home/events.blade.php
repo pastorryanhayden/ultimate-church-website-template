@@ -8,7 +8,7 @@
         @else
             <a href="/events/{{$event->slug}}"><img src="/images/placeholder.jpg" alt="placeholder image"></a>
         @endif
-        <a href="/events/{{$event->slug}}"  class="mt-4 font-sans rounded-full bg-white px-4 py-2.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">Learn More</a>
+        <a href="/events/{{$event->slug}}"  class="mt-4  text-gray-100 underline">Learn More</a>
     </div>
 @endif 
 </div>

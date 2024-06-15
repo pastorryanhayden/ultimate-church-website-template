@@ -84,6 +84,9 @@ class BlogPostResource extends Resource
                     ->searchable(),
                     Forms\Components\Toggle::make('published')
                      ->columnSpan(1),
+                     Forms\Components\Toggle::make('permenantly_featured')
+                     ->columnSpan(3)
+                     ->helperText('If this is selected, it will be permenantly featured on the home page and the most recent post will not show.  This only works on one post.'),
                     Forms\Components\FileUpload::make('image')
                     ->label('Featured Image')
                     ->disk('vultr')
@@ -115,6 +118,7 @@ class BlogPostResource extends Resource
                 ->searchable()
                 ->sortable(),
                 ToggleColumn::make('published'),
+                ToggleColumn::make('permenantly_featured'),
                 TextColumn::make('created_at')
                 ->label('Date')
                 ->date()

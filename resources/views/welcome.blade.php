@@ -26,6 +26,7 @@
         <livewire:home.actions />
         <livewire:home.events />
         <livewire:home.ministries />
+        <livewire:home.blog />
         <livewire:home.featured-series />
         <livewire:home.devotions />
         <livewire:home.map />

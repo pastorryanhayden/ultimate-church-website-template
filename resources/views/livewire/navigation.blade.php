@@ -64,7 +64,7 @@
               </div>
               <div class="flex-auto">
                 <a href="/blog" class="block font-semibold text-gray-900">
-                  Blog
+                  Articles
                   <span class="absolute inset-0"></span>
                 </a>
                 <p class="mt-1 text-gray-600">Articles from our pastor and staff</p>
@@ -97,7 +97,7 @@
         <a href="/sermons" class="text-sm font-semibold leading-6 {{$transparent ? 'text-white' : 'text-gray-900'}}">Sermons</a>
         @endif 
         @if($blog)
-        <a href="/blog" class="text-sm font-semibold leading-6 {{$transparent ? 'text-white' : 'text-gray-900'}}">Blog</a>
+        <a href="/blog" class="text-sm font-semibold leading-6 {{$transparent ? 'text-white' : 'text-gray-900'}}">Articles</a>
         @endif 
         @endif 
       </div>
@@ -141,7 +141,7 @@
               <a href="/sermons" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Sermons</a>
               @endif
               @if($blog)
-              <a href="/blog" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Blog</a>
+              <a href="/blog" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Articles</a>
               @endif
             </div>
           </div>

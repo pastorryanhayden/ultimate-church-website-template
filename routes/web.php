@@ -46,6 +46,7 @@ Route::get('/series/{slug}', SeriesSingle::class)->name('series.single');
 Route::get('/speakers', SpeakerIndex::class);
 Route::get('/speaker/{slug}', SpeakerSingle::class)->name('speaker.single');
 Route::get('/blog', BlogIndex::class);
+Route::get('/blog/{slug}', BlogSingle::class)->name('blog.single');
 
 // This is just for testing to help clear cookies
 Route::get('/clear-announcement-cookie', function () {
