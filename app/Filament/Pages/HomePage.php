@@ -54,10 +54,9 @@ class HomePage extends Page implements HasForms
                     ->required(),
                 FileUpload::make('header_image')
                 ->image()
-                ->imageEditor()
                 ->disk('vultr')
-                    ->directory('images')
-                    ->visibility('public'),
+                ->directory('images')
+                ->visibility('public'),
                 FileUpload::make('header_video')
                 ->disk('vultr')
                     ->directory('images')
@@ -71,6 +70,7 @@ class HomePage extends Page implements HasForms
             Tabs\Tab::make('Action Buttons')
                 ->schema([
                     Repeater::make('action_links')
+                    ->maxItems(4)
                     ->schema([
                         TextInput::make('link_subtext')
                         ->helperText('i.e. "New to BBC?"')
@@ -87,7 +87,8 @@ class HomePage extends Page implements HasForms
                 ->icon('heroicon-m-bolt'),
             Tabs\Tab::make('Map')
                 ->schema([
-                    TextInput::make('map_url'),
+                    TextInput::make('map_url')
+                    ->helperText(str('To get this: 1) Find your church on **[Google Maps](https://maps.google.com)**.  2) Click the share button and select "embed."  3) Copy the inside of the "scr" from the embeded script.  (It will be a long URL)')->inlineMarkdown()->toHtmlString()),
                 ])
                 ->icon('heroicon-m-map'),
             ])     

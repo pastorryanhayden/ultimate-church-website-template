@@ -47,8 +47,14 @@ class Single extends Component
 
     public function render()
     {
-        $moreThanFiftyWords = $this->hasMoreThanFiftyWords($this->sermon->manuscript);
-
+        if($this->sermon->manuscript)
+        {
+             $moreThanFiftyWords = $this->hasMoreThanFiftyWords($this->sermon->manuscript);
+        }else {
+            $moreThanFiftyWords = false;
+        }
+       
+       
 
 
         return view('livewire.sermons.single', [

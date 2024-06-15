@@ -6,7 +6,7 @@
     </div>
     <div class="grid w-full md:grid-cols-2 lg:grid-cols-4 gap-6 px-8">
         <article>
-            <h3 class="text-2xl font-sans uppercase font-bold mb-2">Bible Baptist Church</h3>
+            <h3 class="text-2xl font-sans uppercase font-bold mb-2">{{ env('CHURCH_NAME') }}</h3>
             <div class="text-sm font-sans">
             {!! $settings->footer_about !!}
             </div>

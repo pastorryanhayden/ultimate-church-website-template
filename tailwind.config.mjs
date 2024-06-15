@@ -1,7 +1,7 @@
 import preset from './vendor/filament/support/tailwind.config.preset'
 
 import defaultTheme from './node_modules/tailwindcss/defaultTheme'
-
+import aspectRatio from '@tailwindcss/aspect-ratio';
 
 export default {
     presets: [preset],
@@ -22,7 +22,7 @@ export default {
         },
     },
     plugins: [
-    require('@tailwindcss/aspect-ratio'),
+    aspectRatio,
     // ...
     ],
 }

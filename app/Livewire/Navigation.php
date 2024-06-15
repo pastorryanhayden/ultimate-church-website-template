@@ -32,7 +32,14 @@ class Navigation extends Component
         $this->ministries = Ministry::count() > 0 ? true : false;
 
         // If the latest devotion is less than a month old, set devotions as true
-        $this->devotions = Devotion::latest()->first()->published_at->diffInDays(now()) < 30 ? true : false;
+        if(Devotion::get()->count() > 0)
+        {
+             $this->devotions = Devotion::latest()->first()->published_at->diffInDays(now()) < 30 ? true : false;
+        }else
+        {
+            $this->devotions = false;
+        }
+       
 
         $this->blog = BlogPost::count() > 0 ? true : false;
 
