@@ -37,6 +37,7 @@ Finally, you need to set the domain to work on vultr.  Change the settings in th
 ```shell
 s3cmd mb s3://BUCKET 
 s3cmd setcors cors_rules.xml s3://BUCKET
+s3cmd info s3://BUCKET
 ```
 (Where BUCKET is the name of that site's bucket you set in the .env file above)
 
