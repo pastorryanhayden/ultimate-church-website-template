@@ -1,0 +1,177 @@
+1719085478a:16:{s:20:"heroicon-c-book-open";s:791:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path d="M7.25 3.688a8.035 8.035 0 0 0-4.872-.523A.48.48 0 0 0 2 3.64v7.994c0 .345.342.588.679.512a6.02 6.02 0 0 1 4.571.81V3.688ZM8.75 12.956a6.02 6.02 0 0 1 4.571-.81c.337.075.679-.167.679-.512V3.64a.48.48 0 0 0-.378-.475 8.034 8.034 0 0 0-4.872.523v9.268Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-c-book-open</small>
+	</div>
+</div>
+";s:25:"heroicon-c-bookmark-slash";s:749:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path d="M13 2.75v7.775L4.475 2h7.775a.75.75 0 0 1 .75.75ZM3 13.25V5.475l4.793 4.793L4.28 13.78A.75.75 0 0 1 3 13.25ZM2.22 2.22a.75.75 0 0 1 1.06 0l10.5 10.5a.75.75 0 1 1-1.06 1.06L2.22 3.28a.75.75 0 0 1 0-1.06Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-c-bookmark-slash</small>
+	</div>
+</div>
+";s:26:"heroicon-c-bookmark-square";s:775:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path fill-rule="evenodd" d="M4 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4Zm1 2.25a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 .75.75v6a.75.75 0 0 1-1.28.53L8 9.06l-1.72 1.72A.75.75 0 0 1 5 10.25v-6Z" clip-rule="evenodd"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-c-bookmark-square</small>
+	</div>
+</div>
+";s:19:"heroicon-c-bookmark";s:666:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path d="M3.75 2a.75.75 0 0 0-.75.75v10.5a.75.75 0 0 0 1.28.53L8 10.06l3.72 3.72a.75.75 0 0 0 1.28-.53V2.75a.75.75 0 0 0-.75-.75h-8.5Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-c-bookmark</small>
+	</div>
+</div>
+";s:20:"heroicon-m-book-open";s:879:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path d="M10.75 16.82A7.462 7.462 0 0 1 15 15.5c.71 0 1.396.098 2.046.282A.75.75 0 0 0 18 15.06v-11a.75.75 0 0 0-.546-.721A9.006 9.006 0 0 0 15 3a8.963 8.963 0 0 0-4.25 1.065V16.82ZM9.25 4.065A8.963 8.963 0 0 0 5 3c-.85 0-1.673.118-2.454.339A.75.75 0 0 0 2 4.06v11a.75.75 0 0 0 .954.721A7.506 7.506 0 0 1 5 15.5c1.579 0 3.042.487 4.25 1.32V4.065Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-m-book-open</small>
+	</div>
+</div>
+";s:25:"heroicon-m-bookmark-slash";s:783:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path d="M17 4.517v9.301L5.433 2.252a41.44 41.44 0 0 1 9.637.058C16.194 2.45 17 3.414 17 4.517ZM3 17.25V6.182l10.654 10.654L10 15.082l-5.925 2.844A.75.75 0 0 1 3 17.25ZM3.28 2.22a.75.75 0 0 0-1.06 1.06l14.5 14.5a.75.75 0 1 0 1.06-1.06L3.28 2.22Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-m-bookmark-slash</small>
+	</div>
+</div>
+";s:26:"heroicon-m-bookmark-square";s:799:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path fill-rule="evenodd" d="M4.25 2A2.25 2.25 0 0 0 2 4.25v11.5A2.25 2.25 0 0 0 4.25 18h11.5A2.25 2.25 0 0 0 18 15.75V4.25A2.25 2.25 0 0 0 15.75 2H4.25ZM6 13.25V3.5h8v9.75a.75.75 0 0 1-1.064.681L10 12.576l-2.936 1.355A.75.75 0 0 1 6 13.25Z" clip-rule="evenodd"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-m-bookmark-square</small>
+	</div>
+</div>
+";s:19:"heroicon-m-bookmark";s:775:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path fill-rule="evenodd" d="M10 2c-1.716 0-3.408.106-5.07.31C3.806 2.45 3 3.414 3 4.517V17.25a.75.75 0 0 0 1.075.676L10 15.082l5.925 2.844A.75.75 0 0 0 17 17.25V4.517c0-1.103-.806-2.068-1.93-2.207A41.403 41.403 0 0 0 10 2Z" clip-rule="evenodd"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-m-bookmark</small>
+	</div>
+</div>
+";s:20:"heroicon-o-book-open";s:864:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-o-book-open</small>
+	</div>
+</div>
+";s:25:"heroicon-o-bookmark-slash";s:820:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m3 3 1.664 1.664M21 21l-1.5-1.5m-5.485-1.242L12 17.25 4.5 21V8.742m.164-4.078a2.15 2.15 0 0 1 1.743-1.342 48.507 48.507 0 0 1 11.186 0c1.1.128 1.907 1.077 1.907 2.185V19.5M4.664 4.664 19.5 19.5"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-o-bookmark-slash</small>
+	</div>
+</div>
+";s:26:"heroicon-o-bookmark-square";s:787:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0 1 20.25 6v12A2.25 2.25 0 0 1 18 20.25H6A2.25 2.25 0 0 1 3.75 18V6A2.25 2.25 0 0 1 6 3.75h1.5m9 0h-9"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-o-bookmark-square</small>
+	</div>
+</div>
+";s:19:"heroicon-o-bookmark";s:751:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-o-bookmark</small>
+	</div>
+</div>
+";s:20:"heroicon-s-book-open";s:881:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path d="M11.25 4.533A9.707 9.707 0 0 0 6 3a9.735 9.735 0 0 0-3.25.555.75.75 0 0 0-.5.707v14.25a.75.75 0 0 0 1 .707A8.237 8.237 0 0 1 6 18.75c1.995 0 3.823.707 5.25 1.886V4.533ZM12.75 20.636A8.214 8.214 0 0 1 18 18.75c.966 0 1.89.166 2.75.47a.75.75 0 0 0 1-.708V4.262a.75.75 0 0 0-.5-.707A9.735 9.735 0 0 0 18 3a9.707 9.707 0 0 0-5.25 1.533v16.103Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-s-book-open</small>
+	</div>
+</div>
+";s:25:"heroicon-s-bookmark-slash";s:807:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path d="M3.53 2.47a.75.75 0 0 0-1.06 1.06l18 18a.75.75 0 1 0 1.06-1.06l-18-18ZM20.25 5.507v11.561L5.853 2.671c.15-.043.306-.075.467-.094a49.255 49.255 0 0 1 11.36 0c1.497.174 2.57 1.46 2.57 2.93ZM3.75 21V6.932l14.063 14.063L12 18.088l-7.165 3.583A.75.75 0 0 1 3.75 21Z"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-s-bookmark-slash</small>
+	</div>
+</div>
+";s:26:"heroicon-s-bookmark-square";s:790:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path fill-rule="evenodd" d="M6 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3H6Zm1.5 1.5a.75.75 0 0 0-.75.75V16.5a.75.75 0 0 0 1.085.67L12 15.089l4.165 2.083a.75.75 0 0 0 1.085-.671V5.25a.75.75 0 0 0-.75-.75h-9Z" clip-rule="evenodd"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-s-bookmark-square</small>
+	</div>
+</div>
+";s:19:"heroicon-s-bookmark";s:755:"<div class="flex flex-col items-center justify-center">
+	<div class="relative w-full !h-16 flex flex-col items-center justify-center py-2">
+		<div class="relative w-12 h-12 grow-1 shrink-0 gap-1">
+			<svg class="w-full h-full absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path fill-rule="evenodd" d="M6.32 2.577a49.255 49.255 0 0 1 11.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 0 1-1.085.67L12 18.089l-7.165 3.583A.75.75 0 0 1 3.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93Z" clip-rule="evenodd"/>
+</svg>			
+			<div class="w-full h-full absolute z-10"></div>
+		</div>
+		<small class="w-full text-center grow-0 shrink-0 h-4 truncate">heroicon-s-bookmark</small>
+	</div>
+</div>
+";}

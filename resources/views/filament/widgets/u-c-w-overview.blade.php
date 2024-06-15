@@ -13,7 +13,7 @@
                 <li><a href="#" class="text-primary-800 underline">Contact Support</a></li>
             </ul>
             </div>
-            <iframe class="ml-16" width="560" height="315" src="https://www.youtube.com/embed/nfJI5GV0HPM?si=GcOyjY52vXGiJzYx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe class="ml-16" width="560" height="315" src="https://www.youtube.com/embed/RFP510VdeLM?si=PVjVmRe_mpqcaNLO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </x-filament::section>
 </x-filament-widgets::widget>
