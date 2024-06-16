@@ -42,16 +42,16 @@
             </li>
           </ol>
         </nav>
-    
+
     <img src="{{$series->photo ? Storage::disk('vultr')->url($series->photo) : env('APP_URL') .'/images/series-placeholder.jpg' }}" alt="" class="w-full max-w-lg mx-auto mb-12">
-    
-    
+
+
     @if($series->body)
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 prose">
-       {!! $series->body !!}
+       @markdown($series->body)
     </div>
     @endif
-    
+
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pt-12 pb-24">
         <h2 class="text-center text-4xl font-bold mb-12">Sermons</h2>
        {{ $this->table }}
