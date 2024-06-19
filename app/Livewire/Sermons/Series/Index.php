@@ -89,6 +89,7 @@ class Index extends Component implements HasForms, HasTable
 
     public function render()
     {
-        return view('livewire.sermons.series.index');
+        return view('livewire.sermons.series.index')
+	->title('Sermon Series');
     }
 }

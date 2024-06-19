@@ -90,6 +90,7 @@ public function table(Table $table): Table
 
     public function render()
     {
-        return view('livewire.sermons.speaker.index');
+        return view('livewire.sermons.speaker.index')
+	->title('Speakers');
     }
 }
