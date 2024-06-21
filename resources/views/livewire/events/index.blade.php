@@ -12,7 +12,7 @@
         @foreach($events as $event)
         <article class="relative isolate flex flex-col gap-8 lg:flex-row">
           <div class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
-            <img src="{{ asset('storage/' . $event->photo )}}" alt="" class="absolute inset-0 h-full w-full  bg-gray-50 object-cover">
+            <img src="{{$event->photo ? Storage::disk('vultr')->url($event->photo) : '/images/devotional-placeholder'}}" alt="" class="absolute inset-0 h-full w-full  bg-gray-50 object-cover">
             <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
           </div>
           <div>

@@ -14,14 +14,14 @@
         <p class="description">{{ $event->description }}</p>
         <a class="learn-more" href="/events/{{ $event->slug }}">Learn More @include('partials.icons.chevright')</a>
         </div>
-     
+
         @if($event->photo)
-            <img src="{{ asset('storage/'. $event->photo) }}" alt="{{ $event->title }}">
+            <img src="{{Storage::disk('vultr')->url($event->photo)}}" alt="{{ $event->title }}">
         @else
             <img src="/images/placeholder.jpg" alt="placeholder image">
         @endif
 
 </div>
-    </article>    
+    </article>
 @endforeach
 @endsection
