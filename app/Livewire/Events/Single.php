@@ -13,11 +13,12 @@ class Single extends Component
     {
 
     $this->event = Event::where('slug', $slug)->first();
-    
+
     }
 
     public function render()
     {
-        return view('livewire.events.single');
+        return view('livewire.events.single')
+            ->title($this->event->title);
     }
 }
