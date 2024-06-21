@@ -1,6 +1,6 @@
 <div>
     <div class="relative isolate overflow-hidden bg-gray-700 py-24 sm:py-32">
-      <img src="{{ asset('storage/' . $event->photo )}}" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover opacity-20">
+      <img src="{{ $event->photo ? Storage::disk('vultr')->url($event->photo) : '/devotional-placeholder.jpg' }}" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover opacity-20">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:mx-0">
           <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">{{$event->title}}</h2>
@@ -41,12 +41,12 @@
         </nav>
 
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 prose">
-        
+
         @if(isset($event->photo))
-        <img src="{{ asset('storage/' . $event->photo )}}" alt="" class="w-full block mx-auto">
-        @endif 
+        <img src="{{ Storage::disk('vultr')->url($event->photo) }}" alt="" class="w-full block mx-auto">
+        @endif
 
         @markdown($event->body)
-        
+
     </div>
 </div>
