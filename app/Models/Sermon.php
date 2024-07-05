@@ -52,7 +52,7 @@ class Sermon extends Model
     }
     public function chapter()
     {
-        return $this->belongsToMany(Chapter::class)->using(ChapterSermom::class);
+        return $this->belongsToMany(Chapter::class)->using(ChapterSermon::class);
     }
     public function bookSermons()
     {
