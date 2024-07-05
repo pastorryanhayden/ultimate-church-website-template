@@ -14,7 +14,7 @@ class Index extends Component
         $today = now();
         // Get yesterday's date
         $yesterday = $today->subDays(1);
-        $this->events = Event::where('start_date', '>=', $yesterday)->where('on_homepage', true)->orderBy('start_date', 'asc')->get();
+        $this->events = Event::where('start_date', '>=', $yesterday)->orderBy('start_date', 'asc')->get();
     }
 
     public function render()
