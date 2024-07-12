@@ -2,21 +2,27 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
-use App\Models\Sermon;
+use App\Models\BlogPost;
+use App\Models\Devotion;
 use App\Models\Event;
 use App\Models\Ministry;
-use App\Models\Devotion;
-use App\Models\BlogPost;
+use App\Models\Sermon;
+use Livewire\Component;
 
 class Navigation extends Component
 {
     public $transparent = false;
+
     public $sermons;
+
     public $events;
+
     public $ministries;
+
     public $devotions;
+
     public $blog;
+
     public $resources;
 
     public function mount($transparent = false)
@@ -32,22 +38,17 @@ class Navigation extends Component
         $this->ministries = Ministry::count() > 0 ? true : false;
 
         // If the latest devotion is less than a month old, set devotions as true
-        if(Devotion::get()->count() > 0)
-        {
-             $this->devotions = Devotion::latest()->first()->published_at->diffInDays(now()) < 30 ? true : false;
-        }else
-        {
+        if (Devotion::get()->count() > 0) {
+            $this->devotions = Devotion::latest()->first()->published_at->diffInDays(now()) < 30 ? true : false;
+        } else {
             $this->devotions = false;
         }
-       
 
         $this->blog = BlogPost::count() > 0 ? true : false;
 
         // If both devotions and sermons exist then set resources to true
-        
-        $this->resources = ($this->devotions && $this->sermons) || ($this->blog && $this->sermons) || ($this->devotions && $this->blog) || ($this->blog && $this->sermons)? true : false;
 
-        
+        $this->resources = ($this->devotions && $this->sermons) || ($this->blog && $this->sermons) || ($this->devotions && $this->blog) || ($this->blog && $this->sermons) ? true : false;
 
     }
 

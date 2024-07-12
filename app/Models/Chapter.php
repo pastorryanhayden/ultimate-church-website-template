@@ -19,6 +19,7 @@ class Chapter extends Model
     {
         return $this->belongsToMany(Sermon::class);
     }
+
     public function book()
     {
         return $this->belongsTo(Book::class);

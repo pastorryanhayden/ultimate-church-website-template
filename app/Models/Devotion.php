@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Devotion extends Model
 {
     use HasFactory;
-    
+
     protected $fillable = [
         'title',
         'text',
@@ -31,5 +31,4 @@ class Devotion extends Model
     {
         return $this->belongsTo(Leader::class, 'leader_id');
     }
-
 }

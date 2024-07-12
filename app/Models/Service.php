@@ -17,5 +17,4 @@ class Service extends Model
     {
         return $this->hasMany(Sermon::class);
     }
-
 }

@@ -19,9 +19,9 @@ class Series extends Model
     ];
 
     protected $casts = [
-        'featured' => 'boolean'
+        'featured' => 'boolean',
     ];
-    
+
     public function sermons()
     {
         return $this->hasMany(Sermon::class);

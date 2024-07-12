@@ -8,21 +8,22 @@ use Illuminate\Database\Eloquent\Model;
 class Speaker extends Model
 {
     use HasFactory;
+
     protected $fillable = [
         'name',
         'slug',
         'position',
         'bio',
-        'thumbnail' 
-       ];
+        'thumbnail',
+    ];
 
-       public function sermons()
-       {
-           return $this->hasMany(Sermon::class);
-       }
+    public function sermons()
+    {
+        return $this->hasMany(Sermon::class);
+    }
 
-       public function posts()
-       {
-           return $this->hasMany(BlogPost::class);
-       }
+    public function posts()
+    {
+        return $this->hasMany(BlogPost::class);
+    }
 }

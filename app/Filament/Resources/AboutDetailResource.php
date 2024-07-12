@@ -3,15 +3,12 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\AboutDetailResource\Pages;
-use App\Filament\Resources\AboutDetailResource\RelationManagers;
 use App\Models\AboutDetail;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class AboutDetailResource extends Resource
 {
@@ -32,15 +29,15 @@ class AboutDetailResource extends Resource
         return $form
             ->schema([
                 Forms\Components\Grid::make([
-                    'default' => 1
+                    'default' => 1,
                 ])
-                ->schema([
-                    Forms\Components\TextInput::make('heading')->required(),
-                    Forms\Components\TextInput::make('subheading')->required(),
-                    Forms\Components\FileUpload::make('image')->disk('vultr')
-                    ->directory('images')
-                    ->visibility('public')->required(),
-                ])                
+                    ->schema([
+                        Forms\Components\TextInput::make('heading')->required(),
+                        Forms\Components\TextInput::make('subheading')->required(),
+                        Forms\Components\FileUpload::make('image')->disk('vultr')
+                            ->directory('images')
+                            ->visibility('public')->required(),
+                    ]),
             ]);
     }
 
@@ -67,14 +64,14 @@ class AboutDetailResource extends Resource
                 Tables\Actions\CreateAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -82,5 +79,5 @@ class AboutDetailResource extends Resource
             // 'create' => Pages\CreateAboutDetail::route('/create'),
             'edit' => Pages\EditAboutDetail::route('/{record}/edit'),
         ];
-    }    
+    }
 }

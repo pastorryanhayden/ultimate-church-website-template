@@ -15,5 +15,4 @@ class SiteGlobal extends Model
         'action_links' => 'array',
         'useful_links' => 'array',
     ];
-    
 }

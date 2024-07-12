@@ -2,8 +2,8 @@
 
 namespace App\Livewire\Home;
 
-use Livewire\Component;
 use App\Models\Series;
+use Livewire\Component;
 
 class FeaturedSeries extends Component
 {
@@ -16,8 +16,8 @@ class FeaturedSeries extends Component
 
     public function render()
     {
-        
-                 return view('livewire.home.featured-series');   
+
+        return view('livewire.home.featured-series');
 
     }
 }

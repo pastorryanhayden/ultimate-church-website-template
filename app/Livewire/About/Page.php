@@ -2,14 +2,14 @@
 
 namespace App\Livewire\About;
 
-use Livewire\Component;
 use App\Models\AboutDetail;
 use App\Models\AboutSection;
+use Livewire\Component;
 
 class Page extends Component
 {
-
     public $details;
+
     public $sections;
 
     public function mount()
@@ -20,8 +20,8 @@ class Page extends Component
 
     public function render()
     {
-       
+
         return view('livewire.about.page')
-        ->title('About Bible Baptist Church in Mattoon, IL');
+            ->title('About Bible Baptist Church in Mattoon, IL');
     }
 }

@@ -18,6 +18,7 @@ class Book extends Model
     {
         return $this->belongsToMany(Sermon::class);
     }
+
     public function chapter()
     {
         return $this->hasMany(Chapter::class);

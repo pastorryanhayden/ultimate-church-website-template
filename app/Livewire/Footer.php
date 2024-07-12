@@ -2,12 +2,11 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
 use App\Models\SiteGlobal;
+use Livewire\Component;
 
 class Footer extends Component
 {
-
     public $settings;
 
     public function mount()

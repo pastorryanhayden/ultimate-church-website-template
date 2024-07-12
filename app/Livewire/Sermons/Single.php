@@ -2,15 +2,15 @@
 
 namespace App\Livewire\Sermons;
 
-use Livewire\Component;
 use App\Models\Sermon;
 use Illuminate\Support\Facades\Storage;
+use Livewire\Component;
 use Parsedown;
-
 
 class Single extends Component
 {
     public $sermon;
+
     public $haswords;
 
     public function mount($slug)
@@ -29,33 +29,32 @@ class Single extends Component
 
     public function downloadMp3()
     {
-          $name = $this->sermon->slug . '.mp3';
-          return Storage::disk('vultr')->download($this->sermon->mp3, $name);
-    }
-    public function downloadSlides()
-    {
-          $name = $this->sermon->slug .'-slides.pdf';
-          return Storage::disk('vultr')->download($this->sermon->slides, $name);
-    }
-    public function downloadHandout()
-    {
-          $name = $this->sermon->slug .'-handout.pdf';
-          return Storage::disk('vultr')->download($this->sermon->handout, $name);
+        $name = $this->sermon->slug.'.mp3';
+
+        return Storage::disk('vultr')->download($this->sermon->mp3, $name);
     }
 
-    
+    public function downloadSlides()
+    {
+        $name = $this->sermon->slug.'-slides.pdf';
+
+        return Storage::disk('vultr')->download($this->sermon->slides, $name);
+    }
+
+    public function downloadHandout()
+    {
+        $name = $this->sermon->slug.'-handout.pdf';
+
+        return Storage::disk('vultr')->download($this->sermon->handout, $name);
+    }
 
     public function render()
     {
-        if($this->sermon->manuscript)
-        {
-             $moreThanFiftyWords = $this->hasMoreThanFiftyWords($this->sermon->manuscript);
-        }else {
+        if ($this->sermon->manuscript) {
+            $moreThanFiftyWords = $this->hasMoreThanFiftyWords($this->sermon->manuscript);
+        } else {
             $moreThanFiftyWords = false;
         }
-       
-       
-
 
         return view('livewire.sermons.single', [
             'moreThanFiftyWords' => $moreThanFiftyWords,

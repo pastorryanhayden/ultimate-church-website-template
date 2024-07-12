@@ -17,11 +17,11 @@ class Ministry extends Model
         'body',
         'meeting_info',
         'homepage',
-        'image'
+        'image',
     ];
 
     protected $casts = [
-        'homepage' => 'boolean'
+        'homepage' => 'boolean',
     ];
 
     public function leader()

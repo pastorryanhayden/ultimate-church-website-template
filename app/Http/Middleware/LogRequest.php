@@ -2,16 +2,15 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\PageEvent;
 use Closure;
 use Illuminate\Http\Request;
-use App\Models\PageEvent;
 
 class LogRequest
 {
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
@@ -19,18 +18,19 @@ class LogRequest
     {
         // Make it an after middleware
         $response = $next($request);
- 
+
         try {
             PageEvent::create([
                 'type' => 'pageview',
                 'attribute' => $request->path(),
                 'useragent' => $request->userAgent(),
-                'visitorid' => crypt($request->ip(), config('hashing.encryption_key'))
+                'visitorid' => crypt($request->ip(), config('hashing.encryption_key')),
             ]);
-            
+
             return $response;
         } catch (Error $e) {
             report($e);
+
             return $response;
         }
     }

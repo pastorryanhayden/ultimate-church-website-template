@@ -18,6 +18,6 @@ class Announcement extends Model
 
     protected $casts = [
         'start' => 'datetime',
-        'end' => 'datetime'
+        'end' => 'datetime',
     ];
 }
