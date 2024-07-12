@@ -11,10 +11,13 @@ class BlogPost extends Model
 
     protected $guarded = [];
 
-    protected $casts = [
-        'published' => 'boolean',
-        'permenantly_featured' => 'boolean',
-    ];
+    protected function casts(): array
+    {
+        return [
+            'published' => 'boolean',
+            'permenantly_featured' => 'boolean',
+        ];
+    }
 
     public function author()
     {

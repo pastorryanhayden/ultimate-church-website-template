@@ -28,10 +28,13 @@ class Sermon extends Model
         'youtube_id',
     ];
 
-    protected $casts = [
-        'featured' => 'boolean',
-        'date' => 'date',
-    ];
+    protected function casts(): array
+    {
+        return [
+            'featured' => 'boolean',
+            'date' => 'date',
+        ];
+    }
 
     public function speaker()
     {

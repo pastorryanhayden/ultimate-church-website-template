@@ -22,10 +22,13 @@ class Devotion extends Model
         'published_at',
     ];
 
-    protected $casts = [
-        'published' => 'boolean',
-        'published_at' => 'date',
-    ];
+    protected function casts(): array
+    {
+        return [
+            'published' => 'boolean',
+            'published_at' => 'date',
+        ];
+    }
 
     public function author()
     {

@@ -20,9 +20,12 @@ class Ministry extends Model
         'image',
     ];
 
-    protected $casts = [
-        'homepage' => 'boolean',
-    ];
+    protected function casts(): array
+    {
+        return [
+            'homepage' => 'boolean',
+        ];
+    }
 
     public function leader()
     {

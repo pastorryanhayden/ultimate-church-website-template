@@ -18,9 +18,12 @@ class Series extends Model
         'body',
     ];
 
-    protected $casts = [
-        'featured' => 'boolean',
-    ];
+    protected function casts(): array
+    {
+        return [
+            'featured' => 'boolean',
+        ];
+    }
 
     public function sermons()
     {
