@@ -28,7 +28,7 @@ class BackupDatabase extends Command
      *
      * @return int
      */
-    public function handle()
+    public function handle(): int
     {
         // Path to the SQLite database
         $databasePath = database_path('database.sqlite');

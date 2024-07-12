@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,7 +14,7 @@ class Service extends Model
         'name',
     ];
 
-    public function sermons()
+    public function sermons(): HasMany
     {
         return $this->hasMany(Sermon::class);
     }

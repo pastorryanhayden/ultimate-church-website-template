@@ -2,6 +2,9 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use App\Observers\SermonObserver;
 use Illuminate\Database\Eloquent\Attributes\ObservedBy;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -36,37 +39,37 @@ class Sermon extends Model
         ];
     }
 
-    public function speaker()
+    public function speaker(): BelongsTo
     {
         return $this->belongsTo(Speaker::class);
     }
 
-    public function series()
+    public function series(): BelongsTo
     {
         return $this->belongsTo(Series::class);
     }
 
-    public function service()
+    public function service(): BelongsTo
     {
         return $this->belongsTo(Service::class);
     }
 
-    public function books()
+    public function books(): BelongsToMany
     {
         return $this->belongsToMany(Book::class);
     }
 
-    public function chapter()
+    public function chapter(): BelongsToMany
     {
         return $this->belongsToMany(Chapter::class)->using(ChapterSermon::class);
     }
 
-    public function bookSermons()
+    public function bookSermons(): HasMany
     {
         return $this->hasMany(BookSermon::class);
     }
 
-    public function chapterSermons()
+    public function chapterSermons(): HasMany
     {
         return $this->hasMany(ChapterSermon::class);
     }

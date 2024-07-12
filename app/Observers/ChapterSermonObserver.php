@@ -12,7 +12,7 @@ class ChapterSermonObserver
      *
      * @return void
      */
-    public function created(ChapterSermon $chapterSermon)
+    public function created(ChapterSermon $chapterSermon): void
     {
         $bookSermon = new BookSermon();
         $bookSermon->book_id = $chapterSermon->book_id;
@@ -25,7 +25,7 @@ class ChapterSermonObserver
      *
      * @return void
      */
-    public function updated(ChapterSermon $chapterSermon)
+    public function updated(ChapterSermon $chapterSermon): void
     {
         $booksermon = BookSermon::where('sermon_id', $chapterSermon->sermon_id)->where('book_id', $chapterSermon->book_id)->first();
         $booksermon->book_id = $chapterSermon->book_id;
@@ -37,7 +37,7 @@ class ChapterSermonObserver
      *
      * @return void
      */
-    public function deleted(ChapterSermon $chapterSermon)
+    public function deleted(ChapterSermon $chapterSermon): void
     {
         $booksermon = BookSermon::where('sermon_id', $chapterSermon->sermon_id)->where('book_id', $chapterSermon->book_id)->first();
         if ($booksermon) {
@@ -51,7 +51,7 @@ class ChapterSermonObserver
      *
      * @return void
      */
-    public function restored(ChapterSermon $chapterSermon)
+    public function restored(ChapterSermon $chapterSermon): void
     {
         //
     }
@@ -61,7 +61,7 @@ class ChapterSermonObserver
      *
      * @return void
      */
-    public function forceDeleted(ChapterSermon $chapterSermon)
+    public function forceDeleted(ChapterSermon $chapterSermon): void
     {
         //
     }

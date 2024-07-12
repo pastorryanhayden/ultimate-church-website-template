@@ -27,7 +27,7 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
         $this->app->singleton(MarkdownService::class, function ($app) {
             return new MarkdownService();
@@ -39,7 +39,7 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         Blade::directive('markdown', function ($expression) {
             return "<?php echo app(App\Services\MarkdownService::class)->toHtml($expression); ?>";

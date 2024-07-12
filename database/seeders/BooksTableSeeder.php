@@ -5167,7 +5167,7 @@ class BooksTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
         foreach ($this->books as $ebook) {
             // Create and save the book

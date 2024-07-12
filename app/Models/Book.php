@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -14,12 +16,12 @@ class Book extends Model
         'abbr',
     ];
 
-    public function sermons()
+    public function sermons(): BelongsToMany
     {
         return $this->belongsToMany(Sermon::class);
     }
 
-    public function chapter()
+    public function chapter(): HasMany
     {
         return $this->hasMany(Chapter::class);
     }

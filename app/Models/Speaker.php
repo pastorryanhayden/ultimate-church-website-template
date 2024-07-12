@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -17,12 +18,12 @@ class Speaker extends Model
         'thumbnail',
     ];
 
-    public function sermons()
+    public function sermons(): HasMany
     {
         return $this->hasMany(Sermon::class);
     }
 
-    public function posts()
+    public function posts(): HasMany
     {
         return $this->hasMany(BlogPost::class);
     }
