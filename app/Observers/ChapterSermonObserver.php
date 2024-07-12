@@ -9,8 +9,6 @@ class ChapterSermonObserver
 {
     /**
      * Handle the ChapterSermon "created" event.
-     *
-     * @return void
      */
     public function created(ChapterSermon $chapterSermon): void
     {
@@ -22,8 +20,6 @@ class ChapterSermonObserver
 
     /**
      * Handle the ChapterSermon "updated" event.
-     *
-     * @return void
      */
     public function updated(ChapterSermon $chapterSermon): void
     {
@@ -34,8 +30,6 @@ class ChapterSermonObserver
 
     /**
      * Handle the ChapterSermon "deleted" event.
-     *
-     * @return void
      */
     public function deleted(ChapterSermon $chapterSermon): void
     {
@@ -48,8 +42,6 @@ class ChapterSermonObserver
 
     /**
      * Handle the ChapterSermon "restored" event.
-     *
-     * @return void
      */
     public function restored(ChapterSermon $chapterSermon): void
     {
@@ -58,8 +50,6 @@ class ChapterSermonObserver
 
     /**
      * Handle the ChapterSermon "force deleted" event.
-     *
-     * @return void
      */
     public function forceDeleted(ChapterSermon $chapterSermon): void
     {
