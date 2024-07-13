@@ -20,7 +20,7 @@ class AboutDetailResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-question-mark-circle';
 
-    protected static ?string $navigationGroup = 'Setup';
+    protected static ?string $navigationGroup = 'Content';
 
     protected static ?int $navigationSort = 2;
 

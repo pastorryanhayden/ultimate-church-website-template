@@ -18,7 +18,7 @@ class AboutSectionResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    protected static ?string $navigationGroup = 'Setup';
+    protected static ?string $navigationGroup = 'Content';
 
     protected static ?string $navigationParentItem = 'About Page Details';
 

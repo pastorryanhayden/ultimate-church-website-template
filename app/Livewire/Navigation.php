@@ -2,11 +2,13 @@
 
 namespace App\Livewire;
 
+use App\Models\Article;
 use App\Models\BlogPost;
 use App\Models\Devotion;
 use App\Models\Event;
 use App\Models\Ministry;
 use App\Models\Sermon;
+use App\Models\Testimony;
 use Livewire\Component;
 
 class Navigation extends Component
@@ -24,6 +26,12 @@ class Navigation extends Component
     public $blog;
 
     public $resources;
+
+    public $articles;
+
+    public $testimonies;
+
+    public $expandAbout;
 
     public function mount($transparent = false)
     {
@@ -49,6 +57,12 @@ class Navigation extends Component
         // If both devotions and sermons exist then set resources to true
 
         $this->resources = ($this->devotions && $this->sermons) || ($this->blog && $this->sermons) || ($this->devotions && $this->blog) || ($this->blog && $this->sermons) ? true : false;
+
+
+        $this->articles = Article::count() > 0 ? true : false;
+        $this->testimonies = Testimony::count() > 0 ? true : false;
+
+        $this->expandAbout = ($this->articles || $this->testimonies) ? true : false;
 
     }
 
