@@ -9,6 +9,7 @@ use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
 use Filament\Forms\Get;
 use Filament\Forms\Set;
@@ -45,6 +46,7 @@ class ArticleResource extends Resource
 
                         TextInput::make('slug')
                             ->required(),
+                        Toggle::make('published'),
                         Textarea::make('description')
                             ->columnSpanFull()
                             ->required(),

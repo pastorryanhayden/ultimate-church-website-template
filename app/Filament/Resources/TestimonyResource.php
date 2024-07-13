@@ -4,10 +4,19 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\TestimonyResource\Pages;
 use App\Models\Testimony;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\MarkdownEditor;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
+use Filament\Forms\Get;
+use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Illuminate\Support\Str;
 
 class TestimonyResource extends Resource
 {
@@ -21,7 +30,38 @@ class TestimonyResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Section::make()
+                    ->columns(2)
+                    ->schema([
+                        TextInput::make('title')
+                            ->live(onBlur: true)
+                            ->required()
+                            ->afterStateUpdated(function (Get $get, Set $set, ?string $old, ?string $state) {
+                                if (($get('slug') ?? '') !== Str::slug($old)) {
+                                    return;
+                                }
+
+                                $set('slug', Str::slug($state));
+                            }),
+
+                        TextInput::make('slug')
+                            ->required(),
+                        Toggle::make('published'),
+                        Textarea::make('description')
+                            ->columnSpanFull()
+                            ->required(),
+                        FileUpload::make('featured_image')
+                            ->disk('vultr')
+                            ->directory('images')
+                            ->visibility('public')
+                            ->image()
+                            ->columnSpanFull(),
+
+                    ]),
+                MarkdownEditor::make('content')
+                    ->columnSpanFull()
+                    ->required(),
+
             ]);
     }
 
