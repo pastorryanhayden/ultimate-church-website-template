@@ -15,7 +15,10 @@ use Filament\Forms\Get;
 use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Str;
 
 class ArticleResource extends Resource
@@ -69,7 +72,9 @@ class ArticleResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('title'),
+                TextColumn::make('description'),
+                ToggleColumn::make('published'),
             ])
             ->filters([
                 //
@@ -84,7 +89,10 @@ class ArticleResource extends Resource
             ])
             ->emptyStateActions([
                 Tables\Actions\CreateAction::make(),
-            ]);
+            ])
+            ->reorderable('order_column')
+            ->modifyQueryUsing(fn (Builder $query) => $query->orderBy('order_column'));
+
     }
 
     public static function getRelations(): array

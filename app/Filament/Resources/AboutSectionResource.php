@@ -20,7 +20,7 @@ class AboutSectionResource extends Resource
 
     protected static ?string $navigationGroup = 'Content';
 
-    protected static ?string $navigationParentItem = 'About Page Details';
+    protected static ?string $navigationParentItem = 'About Page';
 
     protected static ?int $navigationSort = 3;
 
