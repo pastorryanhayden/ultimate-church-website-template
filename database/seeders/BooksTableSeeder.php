@@ -2,18 +2,16 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
 use App\Models\Book;
+use Illuminate\Database\Seeder;
 
 class BooksTableSeeder extends Seeder
 {
-
     public $books = [
         [
             'abbr' => 'Gen',
             'book' => 'Genesis',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '31',
@@ -219,8 +217,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Exod',
             'book' => 'Exodus',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '22',
@@ -386,8 +383,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Lev',
             'book' => 'Leviticus',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '17',
@@ -501,8 +497,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Num',
             'book' => 'Numbers',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '54',
@@ -652,8 +647,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Deut',
             'book' => 'Deuteronomy',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '46',
@@ -795,8 +789,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Josh',
             'book' => 'Joshua',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '18',
@@ -898,8 +891,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Judg',
             'book' => 'Judges',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '36',
@@ -989,8 +981,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Ruth',
             'book' => 'Ruth',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '22',
@@ -1012,8 +1003,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => '1Sam',
             'book' => '1 Samuel',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '28',
@@ -1143,8 +1133,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => '2Sam',
             'book' => '2 Samuel',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '27',
@@ -1246,8 +1235,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => '1Kgs',
             'book' => '1 Kings',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '53',
@@ -1341,8 +1329,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => '2Kgs',
             'book' => '2 Kings',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '18',
@@ -1448,8 +1435,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => '1Chr',
             'book' => '1 Chronicles',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '54',
@@ -1571,8 +1557,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => '2Chr',
             'book' => '2 Chronicles',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '17',
@@ -1722,8 +1707,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Ezra',
             'book' => 'Ezra',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '11',
@@ -1769,8 +1753,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Neh',
             'book' => 'Nehemiah',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '11',
@@ -1828,8 +1811,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Esth',
             'book' => 'Esther',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '22',
@@ -1875,8 +1857,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Job',
             'book' => 'Job',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '22',
@@ -2050,8 +2031,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Ps',
             'book' => 'Psalm',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '6',
@@ -2657,8 +2637,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Prov',
             'book' => 'Proverbs',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '33',
@@ -2788,8 +2767,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Eccl',
             'book' => 'Ecclesiastes',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '18',
@@ -2843,8 +2821,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Song',
             'book' => 'Song of Solomon',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '17',
@@ -2882,8 +2859,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Isa',
             'book' => 'Isaiah',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '31',
@@ -3153,8 +3129,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Jer',
             'book' => 'Jeremiah',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '19',
@@ -3368,8 +3343,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Lam',
             'book' => 'Lamentations',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '22',
@@ -3395,8 +3369,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Ezek',
             'book' => 'Ezekiel',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '28',
@@ -3594,8 +3567,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Dan',
             'book' => 'Daniel',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '21',
@@ -3649,8 +3621,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Hos',
             'book' => 'Hosea',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '11',
@@ -3712,8 +3683,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Joel',
             'book' => 'Joel',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '20',
@@ -3731,8 +3701,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Amos',
             'book' => 'Amos',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '15',
@@ -3774,8 +3743,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Obad',
             'book' => 'Obadiah',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '21',
@@ -3785,8 +3753,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Jonah',
             'book' => 'Jonah',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '17',
@@ -3808,8 +3775,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Mic',
             'book' => 'Micah',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '16',
@@ -3843,8 +3809,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Nah',
             'book' => 'Nahum',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '15',
@@ -3862,8 +3827,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Hab',
             'book' => 'Habakkuk',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '17',
@@ -3881,8 +3845,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Zeph',
             'book' => 'Zephaniah',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '18',
@@ -3900,8 +3863,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Hag',
             'book' => 'Haggai',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '15',
@@ -3915,8 +3877,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Zech',
             'book' => 'Zechariah',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '21',
@@ -3978,8 +3939,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Mal',
             'book' => 'Malachi',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '14',
@@ -4001,8 +3961,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Matt',
             'book' => 'Matthew',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '25',
@@ -4120,8 +4079,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Mark',
             'book' => 'Mark',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '45',
@@ -4191,8 +4149,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Luke',
             'book' => 'Luke',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '80',
@@ -4294,8 +4251,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'John',
             'book' => 'John',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '51',
@@ -4385,8 +4341,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Acts',
             'book' => 'Acts',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '26',
@@ -4504,8 +4459,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Rom',
             'book' => 'Romans',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '32',
@@ -4575,8 +4529,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => '1Cor',
             'book' => '1 Corinthians',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '31',
@@ -4646,8 +4599,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => '2Cor',
             'book' => '2 Corinthians',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '24',
@@ -4705,8 +4657,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Gal',
             'book' => 'Galatians',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '24',
@@ -4736,8 +4687,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Eph',
             'book' => 'Ephesians',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '23',
@@ -4767,8 +4717,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Phil',
             'book' => 'Philippians',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '30',
@@ -4790,8 +4739,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Col',
             'book' => 'Colossians',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '29',
@@ -4813,8 +4761,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => '1Thess',
             'book' => '1 Thessalonians',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '10',
@@ -4840,8 +4787,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => '2Thess',
             'book' => '2 Thessalonians',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '12',
@@ -4859,8 +4805,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => '1Tim',
             'book' => '1 Timothy',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '20',
@@ -4890,8 +4835,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => '2Tim',
             'book' => '2 Timothy',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '18',
@@ -4913,8 +4857,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Titus',
             'book' => 'Titus',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '16',
@@ -4932,8 +4875,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Phlm',
             'book' => 'Philemon',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '25',
@@ -4943,8 +4885,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Heb',
             'book' => 'Hebrews',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '14',
@@ -5002,8 +4943,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Jas',
             'book' => 'James',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '27',
@@ -5029,8 +4969,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => '1Pet',
             'book' => '1 Peter',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '25',
@@ -5056,8 +4995,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => '2Pet',
             'book' => '2 Peter',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '21',
@@ -5075,8 +5013,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => '1John',
             'book' => '1 John',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '10',
@@ -5102,8 +5039,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => '2John',
             'book' => '2 John',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '13',
@@ -5113,8 +5049,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => '3John',
             'book' => '3 John',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '14',
@@ -5124,8 +5059,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Jude',
             'book' => 'Jude',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '25',
@@ -5135,8 +5069,7 @@ class BooksTableSeeder extends Seeder
         [
             'abbr' => 'Rev',
             'book' => 'Revelation',
-            'chapters' =>
-            [
+            'chapters' => [
                 [
                     'chapter' => '1',
                     'verses' => '20',
@@ -5228,29 +5161,26 @@ class BooksTableSeeder extends Seeder
             ],
         ],
     ];
+
     /**
      * Run the database seeds.
-     *
-     * @return void
      */
-    public function run()
+    public function run(): void
     {
-        foreach($this->books as $ebook)
-        {
+        foreach ($this->books as $ebook) {
             // Create and save the book
-            
+
             $book = new Book;
             $book->name = $ebook['book'];
             $book->abbr = $ebook['abbr'];
-            
+
             $book->save();
             // Loop Through Chapters
-            foreach($ebook['chapters'] as $chapter)
-            {
+            foreach ($ebook['chapters'] as $chapter) {
                 $chap = $book->chapter()->updateOrCreate([
                     'number' => $chapter['chapter'],
                 ], ['verses' => $chapter['verses']]);
-            }   
+            }
         }
     }
 }

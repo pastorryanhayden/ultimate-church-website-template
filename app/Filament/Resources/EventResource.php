@@ -3,31 +3,22 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\EventResource\Pages;
-use Filament\Resources\Pages\CreateRecord;
-use App\Filament\Resources\EventResource\RelationManagers;
 use App\Models\Event;
-use Filament\Forms;
+use Filament\Forms\Components\Checkbox;
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\MarkdownEditor;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Tables\Table;
 use Filament\Tables;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\DatePicker;
-use Filament\Forms\Components\Textarea;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\Checkbox;
-use Filament\Forms\Components\MarkdownEditor;
-use Filament\Forms\Components\FileUpload;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
+use Filament\Tables\Table;
 use Illuminate\Support\Str;
-use Filament\Forms\Components\Section;
-
-
-
-use Closure;
 
 class EventResource extends Resource
 {
@@ -37,7 +28,6 @@ class EventResource extends Resource
 
     public ?string $title = '';
 
-
     protected static ?string $navigationGroup = 'Announcements and Events';
 
     public static function form(Form $form): Form
@@ -46,8 +36,8 @@ class EventResource extends Resource
             ->schema([
 
                 Section::make('Details')
-                ->columns(4)
-                ->schema([
+                    ->columns(4)
+                    ->schema([
                         TextInput::make('title')
                             ->reactive()
                             ->live(onBlur: true)
@@ -84,28 +74,27 @@ class EventResource extends Resource
                                 'women' => 'women',
                                 'college' => 'college',
                                 'boys' => 'boys',
-                                'girls' => 'girls'
+                                'girls' => 'girls',
                             ])
                             ->columnSpan(3),
                         Checkbox::make('on_homepage')
                             ->label('Show on homepage?')
                             ->columnSpan(3),
-                ]),
+                    ]),
                 Section::make('Photo')
-                ->schema([
-                    FileUpload::make('photo')->disk('vultr')
-                    ->directory('images')
-                    ->visibility('public'),
-                ]),
+                    ->schema([
+                        FileUpload::make('photo')->disk('vultr')
+                            ->directory('images')
+                            ->visibility('public'),
+                    ]),
                 Section::make('Content')
-                ->schema([
-                    MarkdownEditor::make('body')
-                    ->fileAttachmentsDisk('vultr')
-                    ->fileAttachmentsDirectory('images')
-                    ->fileAttachmentsVisibility('public')
-                    ->required(),
-                ]),
-
+                    ->schema([
+                        MarkdownEditor::make('body')
+                            ->fileAttachmentsDisk('vultr')
+                            ->fileAttachmentsDirectory('images')
+                            ->fileAttachmentsVisibility('public')
+                            ->required(),
+                    ]),
 
             ]);
     }
@@ -117,7 +106,7 @@ class EventResource extends Resource
                 TextColumn::make('title')->sortable(),
                 TextColumn::make('start_date')->date()->sortable(),
                 TextColumn::make('end_date')->date(),
-                ToggleColumn::make('on_homepage')
+                ToggleColumn::make('on_homepage'),
             ])
             ->filters([
                 //
@@ -146,6 +135,4 @@ class EventResource extends Resource
             'edit' => Pages\EditEvent::route('/{record}/edit'),
         ];
     }
-
-
 }

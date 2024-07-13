@@ -3,9 +3,9 @@
 namespace App\Filament\Resources\AboutDetailResource\Pages;
 
 use App\Filament\Resources\AboutDetailResource;
+use App\Models\AboutDetail;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
-use App\Models\AboutDetail;
 
 class EditAboutDetail extends EditRecord
 {
@@ -18,7 +18,7 @@ class EditAboutDetail extends EditRecord
         ];
     }
 
-     public function mount($record = null): void
+    public function mount($record = null): void
     {
         // Ensure only the first record is loaded for editing
         $this->record = AboutDetail::firstOrFail();

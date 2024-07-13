@@ -2,8 +2,8 @@
 
 namespace App\Livewire\Home;
 
-use Livewire\Component;
 use App\Models\Event;
+use Livewire\Component;
 
 class Events extends Component
 {

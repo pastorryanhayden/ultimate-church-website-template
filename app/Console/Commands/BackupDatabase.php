@@ -2,9 +2,9 @@
 
 namespace App\Console\Commands;
 
+use Carbon\Carbon;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
-use Carbon\Carbon;
 use Illuminate\Support\Str;
 
 class BackupDatabase extends Command
@@ -25,27 +25,25 @@ class BackupDatabase extends Command
 
     /**
      * Execute the console command.
-     *
-     * @return int
      */
-    public function handle()
+    public function handle(): int
     {
         // Path to the SQLite database
         $databasePath = database_path('database.sqlite');
 
         // Slugify the Church Name
-        $churchname = Str::slug(env('CHURCH_NAME')) . '_';
+        $churchname = Str::slug(env('CHURCH_NAME')).'_';
 
         // Create a backup file name with the current date
-        $backupFileName = 'backup_' . $churchname . Carbon::now()->format('Y_m_d_H_i_s') . '.sqlite';
+        $backupFileName = 'backup_'.$churchname.Carbon::now()->format('Y_m_d_H_i_s').'.sqlite';
 
         // Copy the database to a temporary file
-        $tempBackupPath = storage_path('app/' . $backupFileName);
+        $tempBackupPath = storage_path('app/'.$backupFileName);
         copy($databasePath, $tempBackupPath);
 
         // Upload the backup file to S3
         $s3 = Storage::disk('vultr');
-        $s3->put('backups/' . $backupFileName, file_get_contents($tempBackupPath));
+        $s3->put('backups/'.$backupFileName, file_get_contents($tempBackupPath));
 
         // Remove the temporary backup file
         unlink($tempBackupPath);

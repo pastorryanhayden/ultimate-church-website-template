@@ -11,9 +11,11 @@ class SiteGlobal extends Model
 
     protected $guarded = [];
 
-    protected $casts = [
-        'action_links' => 'array',
-        'useful_links' => 'array',
-    ];
-    
+    protected function casts(): array
+    {
+        return [
+            'action_links' => 'array',
+            'useful_links' => 'array',
+        ];
+    }
 }

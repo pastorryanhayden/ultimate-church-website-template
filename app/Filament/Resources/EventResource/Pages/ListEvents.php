@@ -12,8 +12,6 @@ class ListEvents extends ListRecords
 {
     protected static string $resource = EventResource::class;
 
-   
-
     protected function getHeaderActions(): array
     {
         return [
@@ -28,6 +26,6 @@ class ListEvents extends ListRecords
                 ->modifyQueryUsing(fn (Builder $query) => $query->where('start_date', '>=', now())->orderBy('start_date', 'asc')),
             'past' => Tab::make()
                 ->modifyQueryUsing(fn (Builder $query) => $query->where('start_date', '<', now())->orderBy('start_date', 'desc')),
-                 ];
+        ];
     }
 }

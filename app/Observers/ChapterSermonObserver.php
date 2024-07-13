@@ -2,34 +2,26 @@
 
 namespace App\Observers;
 
-
-use App\Models\ChapterSermon;
 use App\Models\BookSermon;
-
+use App\Models\ChapterSermon;
 
 class ChapterSermonObserver
 {
     /**
      * Handle the ChapterSermon "created" event.
-     *
-     * @param  \App\Models\ChapterSermon  $chapterSermon
-     * @return void
      */
-    public function created(ChapterSermon $chapterSermon)
+    public function created(ChapterSermon $chapterSermon): void
     {
-            $bookSermon = new BookSermon();
-            $bookSermon->book_id = $chapterSermon->book_id;
-            $bookSermon->sermon_id = $chapterSermon->sermon_id;
-            $bookSermon->save();
+        $bookSermon = new BookSermon();
+        $bookSermon->book_id = $chapterSermon->book_id;
+        $bookSermon->sermon_id = $chapterSermon->sermon_id;
+        $bookSermon->save();
     }
 
     /**
      * Handle the ChapterSermon "updated" event.
-     *
-     * @param  \App\Models\ChapterSermon  $chapterSermon
-     * @return void
      */
-    public function updated(ChapterSermon $chapterSermon)
+    public function updated(ChapterSermon $chapterSermon): void
     {
         $booksermon = BookSermon::where('sermon_id', $chapterSermon->sermon_id)->where('book_id', $chapterSermon->book_id)->first();
         $booksermon->book_id = $chapterSermon->book_id;
@@ -38,15 +30,11 @@ class ChapterSermonObserver
 
     /**
      * Handle the ChapterSermon "deleted" event.
-     *
-     * @param  \App\Models\ChapterSermon  $chapterSermon
-     * @return void
      */
-    public function deleted(ChapterSermon $chapterSermon)
+    public function deleted(ChapterSermon $chapterSermon): void
     {
         $booksermon = BookSermon::where('sermon_id', $chapterSermon->sermon_id)->where('book_id', $chapterSermon->book_id)->first();
-        if ($booksermon)
-        {
+        if ($booksermon) {
             $booksermon->delete();
         }
 
@@ -54,22 +42,16 @@ class ChapterSermonObserver
 
     /**
      * Handle the ChapterSermon "restored" event.
-     *
-     * @param  \App\Models\ChapterSermon  $chapterSermon
-     * @return void
      */
-    public function restored(ChapterSermon $chapterSermon)
+    public function restored(ChapterSermon $chapterSermon): void
     {
         //
     }
 
     /**
      * Handle the ChapterSermon "force deleted" event.
-     *
-     * @param  \App\Models\ChapterSermon  $chapterSermon
-     * @return void
      */
-    public function forceDeleted(ChapterSermon $chapterSermon)
+    public function forceDeleted(ChapterSermon $chapterSermon): void
     {
         //
     }

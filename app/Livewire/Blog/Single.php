@@ -2,8 +2,8 @@
 
 namespace App\Livewire\Blog;
 
-use Livewire\Component;
 use App\Models\BlogPost;
+use Livewire\Component;
 
 class Single extends Component
 {

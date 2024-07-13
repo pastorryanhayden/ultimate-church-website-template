@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Announcement;
-use App\Models\Leader;
 use App\Models\AboutPage;
+use App\Models\Leader;
 
 class AboutPageController extends Controller
 {
@@ -14,6 +12,7 @@ class AboutPageController extends Controller
         $today = now();
         $about = AboutPage::first();
         $leaders = Leader::where('pastor', true)->get();
+
         return view('about', compact('leaders', 'about'));
     }
 }

@@ -2,10 +2,10 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
-use Carbon\Carbon;
 use App\Models\Announcement as Shout;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Cookie;
+use Livewire\Component;
 
 class Announcement extends Component
 {
@@ -13,10 +13,9 @@ class Announcement extends Component
 
     public function mount()
     {
-         $announcementId = Cookie::get('announcement_shown');
+        $announcementId = Cookie::get('announcement_shown');
 
-
-          if (!$announcementId) {
+        if (! $announcementId) {
             $this->announcement = Shout::where('start', '<=', Carbon::now())
                 ->where('end', '>=', Carbon::now())
                 ->first();

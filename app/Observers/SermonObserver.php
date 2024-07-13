@@ -9,59 +9,46 @@ class SermonObserver
 {
     /**
      * Handle the Sermon "created" event.
-     *
-     * @param  \App\Models\Sermon  $sermon
-     * @return void
      */
-    public function created(Sermon $sermon)
+    public function created(Sermon $sermon): void
     {
-        if($sermon->manuscript && $sermon->manuscript != '')
-        $sermon->manuscript = CleanUpManuscriptService::clean($sermon->manuscript);
+        if ($sermon->manuscript && $sermon->manuscript != '') {
+            $sermon->manuscript = CleanUpManuscriptService::clean($sermon->manuscript);
+        }
         $sermon->save();
     }
 
     /**
      * Handle the Sermon "updated" event.
-     *
-     * @param  \App\Models\Sermon  $sermon
-     * @return void
      */
-    public function updated(Sermon $sermon)
+    public function updated(Sermon $sermon): void
     {
-        if($sermon->manuscript && $sermon->manuscript != '')
-        $sermon->manuscript = CleanUpManuscriptService::clean($sermon->manuscript);
+        if ($sermon->manuscript && $sermon->manuscript != '') {
+            $sermon->manuscript = CleanUpManuscriptService::clean($sermon->manuscript);
+        }
         $sermon->save();
     }
 
     /**
      * Handle the Sermon "deleted" event.
-     *
-     * @param  \App\Models\Sermon  $sermon
-     * @return void
      */
-    public function deleted(Sermon $sermon)
+    public function deleted(Sermon $sermon): void
     {
         //
     }
 
     /**
      * Handle the Sermon "restored" event.
-     *
-     * @param  \App\Models\Sermon  $sermon
-     * @return void
      */
-    public function restored(Sermon $sermon)
+    public function restored(Sermon $sermon): void
     {
         //
     }
 
     /**
      * Handle the Sermon "force deleted" event.
-     *
-     * @param  \App\Models\Sermon  $sermon
-     * @return void
      */
-    public function forceDeleted(Sermon $sermon)
+    public function forceDeleted(Sermon $sermon): void
     {
         //
     }

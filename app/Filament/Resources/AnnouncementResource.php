@@ -3,26 +3,20 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\AnnouncementResource\Pages;
-use App\Filament\Resources\AnnouncementResource\RelationManagers;
 use App\Models\Announcement;
-use Filament\Forms;
+use Filament\Forms\Components\Card;
+use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Tables\Table;
 use Filament\Tables;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\DateTimePicker;
-use Filament\Forms\Components\Card;
-use Filament\Forms\Components\Textarea;
-
+use Filament\Tables\Table;
 
 class AnnouncementResource extends Resource
 {
     protected static ?string $model = Announcement::class;
-    
+
     protected static ?string $navigationIcon = 'heroicon-o-exclamation-circle';
 
     protected static ?string $navigationGroup = 'Announcements and Events';
@@ -32,15 +26,14 @@ class AnnouncementResource extends Resource
         return $form
             ->schema([
                 Card::make()
-                ->schema([
-                TextInput::make('title')->required(),    
-                Textarea::make('announcement')->placeholder('No church Sunday')
-                ->maxLength(140)
-                ->required(),
-                DateTimePicker::make('start')->firstDayOfWeek(7)->native(false)->required()->seconds(false)->timezone('America/Chicago'),
-                DateTimePicker::make('end')->firstDayOfWeek(7)->native(false)->required()->seconds(false)->timezone('America/Chicago')
-                ])
-                
+                    ->schema([
+                        TextInput::make('title')->required(),
+                        Textarea::make('announcement')->placeholder('No church Sunday')
+                            ->maxLength(140)
+                            ->required(),
+                        DateTimePicker::make('start')->firstDayOfWeek(7)->native(false)->required()->seconds(false)->timezone('America/Chicago'),
+                        DateTimePicker::make('end')->firstDayOfWeek(7)->native(false)->required()->seconds(false)->timezone('America/Chicago'),
+                    ]),
 
                 //
             ]);
@@ -66,14 +59,14 @@ class AnnouncementResource extends Resource
             ])
             ->defaultSort('created_at', 'desc');
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -81,5 +74,5 @@ class AnnouncementResource extends Resource
             'create' => Pages\CreateAnnouncement::route('/create'),
             'edit' => Pages\EditAnnouncement::route('/{record}/edit'),
         ];
-    }    
+    }
 }

@@ -2,8 +2,8 @@
 
 namespace App\Livewire\Ministries;
 
-use Livewire\Component;
 use App\Models\Ministry;
+use Livewire\Component;
 
 class Index extends Component
 {
@@ -18,6 +18,6 @@ class Index extends Component
     public function render()
     {
         return view('livewire.ministries.index')
-        ->title('Ministries of Bible Baptist Church in Mattoon, IL');
+            ->title('Ministries of Bible Baptist Church in Mattoon, IL');
     }
 }

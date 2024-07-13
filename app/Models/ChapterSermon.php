@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 
 class ChapterSermon extends Pivot
 {
-
     protected $fillable = [
         'verse',
         'book_id',
@@ -24,6 +23,7 @@ class ChapterSermon extends Pivot
     {
         return $this->belongsTo(Sermon::class);
     }
+
     public function book(): BelongsTo
     {
         return $this->belongsTo(Book::class);

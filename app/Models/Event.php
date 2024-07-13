@@ -21,9 +21,12 @@ class Event extends Model
         'for',
     ];
 
-    protected $casts = [
-        'on_homepage' => 'boolean',
-        'start_date' => 'date',
-        'end_date' => 'date',
-    ];
+    protected function casts(): array
+    {
+        return [
+            'on_homepage' => 'boolean',
+            'start_date' => 'date',
+            'end_date' => 'date',
+        ];
+    }
 }

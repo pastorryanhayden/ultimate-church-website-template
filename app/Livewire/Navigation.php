@@ -58,6 +58,7 @@ class Navigation extends Component
 
         $this->resources = ($this->devotions && $this->sermons) || ($this->blog && $this->sermons) || ($this->devotions && $this->blog) || ($this->blog && $this->sermons) ? true : false;
 
+
         $this->articles = Article::count() > 0 ? true : false;
         $this->testimonies = Testimony::count() > 0 ? true : false;
 

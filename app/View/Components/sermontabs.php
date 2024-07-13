@@ -2,19 +2,20 @@
 
 namespace App\View\Components;
 
-use Illuminate\View\Component;
-use App\Models\Sermon;
 use App\Models\Series;
+use App\Models\Sermon;
 use App\Models\Speaker;
+use Illuminate\View\Component;
 
 class Sermontabs extends Component
 {
-
     public $selected = 'Sermons';
-    public $sermonscount = 0;
-    public $seriescount = 0;
-    public $speakercount = 0;
 
+    public $sermonscount = 0;
+
+    public $seriescount = 0;
+
+    public $speakercount = 0;
 
     /**
      * Create a new component instance.
@@ -36,10 +37,9 @@ class Sermontabs extends Component
      */
     public function render()
     {
-        if($this->sermonscount && $this->seriescount && $this->speakercount)
-        {
+        if ($this->sermonscount && $this->seriescount && $this->speakercount) {
             return view('components.sermontabs');
         }
-        
+
     }
 }

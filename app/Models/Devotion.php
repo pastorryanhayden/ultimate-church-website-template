@@ -4,11 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Devotion extends Model
 {
     use HasFactory;
-    
+
     protected $fillable = [
         'title',
         'text',
@@ -22,14 +23,16 @@ class Devotion extends Model
         'published_at',
     ];
 
-    protected $casts = [
-        'published' => 'boolean',
-        'published_at' => 'date',
-    ];
+    protected function casts(): array
+    {
+        return [
+            'published' => 'boolean',
+            'published_at' => 'date',
+        ];
+    }
 
-    public function author()
+    public function author(): BelongsTo
     {
         return $this->belongsTo(Leader::class, 'leader_id');
     }
-
 }
