@@ -2,8 +2,8 @@
 
 namespace App\Livewire\Ministries;
 
-use Livewire\Component;
 use App\Models\Ministry;
+use Livewire\Component;
 
 class Single extends Component
 {
@@ -13,9 +13,10 @@ class Single extends Component
     {
         $this->ministry = Ministry::where('slug', $slug)->first();
     }
+
     public function render()
     {
         return view('livewire.ministries.single')
-        ->title('Ministries of Bible Baptist Church in Mattoon, IL');
+            ->title('Ministries of Bible Baptist Church in Mattoon, IL');
     }
 }

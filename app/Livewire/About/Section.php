@@ -7,6 +7,7 @@ use Livewire\Component;
 class Section extends Component
 {
     public $section;
+
     public $place;
 
     public function mount($section, $place)

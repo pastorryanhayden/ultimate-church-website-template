@@ -9,6 +9,7 @@ use Spatie\EloquentSortable\SortableTrait;
 class AboutSection extends Model implements Sortable
 {
     use SortableTrait;
+
     protected $guarded = [];
 
     public $sortable = [

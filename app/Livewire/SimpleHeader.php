@@ -7,6 +7,7 @@ use Livewire\Component;
 class SimpleHeader extends Component
 {
     public $heading;
+
     public $subheading;
 
     public function mount($heading, $subheading)
@@ -14,6 +15,7 @@ class SimpleHeader extends Component
         $this->heading = $heading;
         $this->subheading = $subheading;
     }
+
     public function render()
     {
         return view('livewire.simple-header');

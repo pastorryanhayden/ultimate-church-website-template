@@ -3,27 +3,20 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\SpeakerResource\Pages;
-use App\Filament\Resources\SpeakerResource\RelationManagers;
 use App\Models\Speaker;
-use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
-use Filament\Tables\Table;
-use Filament\Tables;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-
-// Column Classes
-use Filament\Tables\Columns\ToggleColumn;
-use Filament\Tables\Columns\TextColumn;
-
-//Form Classes
-use Filament\Forms\Components\Textarea;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Select;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
+// Column Classes
+use Filament\Forms\Form;
+//Form Classes
+use Filament\Resources\Resource;
+use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Str;
 
 class SpeakerResource extends Resource
@@ -41,44 +34,44 @@ class SpeakerResource extends Resource
                 Section::make('Details')
                     ->schema([
                         TextInput::make('name')
-                        ->reactive()
-                        ->required()
-                        ->live(onBlur: true)
-                        ->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state))),
-                    TextInput::make('slug')
-                    ->disabled()
-                    ->dehydrated(),
-                    Select::make('position')
-                ->options([
-                    'Lead Pastor' => 'Lead Pastor',
-                    'Youth Pastor' => 'Youth Pastor',
-                    'Music Pastor' => 'Music Pastor',
-                    'Pastoral Apprentice' => 'Pastoral Apprentice',
-                    'Deacon' => 'Deacon',
-                    'Sunday School Teacher' => 'Sunday School Teacher',
-                    'Missionary' => 'Missionary',
-                    'Evangelist' => 'Evangelist',
-                    'Special Speaker' => 'Special Speaker',
-                    'Elder' => 'Elder',
-                    'Other' => 'Other',
-                ])
+                            ->reactive()
+                            ->required()
+                            ->live(onBlur: true)
+                            ->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state))),
+                        TextInput::make('slug')
+                            ->disabled()
+                            ->dehydrated(),
+                        Select::make('position')
+                            ->options([
+                                'Lead Pastor' => 'Lead Pastor',
+                                'Youth Pastor' => 'Youth Pastor',
+                                'Music Pastor' => 'Music Pastor',
+                                'Pastoral Apprentice' => 'Pastoral Apprentice',
+                                'Deacon' => 'Deacon',
+                                'Sunday School Teacher' => 'Sunday School Teacher',
+                                'Missionary' => 'Missionary',
+                                'Evangelist' => 'Evangelist',
+                                'Special Speaker' => 'Special Speaker',
+                                'Elder' => 'Elder',
+                                'Other' => 'Other',
+                            ]),
                     ]),
                 Section::make('Media')
-                ->schema([
-                    FileUpload::make('thumbnail')
-                    ->image()
-                    ->disk('vultr')
-                    ->directory('images')
-                    ->visibility('public'),
-                ]),
+                    ->schema([
+                        FileUpload::make('thumbnail')
+                            ->image()
+                            ->disk('vultr')
+                            ->directory('images')
+                            ->visibility('public'),
+                    ]),
                 Section::make('Content')
-                ->schema([
-                    MarkdownEditor::make('bio')
-                    ->fileAttachmentsDisk('vultr')
-                    ->fileAttachmentsDirectory('images')
-                    ->fileAttachmentsVisibility('public')
-                ->label('Content')
-                ]),
+                    ->schema([
+                        MarkdownEditor::make('bio')
+                            ->fileAttachmentsDisk('vultr')
+                            ->fileAttachmentsDirectory('images')
+                            ->fileAttachmentsVisibility('public')
+                            ->label('Content'),
+                    ]),
             ]);
     }
 
@@ -102,14 +95,14 @@ class SpeakerResource extends Resource
             ])
             ->defaultSort('sermons_count', 'desc');
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -117,5 +110,5 @@ class SpeakerResource extends Resource
             'create' => Pages\CreateSpeaker::route('/create'),
             'edit' => Pages\EditSpeaker::route('/{record}/edit'),
         ];
-    }    
+    }
 }

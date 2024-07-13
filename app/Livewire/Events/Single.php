@@ -2,8 +2,8 @@
 
 namespace App\Livewire\Events;
 
-use Livewire\Component;
 use App\Models\Event;
+use Livewire\Component;
 
 class Single extends Component
 {
@@ -12,7 +12,7 @@ class Single extends Component
     public function mount($slug)
     {
 
-    $this->event = Event::where('slug', $slug)->first();
+        $this->event = Event::where('slug', $slug)->first();
 
     }
 

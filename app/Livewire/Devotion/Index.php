@@ -2,7 +2,6 @@
 
 namespace App\Livewire\Devotion;
 
-use Livewire\Component;
 use App\Models\Devotion;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
@@ -10,14 +9,13 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Concerns\InteractsWithTable;
 use Filament\Tables\Contracts\HasTable;
 use Filament\Tables\Table;
-use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Model;
-
+use Livewire\Component;
 
 class Index extends Component implements HasForms, HasTable
 {
-    use InteractsWithTable;
     use InteractsWithForms;
+    use InteractsWithTable;
 
     public function table(Table $table): Table
     {
@@ -28,17 +26,17 @@ class Index extends Component implements HasForms, HasTable
                 TextColumn::make('text')->sortable()->searchable(),
                 TextColumn::make('published_at')->date()->sortable(),
             ])
-             ->recordUrl(
+            ->recordUrl(
                 fn (Model $record): string => route('devotion.single', ['id' => $record->id]),
-                )
+            )
             ->filters([
-                // ...
+             // ...
             ])
             ->actions([
-                // ...
+             // ...
             ])
             ->bulkActions([
-                // ...
+             // ...
             ]);
     }
 

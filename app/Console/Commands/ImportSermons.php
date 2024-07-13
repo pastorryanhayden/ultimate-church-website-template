@@ -13,7 +13,7 @@ class ImportSermons extends Command
 
     protected $description = 'Import Sermons from CSV';
 
-    public function handle()
+    public function handle(): void
     {
 
         $csv = Reader::createFromPath(storage_path('input.csv'), 'r');

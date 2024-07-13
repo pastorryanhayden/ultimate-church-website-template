@@ -2,8 +2,8 @@
 
 namespace App\Livewire\Home;
 
-use Livewire\Component;
 use App\Models\SiteGlobal;
+use Livewire\Component;
 
 class Hero extends Component
 {
