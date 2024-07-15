@@ -11,8 +11,53 @@
             </a>
         </div>
         <div class="hidden lg:flex lg:gap-x-12 font-sans {{ $transparent ? 'text-white' : '' }}">
-            <a href="/about"
-                class="text-sm font-semibold leading-6 {{ $transparent ? 'text-white' : 'text-gray-900' }}">About Us</a>
+            @if ($expandAbout)
+                <div class="relative" x-data="{ showmenu: false }" @mouseover="showmenu = true">
+                    <button type="button"
+                        class="flex items-center gap-x-1 text-sm font-semibold leading-6 {{ $transparent ? 'text-white' : '' }}"
+                        aria-expanded="false">
+                        About Us
+                        <svg class="flex-none w-5 h-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor"
+                            aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+
+                    <div class="flex absolute left-1/2 z-10 px-4 mt-5 w-screen max-w-max -translate-x-1/2"
+                        x-show="showmenu">
+                        <div
+                            class="flex-auto p-4 w-screen max-w-sm text-sm leading-6 bg-white rounded-3xl ring-1 shadow-lg ring-gray-900/5">
+                            <div class="relative p-4 rounded-lg hover:bg-gray-50">
+                                <a href="/about" class="font-semibold text-gray-900">
+                                    About Us
+                                    <span class="absolute inset-0"></span>
+                                </a>
+                                <p class="mt-1 text-gray-600">Learn the essentials information about our church.</p>
+                            </div>
+                            <div class="relative p-4 rounded-lg hover:bg-gray-50">
+                                <a href="#" class="font-semibold text-gray-900">
+                                    Articles
+                                    <span class="absolute inset-0"></span>
+                                </a>
+                                <p class="mt-1 text-gray-600">Important informtion about what we believe.</p>
+                            </div>
+                            <div class="relative p-4 rounded-lg hover:bg-gray-50">
+                                <a href="#" class="font-semibold text-gray-900">
+                                    Testimonies
+                                    <span class="absolute inset-0"></span>
+                                </a>
+                                <p class="mt-1 text-gray-600">Stories of God's work in our lives.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @else
+                <a href="/about"
+                    class="text-sm font-semibold leading-6 {{ $transparent ? 'text-white' : 'text-gray-900' }}">About
+                    Us</a>
+            @endif
             @if ($ministries)
                 <a href="/ministries"
                     class="text-sm font-semibold leading-6 {{ $transparent ? 'text-white' : 'text-gray-900' }}">Ministries</a>
@@ -36,16 +81,6 @@
                         </svg>
                     </button>
 
-                    <!--
-          'Product' flyout menu, show/hide based on flyout menu state.
-
-          Entering: "transition ease-out duration-200"
-            From: "opacity-0 translate-y-1"
-            To: "opacity-100 translate-y-0"
-          Leaving: "transition ease-in duration-150"
-            From: "opacity-100 translate-y-0"
-            To: "opacity-0 translate-y-1"
-        -->
                     <div x-show="showmenu"
                         class="overflow-hidden absolute -right-4 top-full z-10 mt-3 w-screen max-w-md bg-white rounded-3xl ring-1 shadow-lg ring-gray-900/5"
                         @mouseleave="showmenu = false">
@@ -143,8 +178,8 @@
             <div class="flex gap-x-6 justify-end items-center">
                 <button type="button" class="p-2.5 -m-2.5 text-gray-700 rounded-md" x-on:click="showmenu = false">
                     <span class="sr-only">Close menu</span>
-                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                        aria-hidden="true">
+                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
@@ -182,4 +217,3 @@
         </div>
     </div>
 </header>
-
