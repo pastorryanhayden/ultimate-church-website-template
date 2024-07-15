@@ -63,7 +63,11 @@ class TestimonyResource extends Resource
                     ]),
                 MarkdownEditor::make('content')
                     ->columnSpanFull()
-                    ->required(),
+                    ->fileAttachmentsDisk('vultr')
+                    ->fileAttachmentsDirectory('images')
+                    ->fileAttachmentsVisibility('public')
+                    ->required()
+                    ->hint(str('[Uses Markdown](https://www.markdownguide.org/cheat-sheet/)')->inlineMarkdown()->toHtmlString()),
 
             ]);
     }

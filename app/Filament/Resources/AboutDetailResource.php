@@ -34,7 +34,8 @@ class AboutDetailResource extends Resource
                     ->schema([
                         Forms\Components\TextInput::make('heading')->required(),
                         Forms\Components\TextInput::make('subheading')->required(),
-                        Forms\Components\FileUpload::make('image')->disk('vultr')
+                        Forms\Components\FileUpload::make('image')
+                            ->disk('vultr')
                             ->directory('images')
                             ->visibility('public')->required(),
                     ]),
