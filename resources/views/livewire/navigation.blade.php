@@ -30,19 +30,22 @@
                             class="flex-auto p-4 w-screen max-w-sm text-sm leading-6 bg-white rounded-3xl ring-1 shadow-lg ring-gray-900/5">
                             <div class="relative p-4 rounded-lg hover:bg-gray-50">
                                 <a href="/about" class="font-semibold text-gray-900">
-                                    About Us
+                                    Plan A Visit
                                     <span class="absolute inset-0"></span>
                                 </a>
-                                <p class="mt-1 text-gray-600">Learn the essentials information about our church.</p>
+                                <p class="mt-1 text-gray-600">Learn the essentials information about our church before
+                                    visiting.</p>
                             </div>
                             @if ($articles)
-                                <div class="relative p-4 rounded-lg hover:bg-gray-50">
-                                    <a href="/articles/" class="font-semibold text-gray-900">
-                                        Articles
-                                        <span class="absolute inset-0"></span>
-                                    </a>
-                                    <p class="mt-1 text-gray-600">Important informtion about what we believe.</p>
-                                </div>
+                                @foreach ($articles as $article)
+                                    <div class="relative p-4 rounded-lg hover:bg-gray-50">
+                                        <a href="/articles/{{ $article->slug }}" class="font-semibold text-gray-900">
+                                            {{ $article->title }}
+                                            <span class="absolute inset-0"></span>
+                                        </a>
+                                        <p class="mt-1 text-gray-600">{{ $article->description }}</p>
+                                    </div>
+                                @endforeach
                             @endif
                             @if ($testimonies)
                                 <div class="relative p-4 rounded-lg hover:bg-gray-50">
@@ -193,6 +196,19 @@
                         <a href="/about"
                             class="block py-2 px-3 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50">About
                             Us</a>
+                        @if ($articles->count() > 0)
+                            @foreach ($articles as $article)
+                                <a href="/articles/{{ $article->slug }}"
+                                    class="block py-2 px-8 -mx-3 text-base font-semibold leading-7 text-gray-600 rounded-lg hover:bg-gray-50">{{ $article->title }}
+                                </a>
+                            @endforeach
+
+                        @endif
+                        @if ($testimonies)
+                            <a href="/testimonies"
+                                class="block py-2 px-8 -mx-3 text-base font-semibold leading-7 text-gray-600 rounded-lg hover:bg-gray-50">Testimonies
+                            </a>
+                        @endif
                         @if ($ministries)
                             <a href="/ministries"
                                 class="block py-2 px-3 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50">Ministries</a>

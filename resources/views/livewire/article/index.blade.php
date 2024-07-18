@@ -1,7 +1,7 @@
 <div>
     <div class="py-12 px-6 bg-gray-900 sm:py-12 lg:px-8">
         <div class="mx-auto max-w-2xl text-center">
-            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-5xl">{{ env('CHURCH_NAME') }} Articles</h2>
+            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">About {{ env('CHURCH_NAME') }}</h2>
         </div>
     </div>
     <nav class="flex justify-center py-6 mx-auto w-full max-w-4xl" aria-label="Breadcrumb">
@@ -26,7 +26,19 @@
                             d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
                             clip-rule="evenodd" />
                     </svg>
-                    <a href="#" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Articles</a>
+                    <a href="/about" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">About Us</a>
+                </div>
+            </li>
+            <li>
+                <div class="flex items-center">
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor"
+                        aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <a href="#" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">About Us
+                        Articles</a>
                 </div>
             </li>
         </ol>

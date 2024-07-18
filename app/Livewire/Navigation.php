@@ -58,11 +58,10 @@ class Navigation extends Component
 
         $this->resources = ($this->devotions && $this->sermons) || ($this->blog && $this->sermons) || ($this->devotions && $this->blog) || ($this->blog && $this->sermons) ? true : false;
 
-
-        $this->articles = Article::count() > 0 ? true : false;
+        $this->articles = Article::where('published', true)->orderBy('order-column', 'asc')->get();
         $this->testimonies = Testimony::count() > 0 ? true : false;
 
-        $this->expandAbout = ($this->articles || $this->testimonies) ? true : false;
+        $this->expandAbout = ($this->articles->count() > 0 || $this->testimonies) ? true : false;
 
     }
 
