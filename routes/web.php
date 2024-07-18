@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\HomePageController;
 use App\Livewire\About\Page as AboutPage;
+use App\Livewire\Article\Index as ArticleIndex;
+use App\Livewire\Article\Single as ArticleSingle;
 use App\Livewire\Blog\Index as BlogIndex;
 use App\Livewire\Blog\Single as BlogSingle;
 use App\Livewire\Devotion\Index as DevotionIndex;
@@ -17,6 +19,8 @@ use App\Livewire\Sermons\Series\Single as SeriesSingle;
 use App\Livewire\Sermons\Single as SermonsSingle;
 use App\Livewire\Sermons\Speaker\Index as SpeakerIndex;
 use App\Livewire\Sermons\Speaker\Single as SpeakerSingle;
+use App\Livewire\Testimonies\Index as TestimoniesIndex;
+use App\Livewire\Testimonies\Single as TestimoniesSingle;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -47,10 +51,14 @@ Route::get('/speakers', SpeakerIndex::class);
 Route::get('/speaker/{slug}', SpeakerSingle::class)->name('speaker.single');
 Route::get('/blog', BlogIndex::class);
 Route::get('/blog/{slug}', BlogSingle::class)->name('blog.single');
+Route::get('/testimonies', TestimoniesIndex::class);
+Route::get('/testimonies/{slug}', TestimoniesSingle::class)->name('testimonies.single');
+Route::get('/articles', ArticleIndex::class);
+Route::get('/articles/{slug}', ArticleSingle::class)->name('articles.single');
 
 // This is just for testing to help clear cookies
-Route::get('/clear-announcement-cookie', function () {
-    Cookie::queue(Cookie::forget('announcement_shown'));
-
-    return redirect('/');
-});
+// Route::get('/clear-announcement-cookie', function () {
+//    Cookie::queue(Cookie::forget('announcement_shown'));
+//
+//    return redirect('/');
+//});

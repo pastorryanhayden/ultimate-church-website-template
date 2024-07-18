@@ -25,8 +25,7 @@
                         </svg>
                     </button>
 
-                    <div class="flex absolute left-1/2 z-10 px-4 mt-5 w-screen max-w-max -translate-x-1/2"
-                        x-show="showmenu">
+                    <div class="flex absolute right-0 z-10 px-4 mt-5 w-screen max-w-max" x-show="showmenu">
                         <div
                             class="flex-auto p-4 w-screen max-w-sm text-sm leading-6 bg-white rounded-3xl ring-1 shadow-lg ring-gray-900/5">
                             <div class="relative p-4 rounded-lg hover:bg-gray-50">
@@ -36,20 +35,24 @@
                                 </a>
                                 <p class="mt-1 text-gray-600">Learn the essentials information about our church.</p>
                             </div>
-                            <div class="relative p-4 rounded-lg hover:bg-gray-50">
-                                <a href="#" class="font-semibold text-gray-900">
-                                    Articles
-                                    <span class="absolute inset-0"></span>
-                                </a>
-                                <p class="mt-1 text-gray-600">Important informtion about what we believe.</p>
-                            </div>
-                            <div class="relative p-4 rounded-lg hover:bg-gray-50">
-                                <a href="#" class="font-semibold text-gray-900">
-                                    Testimonies
-                                    <span class="absolute inset-0"></span>
-                                </a>
-                                <p class="mt-1 text-gray-600">Stories of God's work in our lives.</p>
-                            </div>
+                            @if ($articles)
+                                <div class="relative p-4 rounded-lg hover:bg-gray-50">
+                                    <a href="/articles/" class="font-semibold text-gray-900">
+                                        Articles
+                                        <span class="absolute inset-0"></span>
+                                    </a>
+                                    <p class="mt-1 text-gray-600">Important informtion about what we believe.</p>
+                                </div>
+                            @endif
+                            @if ($testimonies)
+                                <div class="relative p-4 rounded-lg hover:bg-gray-50">
+                                    <a href="/testimonies" class="font-semibold text-gray-900">
+                                        Testimonies
+                                        <span class="absolute inset-0"></span>
+                                    </a>
+                                    <p class="mt-1 text-gray-600">Stories of God's work in our lives.</p>
+                                </div>
+                            @endif
                         </div>
                     </div>
                 </div>
