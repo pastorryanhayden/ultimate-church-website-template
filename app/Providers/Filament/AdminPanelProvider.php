@@ -5,6 +5,7 @@ namespace App\Providers\Filament;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
+use Filament\Navigation\MenuItem;
 use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
@@ -54,6 +55,13 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
+            ])
+            ->userMenuItems([
+                MenuItem::make()
+                    ->label('View Site')
+                    ->url('/')
+                    ->openUrlInNewTab(true)
+                    ->icon('heroicon-o-home'),
             ])
             ->viteTheme('resources/css/filament/admin/theme.css');
     }

@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
 <CORSRule>
-    <AllowedOrigin>https://examplesite.test</AllowedOrigin>
+    <AllowedOrigin>https://biblebaptistmattoon.test</AllowedOrigin>
     <AllowedMethod>GET</AllowedMethod>
     <AllowedMethod>PUT</AllowedMethod>
     <AllowedMethod>POST</AllowedMethod>
     <AllowedHeader>*</AllowedHeader>
 </CORSRule>
 <CORSRule>
-    <AllowedOrigin>https://example.ultimatechurchwebsites.com</AllowedOrigin>
+    <AllowedOrigin>https://bloomsburgbaptist.ultimatechurchwebsites.com</AllowedOrigin>
+    <AllowedMethod>GET</AllowedMethod>
+    <AllowedMethod>PUT</AllowedMethod>
+    <AllowedMethod>POST</AllowedMethod>
+    <AllowedHeader>*</AllowedHeader>
+</CORSRule>
+<CORSRule>
+    <AllowedOrigin>https://bloomsburgbaptistchurch.net</AllowedOrigin>
     <AllowedMethod>GET</AllowedMethod>
     <AllowedMethod>PUT</AllowedMethod>
     <AllowedMethod>POST</AllowedMethod>
