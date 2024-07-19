@@ -14,12 +14,15 @@ class About extends Component
 
     public $articles;
 
-    public function mount($transparent, $expandabout, $articles, $testimonies)
+    public $morearticles = false;
+
+    public function mount($transparent, $expandabout, $articles, $testimonies, $morearticles)
     {
         $this->transparent = $transparent;
-        $this->expandnabout = $expandabout;
+        $this->expandabout = $expandabout;
         $this->articles = $articles;
         $this->testimonies = $testimonies;
+        $this->morearticles = $morearticles;
     }
 
     public function render()

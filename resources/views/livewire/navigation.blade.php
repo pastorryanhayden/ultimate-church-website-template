@@ -12,7 +12,7 @@
         </div>
         <div class="hidden lg:flex lg:gap-x-12 font-sans {{ $transparent ? 'text-white' : '' }}">
             <livewire:navigation.about transparent="{{ $transparent }}" testimonies="{{ $testimonies }}"
-                :articles="$articles" expandabout="{{ $expandAbout }}" />
+                :articles="$articles" expandabout="{{ $expandAbout }}" morearticles="{{ $morearticles }}" />
             @if ($ministries)
                 <a href="/ministries"
                     class="text-sm font-semibold leading-6 {{ $transparent ? 'text-white' : 'text-gray-900' }}">Ministries</a>
