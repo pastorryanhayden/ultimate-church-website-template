@@ -11,59 +11,8 @@
             </a>
         </div>
         <div class="hidden lg:flex lg:gap-x-12 font-sans {{ $transparent ? 'text-white' : '' }}">
-            @if ($expandAbout)
-                <div class="relative" x-data="{ showmenu: false }" @mouseover="showmenu = true">
-                    <button type="button"
-                        class="flex items-center gap-x-1 text-sm font-semibold leading-6 {{ $transparent ? 'text-white' : '' }}"
-                        aria-expanded="false">
-                        About Us
-                        <svg class="flex-none w-5 h-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor"
-                            aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </button>
-
-                    <div class="flex absolute right-0 z-10 px-4 mt-5 w-screen max-w-max" x-show="showmenu">
-                        <div
-                            class="flex-auto p-4 w-screen max-w-sm text-sm leading-6 bg-white rounded-3xl ring-1 shadow-lg ring-gray-900/5">
-                            <div class="relative p-4 rounded-lg hover:bg-gray-50">
-                                <a href="/about" class="font-semibold text-gray-900">
-                                    Plan A Visit
-                                    <span class="absolute inset-0"></span>
-                                </a>
-                                <p class="mt-1 text-gray-600">Learn the essentials information about our church before
-                                    visiting.</p>
-                            </div>
-                            @if ($articles)
-                                @foreach ($articles as $article)
-                                    <div class="relative p-4 rounded-lg hover:bg-gray-50">
-                                        <a href="/articles/{{ $article->slug }}" class="font-semibold text-gray-900">
-                                            {{ $article->title }}
-                                            <span class="absolute inset-0"></span>
-                                        </a>
-                                        <p class="mt-1 text-gray-600">{{ $article->description }}</p>
-                                    </div>
-                                @endforeach
-                            @endif
-                            @if ($testimonies)
-                                <div class="relative p-4 rounded-lg hover:bg-gray-50">
-                                    <a href="/testimonies" class="font-semibold text-gray-900">
-                                        Testimonies
-                                        <span class="absolute inset-0"></span>
-                                    </a>
-                                    <p class="mt-1 text-gray-600">Stories of God's work in our lives.</p>
-                                </div>
-                            @endif
-                        </div>
-                    </div>
-                </div>
-            @else
-                <a href="/about"
-                    class="text-sm font-semibold leading-6 {{ $transparent ? 'text-white' : 'text-gray-900' }}">About
-                    Us</a>
-            @endif
+            <livewire:navigation.about transparent="{{ $transparent }}" testimonies="{{ $testimonies }}"
+                :articles="$articles" expandabout="{{ $expandAbout }}" />
             @if ($ministries)
                 <a href="/ministries"
                     class="text-sm font-semibold leading-6 {{ $transparent ? 'text-white' : 'text-gray-900' }}">Ministries</a>
@@ -184,8 +133,8 @@
             <div class="flex gap-x-6 justify-end items-center">
                 <button type="button" class="p-2.5 -m-2.5 text-gray-700 rounded-md" x-on:click="showmenu = false">
                     <span class="sr-only">Close menu</span>
-                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" aria-hidden="true">
+                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
