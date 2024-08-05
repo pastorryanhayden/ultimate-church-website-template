@@ -43,10 +43,8 @@ class ArticleResource extends Resource
                                 if (($get('slug') ?? '') !== Str::slug($old)) {
                                     return;
                                 }
-
                                 $set('slug', Str::slug($state));
                             }),
-
                         TextInput::make('slug')
                             ->required(),
                         Toggle::make('published'),
@@ -59,7 +57,6 @@ class ArticleResource extends Resource
                             ->visibility('public')
                             ->image()
                             ->columnSpanFull(),
-
                     ]),
                 MarkdownEditor::make('content')
                     ->columnSpanFull()
@@ -68,7 +65,6 @@ class ArticleResource extends Resource
                     ->fileAttachmentsVisibility('public')
                     ->required()
                     ->hint(str('[Uses Markdown](https://www.markdownguide.org/cheat-sheet/)')->inlineMarkdown()->toHtmlString()),
-
             ]);
     }
 
@@ -96,7 +92,6 @@ class ArticleResource extends Resource
             ])
             ->reorderable('order_column')
             ->modifyQueryUsing(fn (Builder $query) => $query->orderBy('order_column'));
-
     }
 
     public static function getRelations(): array

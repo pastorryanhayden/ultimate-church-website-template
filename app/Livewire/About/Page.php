@@ -22,6 +22,6 @@ class Page extends Component
     {
 
         return view('livewire.about.page')
-            ->title('About Bible Baptist Church in Mattoon, IL');
+            ->title('About ' . env('CHURCH_NAME'));
     }
 }

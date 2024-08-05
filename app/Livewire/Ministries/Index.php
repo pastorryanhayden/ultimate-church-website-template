@@ -18,6 +18,6 @@ class Index extends Component
     public function render()
     {
         return view('livewire.ministries.index')
-            ->title('Ministries of Bible Baptist Church in Mattoon, IL');
+            ->title('Ministries of ' . env('CHURCH_NAME'));
     }
 }
