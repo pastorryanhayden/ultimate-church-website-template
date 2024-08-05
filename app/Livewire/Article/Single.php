@@ -17,6 +17,7 @@ class Single extends Component
     public function render()
     {
 
-        return view('livewire.article.single');
+	    return view('livewire.article.single')
+		    ->title($this->article->title);
     }
 }

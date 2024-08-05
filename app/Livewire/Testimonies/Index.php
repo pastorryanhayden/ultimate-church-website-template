@@ -16,6 +16,7 @@ class Index extends Component
 
     public function render()
     {
-        return view('livewire.testimonies.index');
+	    return view('livewire.testimonies.index')
+		    ->title('Stories of changed lives.');
     }
 }
