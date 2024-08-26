@@ -8,14 +8,14 @@
     <AllowedHeader>*</AllowedHeader>
 </CORSRule>
 <CORSRule>
-    <AllowedOrigin>https://bloomsburgbaptist.ultimatechurchwebsites.com</AllowedOrigin>
+    <AllowedOrigin>https://rollinschurch.ultimatechurchwebsites.com</AllowedOrigin>
     <AllowedMethod>GET</AllowedMethod>
     <AllowedMethod>PUT</AllowedMethod>
     <AllowedMethod>POST</AllowedMethod>
     <AllowedHeader>*</AllowedHeader>
 </CORSRule>
 <CORSRule>
-    <AllowedOrigin>https://bloomsburgbaptistchurch.net</AllowedOrigin>
+        <AllowedOrigin>https://rollinschurch.org</AllowedOrigin>
     <AllowedMethod>GET</AllowedMethod>
     <AllowedMethod>PUT</AllowedMethod>
     <AllowedMethod>POST</AllowedMethod>
