@@ -22,7 +22,7 @@ use App\Livewire\Sermons\Speaker\Single as SpeakerSingle;
 use App\Livewire\Testimonies\Index as TestimoniesIndex;
 use App\Livewire\Testimonies\Single as TestimoniesSingle;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UserRegistrationController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -55,7 +55,8 @@ Route::get('/testimonies', TestimoniesIndex::class);
 Route::get('/testimonies/{slug}', TestimoniesSingle::class)->name('testimonies.single');
 Route::get('/articles', ArticleIndex::class);
 Route::get('/articles/{slug}', ArticleSingle::class)->name('articles.single');
-
+Route::get('/register', [UserRegistrationController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [UserRegistrationController::class, 'register']);
 // This is just for testing to help clear cookies
 // Route::get('/clear-announcement-cookie', function () {
 //    Cookie::queue(Cookie::forget('announcement_shown'));
