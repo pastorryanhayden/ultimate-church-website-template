@@ -5,8 +5,8 @@
     <nav class="flex gap-x-6 justify-between items-center p-6 mx-auto max-w-7xl lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
             <a href="/" class="p-1.5 -m-1.5">
-                <span class="sr-only">{{ env('CHURCH_NAME') }}</span>
-                <h1 class="text-lg uppercase {{ $transparent ? 'text-white' : '' }}">{{ env('CHURCH_NAME') }}</h1>
+                <span class="sr-only">{{ config('church.name') }}</span>
+                <h1 class="text-lg uppercase {{ $transparent ? 'text-white' : '' }}">{{ config('church.name') }}</h1>
                 {{-- <img class="w-auto h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt=""> --}}
             </a>
         </div>

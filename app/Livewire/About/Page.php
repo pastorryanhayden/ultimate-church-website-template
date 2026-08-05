@@ -22,6 +22,6 @@ class Page extends Component
     {
 
         return view('livewire.about.page')
-            ->title('About ' . env('CHURCH_NAME'));
+            ->title('About ' . config('church.name'));
     }
 }

@@ -32,7 +32,7 @@ class BackupDatabase extends Command
         $databasePath = database_path('database.sqlite');
 
         // Slugify the Church Name
-        $churchname = Str::slug(env('CHURCH_NAME')).'_';
+        $churchname = Str::slug(config('church.name')).'_';
 
         // Create a backup file name with the current date
         $backupFileName = 'backup_'.$churchname.Carbon::now()->format('Y_m_d_H_i_s').'.sqlite';

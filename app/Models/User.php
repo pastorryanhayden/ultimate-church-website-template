@@ -48,10 +48,12 @@ class User extends Authenticatable implements FilamentUser
 
     public function canAccessPanel(\Filament\Panel $panel): bool
     {
-        // Get the allowed emails from the environment variable
-        $allowedEmails = explode(',', env('ADMIN_USERS', ''));
+        // Must use config() (not env()) so this works when config is cached in production.
+        $allowedEmails = array_values(array_filter(array_map(
+            'trim',
+            explode(',', (string) config('church.admin_users', ''))
+        )));
 
-        // Check if the user's email is in the allowed emails list
-        return in_array($this->email, $allowedEmails);
+        return in_array($this->email, $allowedEmails, true);
     }
 }

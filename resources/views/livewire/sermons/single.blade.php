@@ -141,7 +141,7 @@
                         <dt class="text-sm font-medium text-gray-900">Speaker</dt>
                         <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
                             <div class="flex">
-                                <img src="{{ $sermon->speaker->thumbnail ? Storage::disk('vultr')->url($sermon->speaker->thumbnail) : env('APP_URL') . '/images/speaker-placeholder.jpg' }}"
+                                <img src="{{ $sermon->speaker->thumbnail ? Storage::disk('vultr')->url($sermon->speaker->thumbnail) : config('app.url') . '/images/speaker-placeholder.jpg' }}"
                                     alt="" class="object-cover mr-4 mb-4 w-16 h-16 rounded-full">
                                 <div>
                                     <h3 class="font-bold text-indigo-500 underline text-md"><a
@@ -162,7 +162,7 @@
                         <dt class="text-sm font-medium text-gray-900">Series</dt>
                         <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
                             <div class="flex">
-                                <img src="{{ $sermon->series->photo ? Storage::disk('vultr')->url($sermon->series->photo) : env('APP_URL') . '/images/devotional-placeholder.jpg' }}"
+                                <img src="{{ $sermon->series->photo ? Storage::disk('vultr')->url($sermon->series->photo) : config('app.url') . '/images/devotional-placeholder.jpg' }}"
                                     alt="" class="object-cover mr-4 mb-4 w-16 h-16 rounded-full">
                                 <div>
                                     <h3 class="font-bold text-indigo-500 underline text-md"><a

@@ -20,6 +20,6 @@ class Index extends Component
     public function render()
     {
         return view('livewire.events.index')
-            ->title('Upcoming events at ' . env('CHURCH_NAME'));
+            ->title('Upcoming events at ' . config('church.name'));
     }
 }

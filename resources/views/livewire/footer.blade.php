@@ -1,12 +1,12 @@
 <footer class="bg-gray-700">
     <div class="max-w-7xl mx-auto p-8 text-white">
     <div class="my-8 text-center">
-        <h2 class="text-white font-serif text-4xl uppercase tracking-wide">Experience {{ env('CHURCH_NAME')}}</h2>
+        <h2 class="text-white font-serif text-4xl uppercase tracking-wide">Experience {{ config('church.name') }}</h2>
         <p class="mt-4 text-white font-sans italic text-lg">Join us this week for church.</p>
     </div>
     <div class="grid w-full md:grid-cols-2 lg:grid-cols-4 gap-6 px-8">
         <article>
-            <h3 class="text-2xl font-sans uppercase font-bold mb-2">{{ env('CHURCH_NAME') }}</h3>
+            <h3 class="text-2xl font-sans uppercase font-bold mb-2">{{ config('church.name') }}</h3>
             <div class="text-sm font-sans">
             {!! $settings->footer_about !!}
             </div>

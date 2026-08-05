@@ -10,7 +10,7 @@
           <p class="mt-6 text-lg leading-8 text-gray-600">{{$post->description}}</p>
           <div class="mt-6 flex border-t border-gray-900/5 pt-6">
               <div class="relative flex items-center gap-x-4">
-                <img src="{{$post->author->thumbnail ? Storage::disk('vultr')->url($post->author->thumbnail) : env('APP_URL') .'/images/speaker-placeholder.jpg' }}" alt="" class="h-10 w-10 object-cover rounded-full bg-gray-50">
+                <img src="{{$post->author->thumbnail ? Storage::disk('vultr')->url($post->author->thumbnail) : config('app.url') .'/images/speaker-placeholder.jpg' }}" alt="" class="h-10 w-10 object-cover rounded-full bg-gray-50">
                 <div class="text-sm leading-6">
                   <p class="font-semibold text-gray-900">
                     <a href="/speaker/{{$post->author->slug}}">
@@ -27,7 +27,7 @@
         <a href="/blog" class="underline text-lg mt-12 text-gray-400 block font-semibold">View All Articles</a>
       </div>
       <div class="flex items-start justify-end lg:order-first">
-        <img src="{{$post->image ? Storage::disk('vultr')->url($post->image) : env('APP_URL') .'/images/devotional-placeholder.jpg' }}" alt="Product screenshot" class="w-[48rem] max-w-none  shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]" width="2432" height="1442">
+        <img src="{{$post->image ? Storage::disk('vultr')->url($post->image) : config('app.url') .'/images/devotional-placeholder.jpg' }}" alt="Product screenshot" class="w-[48rem] max-w-none  shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]" width="2432" height="1442">
       </div>
     </div>
   </div>

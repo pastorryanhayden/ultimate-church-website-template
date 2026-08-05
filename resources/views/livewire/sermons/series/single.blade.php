@@ -43,7 +43,7 @@
           </ol>
         </nav>
 
-    <img src="{{$series->photo ? Storage::disk('vultr')->url($series->photo) : env('APP_URL') .'/images/series-placeholder.jpg' }}" alt="" class="w-full max-w-lg mx-auto mb-12">
+    <img src="{{$series->photo ? Storage::disk('vultr')->url($series->photo) : config('app.url') .'/images/series-placeholder.jpg' }}" alt="" class="w-full max-w-lg mx-auto mb-12">
 
 
     @if($series->body)
