@@ -44,7 +44,7 @@
         </nav>
     <div class="w-full flex justify-center items-center">
    
-    <img src="{{$speaker->thumbnail ? Storage::disk('vultr')->url($speaker->thumbnail) : env('APP_URL') .'/images/speaker-placeholder.jpg' }}" alt="" class="h-32 w-32 object-cover rounded-full">
+    <img src="{{$speaker->thumbnail ? Storage::disk('vultr')->url($speaker->thumbnail) : config('app.url') .'/images/speaker-placeholder.jpg' }}" alt="" class="h-32 w-32 object-cover rounded-full">
     
     </div>
     

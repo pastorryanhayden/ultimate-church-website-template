@@ -17,6 +17,6 @@ class Single extends Component
     public function render()
     {
         return view('livewire.ministries.single')
-            ->title('Ministries of ' . env('CHURCH_NAME'));
+            ->title('Ministries of ' . config('church.name'));
     }
 }

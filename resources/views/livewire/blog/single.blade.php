@@ -1,7 +1,7 @@
 <div>
    <div class="bg-gray-900 px-6 py-12 sm:py-12 lg:px-8">
       <div class="mx-auto max-w-2xl text-center">
-        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-5xl">{{ env('CHURCH_NAME') }} Articles</h2>
+        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-5xl">{{ config('church.name') }} Articles</h2>
       </div>
     </div>
       <nav class="flex max-w-4xl mx-auto py-6 w-full justify-center" aria-label="Breadcrumb">
@@ -34,14 +34,14 @@
             </li>
           </ol>
         </nav>
-      <img src="{{$post->image ? Storage::disk('vultr')->url($post->image) : env('APP_URL') .'/images/devotional-placeholder.jpg' }}" alt="" class="w-full  max-w-4xl mx-auto">  
+      <img src="{{$post->image ? Storage::disk('vultr')->url($post->image) : config('app.url') .'/images/devotional-placeholder.jpg' }}" alt="" class="w-full  max-w-4xl mx-auto">  
       <div class="bg-white px-6 py-24 sm:py-32 lg:px-8">
           <div class="mx-auto max-w-2xl text-center">
             <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">{{$post->title}}</h2>
             <p class="mt-6 text-lg leading-8 text-gray-600">{{$post->description}}</p>
             <div class="flex justify-center mt-4">
                 <div class="relative flex items-center gap-x-4">
-                <img src="{{$post->author->thumbnail ? Storage::disk('vultr')->url($post->author->thumbnail) : env('APP_URL') .'/images/speaker-placeholder.jpg' }}" alt="" class="h-10 w-10 object-cover rounded-full bg-gray-50">
+                <img src="{{$post->author->thumbnail ? Storage::disk('vultr')->url($post->author->thumbnail) : config('app.url') .'/images/speaker-placeholder.jpg' }}" alt="" class="h-10 w-10 object-cover rounded-full bg-gray-50">
                 <div class="text-sm leading-6">
                   <p class="font-semibold text-gray-900">
                     <a href="/speaker/{{$post->author->slug}}">

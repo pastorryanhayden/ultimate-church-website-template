@@ -1,7 +1,7 @@
 <div>
     <div class="py-12 px-6 bg-gray-900 sm:py-12 lg:px-8">
         <div class="mx-auto max-w-2xl text-center">
-            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">About {{ env('CHURCH_NAME') }}</h2>
+            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">About {{ config('church.name') }}</h2>
         </div>
     </div>
     <nav class="flex justify-center py-6 mx-auto w-full max-w-4xl" aria-label="Breadcrumb">
@@ -50,7 +50,7 @@
                     @foreach ($testimonies as $post)
                         <article class="flex relative flex-col gap-8 lg:flex-row isolate">
                             <div class="relative lg:w-64 aspect-square lg:shrink-0">
-                                <img src="{{ $post->featured_image ? Storage::disk('vultr')->url($post->featured_image) : env('APP_URL') . '/images/devotional-placeholder.jpg' }}"
+                                <img src="{{ $post->featured_image ? Storage::disk('vultr')->url($post->featured_image) : config('app.url') . '/images/devotional-placeholder.jpg' }}"
                                     alt=""
                                     class="object-cover absolute inset-0 w-full h-full bg-gray-50 rounded-2xl">
                                 <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>

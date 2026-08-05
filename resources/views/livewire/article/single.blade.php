@@ -1,7 +1,7 @@
 <div>
     <div class="py-12 px-6 bg-gray-900 sm:py-12 lg:px-8">
         <div class="mx-auto max-w-2xl text-center">
-            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">About {{ env('CHURCH_NAME') }}</h2>
+            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">About {{ config('church.name') }}</h2>
         </div>
     </div>
     <nav class="flex justify-center py-6 mx-auto w-full max-w-4xl" aria-label="Breadcrumb">
@@ -55,7 +55,7 @@
             </li>
         </ol>
     </nav>
-    <img src="{{ $article->featured_image ? Storage::disk('vultr')->url($article->featured_image) : env('APP_URL') . '/images/devotional-placeholder.jpg' }}"
+    <img src="{{ $article->featured_image ? Storage::disk('vultr')->url($article->featured_image) : config('app.url') . '/images/devotional-placeholder.jpg' }}"
         alt="" class="mx-auto w-full max-w-4xl">
     <div class="py-24 px-6 bg-white sm:py-32 lg:px-8">
         <div class="mx-auto max-w-2xl text-center">
